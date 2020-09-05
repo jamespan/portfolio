@@ -10,7 +10,7 @@ import name.abuchen.portfolio.model.Client;
 public class BondoraGoAndGrowPDFExtractor extends AbstractPDFExtractor
 {
     static String ACCOUNT_STATEMENT_DOCUMENT_TYPE = "Zusammenfassung"; //$NON-NLS-1$
-    static String ACCOUNT_STATEMENT_TRANSACTION_REGEX = "(?<date>\\d{2}.\\d{2}.\\d{4})\\s(?<kind>[\\D]+)\\s(?<sign>-?)(?<amount>\\d+,?\\d{0,2}).+(?<currency>[\\S]+)"; //$NON-NLS-1$
+    static String ACCOUNT_STATEMENT_TRANSACTION_REGEX = "(?<date>\\d{2}.\\d{2}.\\d{4})\\s(?<kind>[\\D]+)\\s(?<sign>-?)(?<amount>(\\d+\\.)?\\d+,?\\d{0,2}).+(?<currency>[\\S]+)"; //$NON-NLS-1$
     static String BANK_IDENTIFIER = "Go & Grow";
 
     public BondoraGoAndGrowPDFExtractor(Client client)
@@ -47,11 +47,6 @@ public class BondoraGoAndGrowPDFExtractor extends AbstractPDFExtractor
                             t.setAmount(asAmount(v.get("amount")));
                             t.setCurrencyCode("EUR");
 
-                            String sign = v.get("sign");
-                            if ("-".equals(sign))
-                            {
-                                t.setType(AccountTransaction.Type.REMOVAL);
-                            }
                             String kind = v.get("kind");
                             if (kind != null)
                             {
@@ -59,6 +54,9 @@ public class BondoraGoAndGrowPDFExtractor extends AbstractPDFExtractor
                                 {
                                     case "Überweisen":
                                         t.setType(AccountTransaction.Type.DEPOSIT);
+                                        break;
+                                    case "Abheben":
+                                        t.setType(AccountTransaction.Type.REMOVAL);
                                         break;
                                     case "Go & Grow Zinsen":
                                         t.setType(AccountTransaction.Type.INTEREST);
