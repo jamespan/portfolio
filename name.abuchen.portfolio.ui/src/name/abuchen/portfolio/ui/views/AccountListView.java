@@ -789,6 +789,7 @@ public class AccountListView extends AbstractListView implements ModificationLis
                 case DIVIDENDS:
                 case TAX_REFUND:
                 case SELL:
+                case SHORT:
                 case TRANSFER_IN:
                 case FEES_REFUND:
                     balance.add(t.getMonetaryAmount());
@@ -798,6 +799,7 @@ public class AccountListView extends AbstractListView implements ModificationLis
                 case INTEREST_CHARGE:
                 case TAXES:
                 case BUY:
+                case COVER:
                 case TRANSFER_OUT:
                     balance.subtract(t.getMonetaryAmount());
                     break;
