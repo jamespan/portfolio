@@ -45,7 +45,7 @@ public final class Security implements Attributable, InvestmentVehicle
     private String onlineId;
 
     private String name;
-    private String currencyCode = CurrencyUnit.EUR;
+    private String currencyCode = CurrencyUnit.USD;
     private String targetCurrencyCode;
 
     private String note;
