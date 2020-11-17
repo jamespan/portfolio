@@ -13,6 +13,7 @@ import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseTrackListener;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
@@ -23,7 +24,6 @@ import name.abuchen.portfolio.snapshot.trail.TrailProvider;
 import name.abuchen.portfolio.snapshot.trail.TrailRecord;
 import name.abuchen.portfolio.ui.Messages;
 import name.abuchen.portfolio.ui.util.Colors;
-import name.abuchen.portfolio.util.TextUtil;
 
 public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
 {
@@ -40,6 +40,9 @@ public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
     @Override
     protected Composite createViewerToolTipContentArea(Event event, ViewerCell cell, Composite parent)
     {
+        if (cell == null)
+            return super.createViewerToolTipContentArea(event, cell, parent);
+
         Object element = cell.getElement();
 
         if (!(element instanceof TrailProvider))
@@ -91,7 +94,7 @@ public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
 
         Label label = new Label(composite, SWT.NONE);
         label.setBackground(composite.getBackground());
-        label.setText(TextUtil.pad(trail.getLabel()));
+        label.setText(trail.getLabel());
 
         Label shares = new Label(composite, SWT.RIGHT);
         shares.setBackground(composite.getBackground());
@@ -110,8 +113,8 @@ public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
             if (index == level)
             {
                 answer = column;
-                column.setText(TextUtil.pad(trail.getValue() != null ? Values.Money.format(trail.getValue())
-                                : Messages.LabelNotAvailable));
+                column.setText(trail.getValue() != null ? Values.Money.format(trail.getValue())
+                                : Messages.LabelNotAvailable);
 
                 highlight(Arrays.asList(label, column), inputs);
             }
@@ -127,6 +130,8 @@ public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
 
         outputs.forEach(label -> label.addMouseTrackListener(new MouseTrackListener()
         {
+            private Color background = Colors.INFO_TOOLTIP_BACKGROUND;
+
             @Override
             public void mouseHover(MouseEvent e)
             {
@@ -135,13 +140,17 @@ public class MoneyTrailToolTipSupport extends ColumnViewerToolTipSupport
             @Override
             public void mouseExit(MouseEvent e)
             {
-                outputs.forEach(l -> l.setBackground(Colors.INFO_TOOLTIP_BACKGROUND));
-                inputs.forEach(l -> l.setBackground(Colors.INFO_TOOLTIP_BACKGROUND));
+                outputs.forEach(l -> l.setBackground(this.background));
+                inputs.forEach(l -> l.setBackground(this.background));
             }
 
             @Override
             public void mouseEnter(MouseEvent e)
             {
+                // background color is theme dependent -> save color to restore
+                // during mouseExit
+                this.background = outputs.get(0).getBackground();
+
                 outputs.forEach(l -> l.setBackground(Colors.ICON_ORANGE));
                 inputs.forEach(l -> l.setBackground(Colors.ICON_GREEN));
             }
