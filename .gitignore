@@ -2,3 +2,6 @@ target
 .metadata/*
 .recommenders/*
 .DS_Store
+.idea/
+*.iml
+workspace/.metadata/.log
