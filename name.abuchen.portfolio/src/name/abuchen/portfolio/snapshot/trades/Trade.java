@@ -197,7 +197,14 @@ public class Trade implements Adaptable
 
     public double getReturn()
     {
-        return (exitValue.getAmount() / (double) entryValue.getAmount()) - 1;
+        if (PortfolioTransaction.Type.SHORT == this.type)
+        {
+            return (entryValue.getAmount() / (double) exitValue.getAmount()) - 1;
+        }
+        else
+        {
+            return (exitValue.getAmount() / (double) entryValue.getAmount()) - 1;
+        }
     }
 
     @Override
