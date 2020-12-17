@@ -37,6 +37,39 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>hack bigsur issue</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<exec executable="bash">
+									<arg value="-c"/>
+									<arg value="cp target/name.abuchen.portfolio.ui-0.49.2.jar target/name.abuchen.portfolio.ui_0.49.3.bigsur.jar"/>
+								</exec>
+								<exec executable="bash">
+									<arg value="-c"/>
+									<arg value="mv target/MANIFEST.MF target/MANIFEST.MF.bak"/>
+								</exec>
+								<exec executable="bash">
+									<arg value="-c"/>
+									<arg value="cp META-INF/MANIFEST.MF.bigsur target/MANIFEST.MF"/>
+								</exec>
+								<exec executable="bash">
+									<arg value="-c"/>
+									<arg value="jar uvfm target/name.abuchen.portfolio.ui_0.49.3.bigsur.jar target/MANIFEST.MF"/>
+								</exec>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>

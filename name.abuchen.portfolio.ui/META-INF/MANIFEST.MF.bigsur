@@ -1,0 +1,4205 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.3
+Built-By: asbn
+Build-Jdk: 11.0.9
+Bundle-ManifestVersion: 2
+Bundle-Name: Portfolio Platform UI
+Bundle-SymbolicName: name.abuchen.portfolio.ui;singleton:=true
+Bundle-Version: 0.49.3.bigsur
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: name.abuchen.portfolio.ui.PortfolioPlugin
+Bundle-Vendor: Andreas Buchen
+Import-Package: com.google.common.base,com.google.common.collect,com.goo
+ gle.common.primitives,com.google.gson,com.google.gson.reflect,de.engeha
+ usen.treemap,de.engehausen.treemap.impl,de.engehausen.treemap.swt,javax
+ .annotation,javax.inject,org.apache.commons.csv,org.apache.pdfbox.pdmod
+ el,org.apache.pdfbox.util,org.eclipse.core.commands,org.eclipse.core.co
+ mmands.common,org.eclipse.core.databinding,org.eclipse.core.databinding
+ .beans,org.eclipse.core.databinding.conversion,org.eclipse.core.databin
+ ding.observable.value,org.eclipse.core.databinding.property.value,org.e
+ clipse.core.databinding.validation,org.eclipse.core.net.proxy,org.eclip
+ se.core.runtime,org.eclipse.core.runtime.jobs,org.eclipse.core.runtime.
+ preferences,org.eclipse.e4.core.commands,org.eclipse.e4.core.contexts,o
+ rg.eclipse.e4.core.di,org.eclipse.e4.core.di.annotations,org.eclipse.e4
+ .core.di.extensions,org.eclipse.e4.core.services.events,org.eclipse.e4.
+ core.services.log,org.eclipse.e4.ui.css.swt.dom,org.eclipse.e4.ui.css.s
+ wt.dom.definition,org.eclipse.e4.ui.css.swt.helpers,org.eclipse.e4.ui.c
+ ss.swt.properties,org.eclipse.e4.ui.css.swt.theme,org.eclipse.e4.ui.di,
+ org.eclipse.e4.ui.internal.css.swt.definition,org.eclipse.e4.ui.interna
+ l.workbench,org.eclipse.e4.ui.model.application,org.eclipse.e4.ui.model
+ .application.commands,org.eclipse.e4.ui.model.application.ui,org.eclips
+ e.e4.ui.model.application.ui.basic,org.eclipse.e4.ui.model.application.
+ ui.impl,org.eclipse.e4.ui.model.application.ui.menu,org.eclipse.e4.ui.m
+ odel.application.ui.menu.impl,org.eclipse.e4.ui.services,org.eclipse.e4
+ .ui.workbench,org.eclipse.e4.ui.workbench.lifecycle,org.eclipse.e4.ui.w
+ orkbench.modeling,org.eclipse.emf.common.notify,org.eclipse.emf.ecore,o
+ rg.eclipse.emf.ecore.util,org.eclipse.equinox.internal.p2.core.helpers,
+ org.eclipse.equinox.p2.core,org.eclipse.equinox.p2.engine,org.eclipse.e
+ quinox.p2.metadata,org.eclipse.equinox.p2.operations,org.eclipse.equino
+ x.p2.repository,org.eclipse.equinox.p2.repository.artifact,org.eclipse.
+ equinox.p2.repository.metadata,org.eclipse.jface,org.eclipse.jface.acti
+ on,org.eclipse.jface.databinding.swt,org.eclipse.jface.databinding.view
+ ers,org.eclipse.jface.dialogs,org.eclipse.jface.fieldassist,org.eclipse
+ .jface.internal,org.eclipse.jface.layout,org.eclipse.jface.operation,or
+ g.eclipse.jface.preference,org.eclipse.jface.resource,org.eclipse.jface
+ .util,org.eclipse.jface.viewers,org.eclipse.jface.window,org.eclipse.jf
+ ace.wizard,org.eclipse.nebula.cwt.base,org.eclipse.nebula.widgets.cdate
+ time,org.eclipse.osgi.service.datalocation,org.eclipse.osgi.util,org.ec
+ lipse.swt,org.eclipse.swt.browser,org.eclipse.swt.custom,org.eclipse.sw
+ t.dnd,org.eclipse.swt.events,org.eclipse.swt.graphics,org.eclipse.swt.l
+ ayout,org.eclipse.swt.program,org.eclipse.swt.widgets,org.json.simple,o
+ rg.json.simple.parser,org.jsoup;version="1.12.2",org.jsoup.safety;versi
+ on="1.12.2",org.osgi.framework,org.osgi.service.component.annotations;v
+ ersion="1.3.0",org.osgi.service.event,org.osgi.service.prefs,org.swtcha
+ rt
+Require-Bundle: com.ibm.icu,name.abuchen.portfolio;bundle-version="0.49.
+ 3.bigsur",org.eclipse.nebula.cwt,org.eclipse.ui.forms,org.eclipse.e4.ui
+ .css.core,org.eclipse.ui.themes
+Automatic-Module-Name: name.abuchen.portfolio.ui
+Service-Component: OSGI-INF/name.abuchen.portfolio.ui.util.theme.ColorAn
+ dFontProviderImpl.xml
+
+Name: name/abuchen/portfolio/ui/wizards/events/AddCustomEventPage.class
+SHA-256-Digest: BYLw1pGoGRDXMasEsC32ocPCXwQuaIdrubh5+qUMY+Q=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$12.class
+SHA-256-Digest: fN5jMIObSIVwHT4J9m+zuQFmif7r1blnvowK4sh4TFU=
+
+Name: name/abuchen/portfolio/ui/dialogs/DisplayTextDialog.class
+SHA-256-Digest: 7Fmzd0eFcN0dXEv3/nrDzVp7c9A2BNg5pTQo+UfVi7E=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ExchangeRateWidget.class
+SHA-256-Digest: LBl5+LhUdf4kIBwnFrgOprkfOGCcPBSNG0AsC2hBI00=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$9.class
+SHA-256-Digest: ajwwOcAVt9gJMjlnrBi6JjWLZrP+cRphc/eXk9O1c6c=
+
+Name: name/abuchen/portfolio/ui/views/PortfolioListView$3.class
+SHA-256-Digest: kTxGx7e4rwWE8jM3wUvpZgA/XPxW2f+pe8mfIvbHGoA=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNodeTransfer.clas
+ s
+SHA-256-Digest: OIXL3yYgL+WH6lQkmZIJMi6aO+fJ1LfVEA0QSdhWeK4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$18.class
+SHA-256-Digest: LGfxtGxKH1F3vFtPj1z39EkLP/rfLALsRVq9b7mT9eg=
+
+Name: name/abuchen/portfolio/ui/util/EmbeddedBrowser.class
+SHA-256-Digest: UmxOOrvlmZKhC0Z+rJsbDn9W4U0CroZR2a9CIGUlJaM=
+
+Name: name/abuchen/portfolio/ui/wizards/security/LatestQuoteProviderPage
+ .class
+SHA-256-Digest: v350EtWjgMut+BJD5e4nDAd2wD3tEb7NT0eytTqzX3U=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenPreferenceDialogHandler.cla
+ ss
+SHA-256-Digest: eXY3c/W8x2e/S69pZALVEQWpIsOXp+NS6L1eD9RUBwY=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesChartLegend$R
+ owPlusChevronLayout.class
+SHA-256-Digest: zyS1PQlp66rG0RziIZeqf/oRxa/jNAJqwXpaLMEgjY0=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsHistoryView$1.cla
+ ss
+SHA-256-Digest: XVigPV7SdhreaaNhg08kX9FqNlpt3n20QuIE59Tfw/w=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$FilterDropDown$1.
+ class
+SHA-256-Digest: ShMGvEihcsId2DQINz9Yxy0VeswUMQcRbLHNmEzujS8=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/AbstractTradesWidget.cla
+ ss
+SHA-256-Digest: VKCaSUKRV7ivBPtAa9G+2TAEoZtkJ465P4nI56V8JTQ=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$7.class
+SHA-256-Digest: VnA52LigRCnvKEnR71ij8qParvhndQujCJC0ntOBODw=
+
+Name: name/abuchen/portfolio/ui/handlers/CloseFileHandler.class
+SHA-256-Digest: G97IgQSN4SyUXbmcYZmKZ522jR/LtV6aPbAjpf3lk2A=
+
+Name: name/abuchen/portfolio/ui/editor/ProgressProvider$1.class
+SHA-256-Digest: 1JnKUhYPEdg62PYllNUl7lC9aM+08/uA5ikaM41fAYo=
+
+Name: icons/unassigned@2x.png
+SHA-256-Digest: SoQY2QkGeyy0uABojNE+LFj/ioMWx8P2iIHhh8mLdl8=
+
+Name: name/abuchen/portfolio/ui/log/OpenErrorLogFileHandler.class
+SHA-256-Digest: ZuLbEqXwywXeCfNih0vrfYIbux479VSy6qF/DpFmh6M=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewAccountPage$1.class
+SHA-256-Digest: h/kDKJ4DDCVf0frogv3zTaO19BmmUj+FlOmqdouuVVA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$13.class
+SHA-256-Digest: h02bzF3iBPOg4c3wXHMakJqhpw9NbiFxGPGiVXaLRSw=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenBookmarksHandler$BookmarkPo
+ pup.class
+SHA-256-Digest: y8Gju/u82+J0s8zNAug+pocDv3m5JFtOYrYFLPhVWnQ=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Preferences.class
+SHA-256-Digest: sAbe0m8QC+3aUOAqzyYpPTzLdCCvVrQ/VnpHZzicIuQ=
+
+Name: name/abuchen/portfolio/ui/util/swt/ActiveShell.class
+SHA-256-Digest: x48/mOUIWHQ8Rjq+6X/5Kjw8qdcVDZ0zprDP3Schsns=
+
+Name: name/abuchen/portfolio/ui/util/chart/ScatterChart.class
+SHA-256-Digest: VHHc6Z6NxvVY/EpQQ9GPuKUFEkNg5uHZxdfoLTLZ6og=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob$1.class
+SHA-256-Digest: kG2drx7pYPm0s+EJRaZ0GtTq/RGw3H31n02GwFcug8k=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsViewModel$UpdateL
+ istener.class
+SHA-256-Digest: 5yXqoJpNTScac7mVDUjrMWVsoMpacUtt4tCJChfHum4=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$StringToCalendarConve
+ rter.class
+SHA-256-Digest: JXW3+0Om9a261l7RynJCYo6GUwfYzu2mzmaq6tlG2uA=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ImageAttributeEditingSuppor
+ t$FileDialogCellEditor.class
+SHA-256-Digest: KOmZ5+30dRLlDN1ZAFYLa0sV00GGJiltjBAHi9NOFhY=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenWithLastViewHandler.class
+SHA-256-Digest: ZpzS5ZXsmP2e8WN9LswCB9WmPqGX0Yz2uYDxfTOEqXk=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$17.class
+SHA-256-Digest: +1es6EqR3fC/sZk5ikxRPXQbIX9utwVgrlFbBGzYH7Q=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$21.class
+SHA-256-Digest: NiBvUC+MVu05/TtquXr57+4e/PHCa7Hh+hY6lBM4yE4=
+
+Name: name/abuchen/portfolio/ui/dialogs/PasswordDialog$PasswordModel.cla
+ ss
+SHA-256-Digest: ou6jYN+j6iJL2wz5lO5ywh+n6SYNC0akxSYn8y/QDsQ=
+
+Name: name/abuchen/portfolio/ui/util/FormDataFactory.class
+SHA-256-Digest: FBdvMLDGlOYfDnrbZfBwJAUaW80k5z7Hk05Ier//pLQ=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$10.class
+SHA-256-Digest: EQohZ84Jk1xkAb+MnP4uNftubcegRmBanKzc1fHXtmA=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSerializer.cl
+ ass
+SHA-256-Digest: qocaK2ruUJ5pV6b6i3DcrhpxrH5GdnYDLPDZMQyRViw=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/TransactionElements.clas
+ s
+SHA-256-Digest: 5rL7IL4X8JW9970/9jNH4udi0C6qU/GsZUf8Ne8TNDI=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$2.class
+SHA-256-Digest: kMrBN+GJOzLN4oSqH+g3C4GXWB9K9BrJ3iTCnGwI3WA=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsHistoryView.class
+SHA-256-Digest: eLASq+WzyZEFscOgLoDpjdWA3RQ2zHTJCm09TCQwuJk=
+
+Name: icons/pp_512@2x.png
+SHA-256-Digest: xqX0RvW5Z9P+n5dvRueG03Eie1832cqxssWJ23piW0E=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$4.class
+SHA-256-Digest: oUCfLVzy50NlVLYa0Y8DALsQiqKbLwGn8voOkAhqJPs=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$Input$1.class
+SHA-256-Digest: TfZSjiHpYI9k7MI7gsq7ZJbycnTS2epSbpNozXwNAH8=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerQuarterChartTa
+ b$DividendPerQuarterChartToolTip.class
+SHA-256-Digest: cIVatPXHS3brhUXVY6p0eO/jXW2jrRHX7PPytywFeYA=
+
+Name: name/abuchen/portfolio/ui/util/viewers/AttributeEditingSupport.cla
+ ss
+SHA-256-Digest: aSJweyGahz6foK6rF4GMINwxj4WOgJAu3OHLVAOrrdk=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob$Dirtyable.class
+SHA-256-Digest: qeGiSfdRdxg+IXZx1CK3wr/9Wf6lWBo/4v/Cn2cLeyM=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Command.class
+SHA-256-Digest: nnkoDa4+P9bgPRr7/pKIHPTCL8635HzjYJRtWcYgaUI=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportExtractedItem
+ sWizard$1.class
+SHA-256-Digest: 6tPxHjkJiAfb5+tw6Dc5ZQyFcsUt8gp5ZW6UPwqqdFE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DonutViewer$LoadDataFunct
+ ion.class
+SHA-256-Digest: LUNnj5pXxacqFtXFeRsldcvqqY8Ykl9QMUc4FvofZdo=
+
+Name: name/abuchen/portfolio/ui/log/ErrorLogPart$LogEntryContentProvider
+ .class
+SHA-256-Digest: xEvVSUnP3lHnqQ3tvYnkx35hcU/jFnmP14j4JpqDnes=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$3.class
+SHA-256-Digest: TP1I10ZNtZ/BI2jUldb0m6W/DSkoxc+nLzB8T16oBmI=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$TableV
+ iewerPolicy.class
+SHA-256-Digest: 6+Ye5bx7oGZk+2SJ7usVeX6AM0a364l8SRo61xtATI4=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$12.class
+SHA-256-Digest: BtDzHjIUoQfAwDlgnRJS6SwjpkgAh9zXnKSjpUyRivE=
+
+Name: icons/export.png
+SHA-256-Digest: gazy032ByCQYKQrVv3WctuUiOZIb6uEF8FjScR0Ja5o=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ImportIndizesPage$3.class
+SHA-256-Digest: f5lUxhSYE7LCIYuOyzlNS6BHz8PpIAvc6eDUmVdQ3lc=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerYearMatrixTab.
+ class
+SHA-256-Digest: jQS1qWY+fq7B0hN5r9a6gmFFBXDnQ97TOQhjc4yl51o=
+
+Name: name/abuchen/portfolio/ui/addons/Preference2EnvAddon.class
+SHA-256-Digest: Rnp6RdNFqrevBJEfLRv5+UaY+Z3qMvjLDJ9LZuIezrA=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenRecentFileHandler.class
+SHA-256-Digest: jkHN6vbpDQ57rRJVkpr8IS59wSMwFodm/TJrtSwAO+o=
+
+Name: icons/view_plus@2x.png
+SHA-256-Digest: MIr0zZ80gDMazYDzUI+VFLbQ5ok3dUPvgk3vQZ95hbs=
+
+Name: name/abuchen/portfolio/ui/editor/Navigation$Item.class
+SHA-256-Digest: 6oPFOhcBIvgzxMBNk9Ou/fj/qfDHQjCsiJYmLKeQsFE=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ReportingPeriodColumnOption
+ s.class
+SHA-256-Digest: R1gsWcREiWEgD+dwz7oJcq9HD3co8vkr/saPys1+0Ro=
+
+Name: name/abuchen/portfolio/ui/messages_de.properties
+SHA-256-Digest: CrV9y5uToocUPDz/3efeRM7Exfc/tlhilpHb6v78b5Q=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$2.class
+SHA-256-Digest: 849zFyeHQO9dYKWXmPkqSyP0u8LVm4TtvHly1fxWFBs=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardView$CalculateW
+ idgetDataRunnable.class
+SHA-256-Digest: e/4wHVueJQ/1rx6uVfCzwDwuGXbvg5fBBmBSDhTL740=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewPortfolioAccountPage$2
+ .class
+SHA-256-Digest: RXmqBpSlB5wX563HFFParXIB0jyKGHSJLD5835v/qlY=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesCache.class
+SHA-256-Digest: zaZxicIjNw01tFNME/DpyMp7ItowbJqCk7Zma5rOuOo=
+
+Name: name/abuchen/portfolio/ui/addons/OSXStartupAddon$1.class
+SHA-256-Digest: d1Y/Z9xhAI8AVClLMfuMFzveNV0k3T3JR5k+POlD+iY=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$7.class
+SHA-256-Digest: dqKKAYP2e1Jvpy14qXgwnRIQ03ifZWKSPpjTvUfwn3Y=
+
+Name: icons/filter_off.png
+SHA-256-Digest: Kdm6WYCigYvuWKyMeYnvKBSXNIhI9MI1vTrwD6DExIw=
+
+Name: name/abuchen/portfolio/ui/editor/PageBook.class
+SHA-256-Digest: OD0mjn9hGJIu1c6a9DpGTRktwzJO/sJz0SwTSaIjzzs=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$23.class
+SHA-256-Digest: 8xejNiAhl8BuqPQroYyNehIk8iRrfbuBgvYh0N7JN34=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$ColumnConfigDialog.class
+SHA-256-Digest: gx+T2xUR1AqMN3Q5VKPiltQljUOOagLQlUtsqG/wHHw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNode$Classificati
+ onNode.class
+SHA-256-Digest: 3x5K9Mpvq8KYh7bN4ngJf1age4+1tUABTOcjYzDk+h4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$LinkToPortfolioRep
+ ort.class
+SHA-256-Digest: GEdPoora4LeKgU2Sj5u7J14BUhfGqcz1zUXW5Z5/h0g=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$7.class
+SHA-256-Digest: zPif3/uvwV300064zH1/6SOO5s/s1v6dIrX6gcCkei8=
+
+Name: name/abuchen/portfolio/ui/editor/PortfolioPart$1.class
+SHA-256-Digest: x7km/pP4p8NUGx8zFyZSlklgNZnw3aXD9EycnsmVuMY=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$26.class
+SHA-256-Digest: x+YeXtSaiGsgYqirvyFnZs18wYZfjCiISmRVQqvisiM=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ErroneousImportFile
+ sPage$1.class
+SHA-256-Digest: 8nxCuvZdockvGaLKi350cCFNS3MfbKt2R/RHdpRw+rw=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnEditingSupportWrapper
+ .class
+SHA-256-Digest: lgGmA31lR7YlxlU5vPLZXJ3k//iOZApwPOUmI+Jx6/U=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransferDial
+ og$AccountsMustBeDifferentValidator.class
+SHA-256-Digest: YwEAVg70wIJLL2ZZgruT9yf95g32D7r6/hkZyDDR+WI=
+
+Name: name/abuchen/portfolio/ui/util/QuotesTableViewer$PriceLabelProvide
+ r.class
+SHA-256-Digest: nyTfaZwqlMbwSuTPwhUJ031ZeBxRx4jTS8QL5bmdSEE=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$4.class
+SHA-256-Digest: HWPhnHqrrnMJsxd3MzLFptbZ6lA0s7gRIJv7cZFqgeg=
+
+Name: name/abuchen/portfolio/ui/util/FormatHelper.class
+SHA-256-Digest: o1wG+HexK1/h8Fev41engrHh7vA1GQb5uJbXjMPRbg8=
+
+Name: name/abuchen/portfolio/ui/views/HoldingsPieChartView.class
+SHA-256-Digest: A+47bi5f24+eSj6dHvwbz1D3wg4Ij+wiHGfL1Hl9res=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$11.class
+SHA-256-Digest: wb9eE5xjCM3AVyelOsKhLDMY/7JW69h299Z5xaBMykU=
+
+Name: icons/bookmark_open.png
+SHA-256-Digest: 8EbbqKr3zjIGxoL1YZcEQ4vO8j4XMpOif0JbsYneFns=
+
+Name: name/abuchen/portfolio/ui/parts/kommer.xml
+SHA-256-Digest: UbBsdPhwzbsCbd09FgzbLOrrI1vwSNOPIo5MHbA6vGI=
+
+Name: name/abuchen/portfolio/ui/preferences/FinnhubPreferencePage.class
+SHA-256-Digest: VF+zhvMMwkIwH9IbXV7lZxWwRxo4th/gWHIyiPpdVMI=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages.properties
+SHA-256-Digest: yodDLDc3r6kWOyaMQrp/a8epmwQIUxTlf2SUW8RKPtg=
+
+Name: name/abuchen/portfolio/ui/log/ClearLogHandler.class
+SHA-256-Digest: aggxUq1ViYlyAz36d5SQE1dRuWQqBfkyfcAWd4VPYvQ=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$4.class
+SHA-256-Digest: drPXkQtCtYV1O3t5D59aGemCnNl6ZCKmQZoo+NHLPqQ=
+
+Name: icons/xmark@2x.png
+SHA-256-Digest: rWPPB0BHfcVlF+4R3R9uQcGUQwLRRy7cyIDr2ekAcSc=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$FilterDropDown.cl
+ ass
+SHA-256-Digest: 0W3kLWnSgxzoHyX4KgdaVKTGtpcC1VsAdY5F4BUyNN0=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$No
+ tNullValidator.class
+SHA-256-Digest: UcV+27EKSxYOOJOC7AOsVwKujQAsU6XnHu1DGXFsClA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$8.class
+SHA-256-Digest: saOsD0B9kLmigCrUYX4JPB01oNb4ziKzp8XskpyRa6E=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/InvestmentPlanModel
+ .class
+SHA-256-Digest: Q7TdCD8edvBT6zWIkZGa08JZEox2Jh2JUVSst66vKq8=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerQuarterMatrixT
+ ab$1.class
+SHA-256-Digest: 34VTsNmAPzdbsUjLRDMm8ey2xLeDrGBhJf2y+CRgURg=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayout$SashMouseTrackListen
+ er.class
+SHA-256-Digest: CFe8m4HLzKUc01xLav3604bSw5j9LCEZ8ZFObroyoF8=
+
+Name: name/abuchen/portfolio/ui/util/viewers/BooleanEditingSupport.class
+SHA-256-Digest: Q0zsT8QrKhBgFUfoF+RpEE6QNGRvVnJBT8hJdKPWg9Y=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/VerticalSpacerWidget.cla
+ ss
+SHA-256-Digest: Snk1knWi/O4qXdFghFtQVzaWmqCWMuq0+gL7TVt3Pnw=
+
+Name: name/abuchen/portfolio/ui/views/AbstractTabbedView.class
+SHA-256-Digest: +5tiPN00FdH3TKxogd09aViLx/l4TTJboPB6MECBbqo=
+
+Name: META-INF/html/pie.html
+SHA-256-Digest: s3CJNBcWaoDIFnZqI35bWJxxZNPe/vtgJxbqx70C05U=
+
+Name: name/abuchen/portfolio/ui/editor/ClientProgressProvider.class
+SHA-256-Digest: /cwHyRU8eUf1riJrQ2ehXNH3vWpACjNyuIMBfMlzhm0=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SearchSecurityWizard.cl
+ ass
+SHA-256-Digest: a7hUsvBka2KC2R44iC0yYVBykLhk0sSWugCbZL+rmJA=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractQuoteProviderPa
+ ge.class
+SHA-256-Digest: O5szdg+siUxU9d5rkd9DZOuXm9N0xi5VB8HpW9rEweM=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeries$UseCase.clas
+ s
+SHA-256-Digest: XaDV9z2IxSBfsBTLg+uLnNS+RbNTwQsgdjbGJPdU+wc=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$28.class
+SHA-256-Digest: k91OZbTgZabqTbpu36eJFXsodKsPiTkkPSgaBwAoB7g=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer.class
+SHA-256-Digest: qW1jOjwlBKBwRAjaNpwlpp4GcO4zbbsziQ6ZHIanONw=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/HeatmapOrnament.
+ class
+SHA-256-Digest: tO0Z/yrKtJlwfJoz/dT23PHwolzqfZk8f2FB4WceWt4=
+
+Name: name/abuchen/portfolio/ui/views/columns/NoteColumn$1.class
+SHA-256-Digest: /wk2tjJ5EWgcchS9GVD9P9pBaagbliuOL+tjkqJ2qSQ=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewClientWizard.class
+SHA-256-Digest: 8/wxZIIMC7QVY0+ncu701kxiNsXHSMyFYCZWg88XMPY=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardView$WidgetDrop
+ TargetAdapter.class
+SHA-256-Digest: 1fRkLD53iAn9KbvdE1YL/jBwKoMg9OH7q5emJg93Rl8=
+
+Name: name/abuchen/portfolio/ui/wizards/security/LatestQuoteProviderPage
+ $LoadLatestQuote.class
+SHA-256-Digest: HuiMshJN99uDXfVdtdYwjVqQXfb2Oqejwjcfc4oMGl8=
+
+Name: icons/account@2x.png
+SHA-256-Digest: PS6VNCIZCLgeU7ZTsNja/sqVbio/tRx9KbbHRQ5wrqs=
+
+Name: name/abuchen/portfolio/ui/addons/StartupAddon.class
+SHA-256-Digest: Gunqc9tMmSib2yVvd3DAuuFUZDTrVgEy5hOIoXJT1YE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/PieChartViewer.class
+SHA-256-Digest: PjkO6xQ7BdXrXt+AflMajWtX+NdptY9KFe+t5yHqf3Y=
+
+Name: name/abuchen/portfolio/ui/util/chart/StackedTimelineChart$1.class
+SHA-256-Digest: gFKl/oCrQ6oPH7MvgtooRfqAvoJJdwhWveQfjHs5Afg=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeries$Type.class
+SHA-256-Digest: OIkMuNX9SaEtKJs07VTZepHWKVeZDKqb6c0SxYfZa5s=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/BuySellModel.class
+SHA-256-Digest: DJ6r4MMwBDFpMp0sj7dWKvk23ijJgFugi1E09Ao4Q4s=
+
+Name: icons/pp_48.png
+SHA-256-Digest: OnAySZGqBdmq/88bkyUBAKJO2WHKTxbP4VavYOEmmo0=
+
+Name: name/abuchen/portfolio/ui/views/trades/TradeDetailsView$Input.clas
+ s
+SHA-256-Digest: vm+jInVcqpjr681XfISpuxonP7tixcTm9eNZ+2cY/yg=
+
+Name: icons/view_barchart@2x.png
+SHA-256-Digest: xHMrmMIwmJadi78bfvIx5nZNW5xfeRIliZLm1QpD6NA=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$5.class
+SHA-256-Digest: U2o8VqNdOR/WpUvkTYCb89pgpkv1XUqs8TlGoaetmxY=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$13.class
+SHA-256-Digest: HpEmXxaeGoMLnOUSqISz0E0MrczoqEoY+8YqVDRMaJg=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$TreeVi
+ ewerPolicy.class
+SHA-256-Digest: 5wMEkwRyAjDz/ugLnxUQFeHMdABVKx21iycSRigPzbk=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$4.class
+SHA-256-Digest: dDXDw+R9zV4bCLAgqSdw9B/9zbDO8kxmgOc5O74/F7Q=
+
+Name: icons/pp_256@2x.png
+SHA-256-Digest: sJTq/k/os6wzD3FajVq8f9MlnZWMQYrKohlo5eXLk3s=
+
+Name: name/abuchen/portfolio/ui/views/columns/TaxonomyColumn.class
+SHA-256-Digest: 1Me6NLBBAp/JOfuN/Ayuj3FpFa8ON6U2FtK5uYuVTAU=
+
+Name: name/abuchen/portfolio/ui/preferences/ThemePreferencePage$1.class
+SHA-256-Digest: iVYC+9nB2F7f+829PgDEIpE0z0DICQJ2TtLvGJBOjps=
+
+Name: icons/online.png
+SHA-256-Digest: rF7JIcLK1eihuci+bMvXtNoZpdk9Chnvz70CTaEG/WA=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$2.class
+SHA-256-Digest: tvHXT3SSr8o1Fc5LxbRkUbxgNMhM+0Xb9SUck3ARZGs=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$11.class
+SHA-256-Digest: IzDkgq7y84IdzUN+KOHwa2iGBKCjegE9PTCnNPGKavw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyModel$TaxonomyMod
+ elUpdatedListener.class
+SHA-256-Digest: rrkkUPSML0+Yu2HSEEUTzIv+D/GuM+Tvw7GtfaOr6Fw=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$18.class
+SHA-256-Digest: Siu8YQ6YRvrdUKfnSrfSXAQipm9NvbI07rGOkoVFnpA=
+
+Name: name/abuchen/portfolio/ui/util/swt/ColoredLabel.class
+SHA-256-Digest: tQbQjrFJ4IZfwJeh7RS61K1/OOtIeOv24ZCZ065zViQ=
+
+Name: icons/view_table.png
+SHA-256-Digest: OPvtMsn27Y+Bh5YNpEzSu3TyVH8jOfGmyyXR2JBzgAE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$2.
+ class
+SHA-256-Digest: +N2TzFDArVf12y5rG2L37xDwbEH+hGKkFZnNmRfJYNc=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TreeMapViewer$Classificat
+ ionRectangleRenderer.class
+SHA-256-Digest: 0rdaYFVlHUxvJXYQXHSAxN9B8t52Gb9nuDwPYoo+aUE=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$6.class
+SHA-256-Digest: nH+y5df1ZnEauUfhQj1gwrpuNR4Z/TxQudJU80yYLJ0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthChartTab.
+ class
+SHA-256-Digest: XQvy4cxZ6k1+nf+iqW4WmkxPQl4pN5cvUiAEg7CPxVo=
+
+Name: name/abuchen/portfolio/ui/util/CacheKey.class
+SHA-256-Digest: 6nq1TzznX/WznbjLj6PWFkzmThaCa9SgeYn5IBDgooE=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$9.class
+SHA-256-Digest: I++m9FgBZaQEAtVZ4I7s7pMUxEU/HNi2m7zA3iyeEJ4=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/RecalculateTargetsAttache
+ dModel.class
+SHA-256-Digest: OBCOBctZlINqQ+6OXU6PgpIHoPk0aPVnK/rw9WbxJ8M=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio.ui/po
+ m.xml
+SHA-256-Digest: yqEbgCXqhrDnpbDQi+zLqkH0drJi/XhqCQqdjGuQopg=
+
+Name: name/abuchen/portfolio/ui/util/TableViewerCSVExporter.class
+SHA-256-Digest: HaHH2nPtKhc/a6R/2yi+cN9aEak7xename3CxZ5jTnI=
+
+Name: name/abuchen/portfolio/ui/views/HoldingsPieChartView$LoadDataFunct
+ ion.class
+SHA-256-Digest: tKWHLLjgOuKbhhBEvpj9pYC8W7V+yHy4IKOkl16n0WA=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$ExportDropDow
+ n$1.class
+SHA-256-Digest: hT8EQm3kaXStDQaqfBAkXo/UQ12rU0mr7mRVWNROXP8=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$1.class
+SHA-256-Digest: LHKTsk3nUdPy8WVVK0l2ZVVnYW/aypxIXRi/iZKzCWY=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/TradesProfitLossWidget.c
+ lass
+SHA-256-Digest: eusJQUIzKtyX6xTzOf8DNKEVpqjn+CYwGnE23XmyzVE=
+
+Name: name/abuchen/portfolio/ui/theme/ColorDefinition.class
+SHA-256-Digest: BJ2fGXnrPPdosVRdUYVGZ05pbfA6q8JCE2LgbtucnaM=
+
+Name: icons/view_share@2x.png
+SHA-256-Digest: zGN4CEQiQj2FlkWXwBUb56K8s0Qdci0TSMYBStVQWoE=
+
+Name: name/abuchen/portfolio/ui/views/earnings/StartYearSelectionDropDow
+ n$1.class
+SHA-256-Digest: i7a7+riC1MCmzk3y1L0OCJIfj6waDrYLvfLaQbh+/zY=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/EarningsHeatmapW
+ idget.class
+SHA-256-Digest: euRr1m6S8Xxf3rBlQ6V1yIVc3fuXShmgUk5Q/MHvjE4=
+
+Name: name/abuchen/portfolio/ui/preferences/AlphaVantagePreferencePage$1
+ .class
+SHA-256-Digest: AhnyM1OTd8zEXyxLpX5Gl6wKXmqGhIbVtEH7WDFg3pI=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$11.class
+SHA-256-Digest: AInkMSbH3PdCmQ+ABYADb/JRgfHcxJ3TjKbynVr8yZ8=
+
+Name: name/abuchen/portfolio/ui/util/SimpleDateTimeDateSelectionProperty
+ .class
+SHA-256-Digest: ZqMlywGDfF2QHujvPqxMAaLahzOuOKHQEergi8VwGGA=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$8.class
+SHA-256-Digest: rBHG6pYOxg5OIwvUxYw6jnt8LLxL2Tnhlh7po/GnSlc=
+
+Name: name/abuchen/portfolio/ui/util/chart/AbstractChartToolTip.class
+SHA-256-Digest: VwCA7OZ1ims3kL6oGpjIRVfgobLQywapTcef9Ib5nLg=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$5.class
+SHA-256-Digest: 2fbFeTXc88OeAFjsnGGM5HWL67toP4ybtxVXNkI/ix8=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$ChainedC
+ omparator.class
+SHA-256-Digest: IkrPqJxy+87urd/3MYH9Jc8AUSij47wknhMCSInmNus=
+
+Name: name/abuchen/portfolio/ui/editor/LoadClientThread.class
+SHA-256-Digest: MNsfep8UrYd7JchmcreTyu8xntcZzgrIjP5Gd4lqxtM=
+
+Name: META-INF/css/light.css
+SHA-256-Digest: 0yDXQvhETM13IYNFOYBkPkBiM8+z+uEvIMJrSL9MWTs=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$19.class
+SHA-256-Digest: XeoR7mNR49TYxipJepfSbnQjWOGoW8Qh3QmZ2JEdyXc=
+
+Name: name/abuchen/portfolio/ui/editor/AbstractFinanceView.class
+SHA-256-Digest: 4ya7U/0uNXmeXlTFH1SU4XtqRI9CVv4X/z8bAQGhIcg=
+
+Name: name/abuchen/portfolio/ui/wizards/client/AddTaxonomyPage$1.class
+SHA-256-Digest: w0nsNurPbSBiwo2dz/JM9Jh3lSIRS413sYGREHUVD9o=
+
+Name: css/dark_mac.css
+SHA-256-Digest: KzHPhVQ0l92weAj/fxNT6EEmY9aQ7S10pIN3uXW6Xm8=
+
+Name: name/abuchen/portfolio/ui/handlers/NewTransactionMenuContribution.
+ class
+SHA-256-Digest: Kt3mrDm1wtO14oy/S2s/Y/bBlyqNduF1oZQiCfYTflE=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/SelectSplitPage$1.class
+SHA-256-Digest: L7BCg/ws5rVCDDL8fem40Loo2ydXRSynvAROMCwCS9g=
+
+Name: name/abuchen/portfolio/ui/util/viewers/TransactionOwnerListEditing
+ Support$TriConsumer.class
+SHA-256-Digest: ceLUk3zkqQQDYZW579QU6WeLlYJAr2omil+R1gzb2Gg=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNode$UnassignedCo
+ ntainerNode.class
+SHA-256-Digest: XBu92Mv8yRo9MlNFPw7QoOVJTlEwrF2Rg6VepThNH60=
+
+Name: name/abuchen/portfolio/ui/views/columns/CurrencyColumn.class
+SHA-256-Digest: HN0e1vCmgMgLCp9/6WaCTeVZC67SgNbD/cLzt5fuOD4=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$5.class
+SHA-256-Digest: KxTC3mPtfjkXaSWrfVFyqFiCKv9KhNEhN4Q93FxtmbI=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewTransactionsPage.c
+ lass
+SHA-256-Digest: vpiN/osJInoe5kUvE584oLNsL7rgM91so1AgDFGSmNA=
+
+Name: name/abuchen/portfolio/ui/theme/ColorAndFontProviderImpl.class
+SHA-256-Digest: K1/5N/QZDCWF1O/LfrVqIfamWvEhLOmrWyQhtK2QKJw=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ActivityWidget$TimeGridP
+ aintListener.class
+SHA-256-Digest: /xb93v9SytK9T8+WJSRTluW/QtIiRRXiFgQ+KlGQMoM=
+
+Name: name/abuchen/portfolio/ui/util/ConfigurationStore$ConfigurationSto
+ reOwner.class
+SHA-256-Digest: cAQ4ps0acs9YHJ1m7jl5TpkpNtCcdMAYrXpUQR2ZPX4=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/StackedChartViewer$Series
+ Builder.class
+SHA-256-Digest: ulxkHUFfWvZNPWQrao8mc9wWpeRIvT1ZU/tJ8LEjY/g=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel$Class
+ ificationLink.class
+SHA-256-Digest: WIyAtUAtJsSgQe1SC+ci+QglJSRL3gD1Gq6KFRrmWqs=
+
+Name: name/abuchen/portfolio/ui/util/SWTHelper.class
+SHA-256-Digest: WCWhF0bz4nhZPMsG8CilxjKEZ4uBjvQ7/cF7cJwf8b0=
+
+Name: name/abuchen/portfolio/ui/UIConstants$File.class
+SHA-256-Digest: rzi+889iHCIXC7xgAZNVyafiOQ9cfonRx/0Zthl7CF0=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$10
+ .class
+SHA-256-Digest: mjnvGxlTH23EeemRLw6MA86hMB+gRIZikHhsQm1qjWg=
+
+Name: META-INF/css/dark.css
+SHA-256-Digest: Sz6tcAYpahBFb0JtzcNF1GZwUqI2mcJL11Lt43n2bos=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthMatrixTab
+ $3.class
+SHA-256-Digest: 1ehw2MigSTdp2S0tQaqe6P/gy647djzPFRtm2c1PsQ8=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels_es.properties
+SHA-256-Digest: 6t4k4wkc0KUjqDteRQL9C6p87qKzcQ7ijYZkr6ihIDA=
+
+Name: icons/error@2x.png
+SHA-256-Digest: 1lqW6kPOuWhIxpuel22QPuCNbYtpRHRFQXrsuH8f94M=
+
+Name: icons/config@2x.png
+SHA-256-Digest: OCdQ+Kc6JkO/YZMPJ2TfN94bEb9y4MX71kO8wcQ1VX4=
+
+Name: icons/note.png
+SHA-256-Digest: FXneJRxyAq5icpdsSU11VdN/pmOySWJuNnawLxPGjM8=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$8.class
+SHA-256-Digest: kzO9Uvs0icZiz9qA6UQwNqW/UVodfQeSWmwUlEm0yAE=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$10.class
+SHA-256-Digest: sk5ARClEuepKyA9lzrU270u2EOxb41AK8bV1gwlihmI=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$FormattedLabelProvider.class
+SHA-256-Digest: j2wdri+27qYLUXxOP+ajToogd/jFCqiHIDeffSu98/8=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Event$ExchangeRates.class
+SHA-256-Digest: s6yMUaflc01ehTFeMRXjeQ9a1w7rbaPnQ+SuZHaTZ5I=
+
+Name: name/abuchen/portfolio/ui/update/UpdateMessageDialog.class
+SHA-256-Digest: 2k6QNe3XSQ2/ypnbnFmcjW2ZHtcequWUojRnQDyVGw0=
+
+Name: icons/unassigned.png
+SHA-256-Digest: vpqR/Dx/k+gSElxw+rZiW0seAfTQo9Ayn1Y7t9p/Abc=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$7.class
+SHA-256-Digest: l00Ar0GY9L/8di1L/P2tAGa5oUywNBL8HQEY8jJotKs=
+
+Name: name/abuchen/portfolio/ui/util/chart/ScatterChartToolTip.class
+SHA-256-Digest: u/emfHcO0FsBaC3khyEHQglxKaWkoLWQNb4TJzMUw7g=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthMatrixTab
+ .class
+SHA-256-Digest: 8M1oxMe1mdRfxkeyTOqvGncrBU5MMI0oycAPtsRmoYw=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels_fr.properties
+SHA-256-Digest: XXBK/g18jknPL7YFnad8iAME4lXz8Y0PC4VDJKO8T08=
+
+Name: name/abuchen/portfolio/ui/preferences/GeneralPreferencePage.class
+SHA-256-Digest: TNJgxZL6I8TZZkNz1AMhZrQ5YQQRNEUSp1/Wwz0BeVw=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Part.class
+SHA-256-Digest: 5+Od+t+d+1qBULaaYXIoflPGQOL+lhO/Y2ed58cBhhY=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNodeRenderer$Segm
+ ent.class
+SHA-256-Digest: NlpZLnY2KEb1zzZvqXh9XzDkX/5tK6JYdeqICdZKp3A=
+
+Name: name/abuchen/portfolio/ui/dnd/SecurityTransfer.class
+SHA-256-Digest: JINYvPztfSnhCPweeykzh32rkR9QSLXueDxfTJTzw08=
+
+Name: META-INF/html/test.html
+SHA-256-Digest: 6CIxAyFBEkcaP2CoDBMwgaWpitcaocNVMOMoK3eHZFo=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/StackedChartViewer$1.clas
+ s
+SHA-256-Digest: jyI1MPsYlxo9jfExe0UabMVqAv9hCX7Sx008ZO1m/eg=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$9.class
+SHA-256-Digest: 3BFpp1I+JdDCevKQDbKmQ+iTMiWZdHZiO0buckM1f5I=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$ExportDropDown.cla
+ ss
+SHA-256-Digest: PFchEshgf/XCcCLnWjoEZ7WrWN+SKuVMTCsY8BcPaAw=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/EnumBasedConfig$Policy.c
+ lass
+SHA-256-Digest: 4GYCwaIxZuLIHOpMpjszVk1ml9diDhLiS+vYKNTLCpM=
+
+Name: icons/interval.png
+SHA-256-Digest: fF8cpviEmv0e7rGr8+sj0lXHGoq9+Dnb+tBhgZJ0EBw=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractQuoteProviderPa
+ ge$1.class
+SHA-256-Digest: aPIu6kPWtOxDGJ64Y3tPAH6Fo/m66QF8uKvsCqhftvo=
+
+Name: name/abuchen/portfolio/ui/util/LabelOnly.class
+SHA-256-Digest: Q6bQpi615fa6pLCmrClHcA1gQTfHjUunK/HFOZ8GIA0=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart.class
+SHA-256-Digest: BfpVZHZPXRT6JtzUnTEPShp+aH41s5SRTdQG6zauLbs=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ChartWidget.class
+SHA-256-Digest: n30F0ZrA7Bn7XiOATmepx6ZwSl1SCbAwhao9YJCswwE=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$1.class
+SHA-256-Digest: TVuc6VGeS1zrruRopAsoBNb1FsgnuL7M0UNoTTobwY4=
+
+Name: name/abuchen/portfolio/ui/util/swt/StyledLabel$Tag.class
+SHA-256-Digest: 7VRK+M/QFAvKTLMJHCVPmxfdk+wFCluLRPm8vfc+T8A=
+
+Name: name/abuchen/portfolio/ui/wizards/security/HistoricalQuoteProvider
+ Page.class
+SHA-256-Digest: vK5eMwpvpzE905Wo8Lxwyl9HkCQc6vBD0qObv38cddk=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$SecurityFace
+ t.class
+SHA-256-Digest: G7yqk/ZG4d5MgF2BdfCz61Ws82vS3Z0QPrwZFmeWM5U=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob.class
+SHA-256-Digest: JqmUkyirQI/Oi8Kj+fo0Y7t2/1grOxeGGAhZgm/b1So=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnEditingSupport$Modifi
+ cationListener.class
+SHA-256-Digest: a3GULXOynFV/M2mBuw8UcwickjFgwDNNQuASQuLdlZY=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsView.class
+SHA-256-Digest: rMTGkYNhoxg+twzuGmP/9eR3+dJJuvFkhEJczhXxiQ0=
+
+Name: name/abuchen/portfolio/ui/addons/OSXStartupAddon$2.class
+SHA-256-Digest: 4ipZeg9SgOMXVursuHzm4gYQJosX7o9D1st53k/CqX8=
+
+Name: name/abuchen/portfolio/ui/wizards/client/AddTaxonomyPage$2.class
+SHA-256-Digest: BlXjpaEUeMlO5oXwePsffZFbBvKSPf6/YAeuiHsAVck=
+
+Name: name/abuchen/portfolio/ui/preferences/LanguagePreferencePage$Langu
+ age.class
+SHA-256-Digest: DnX4Sh586wI8GKVo1P6eW4nnhTjHKUK5JKe/MnG58rk=
+
+Name: name/abuchen/portfolio/ui/dialogs/PasswordDialog$1.class
+SHA-256-Digest: WeLpYVm4cjwe35DQm8CxW4mY6wO8v7pOPij6rRsvKpw=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$13.class
+SHA-256-Digest: b5plCqBs+CRCXZO7mlpsAI+lxVlKqR/p9YnCf/TrkgY=
+
+Name: name/abuchen/portfolio/ui/handlers/ImportIBHandler.class
+SHA-256-Digest: Ys28aNBvGM+bhv2EsL+208YiZV9QSWbT80Ew00OzqPU=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewAccountPage.class
+SHA-256-Digest: T5YuQ8yG9K0S969ydGBAtKpZwI8vbaLWaGvUnhxSOyc=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$StatusTextConverter.c
+ lass
+SHA-256-Digest: 7AK6MvY2NozycA7qqN36OmuUcXDTazXdcERStiunpbM=
+
+Name: name/abuchen/portfolio/ui/wizards/security/LatestQuoteProviderPage
+ $DummyQuoteFeed.class
+SHA-256-Digest: e85ISGlu5KO6fLK5IyICzgnf5F/QGJnbKHOIBpiloeY=
+
+Name: name/abuchen/portfolio/ui/views/actions/RevertDeliveryAction.class
+SHA-256-Digest: gY6PM9b3gCtsL7SRxeann6UxmKDw19NBIdkM/TbCJOA=
+
+Name: name/abuchen/portfolio/ui/selection/SecuritySelection.class
+SHA-256-Digest: UqOUgRAHEYJppolB/6SIzF3ccxzbPQbG5BrrmG/nmpM=
+
+Name: name/abuchen/portfolio/ui/theme/ElementProvider.class
+SHA-256-Digest: 3s6E3vh3ONWqNVBdGPC6BwWMQtYaRhGSn2Bjva6CDsg=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthMatrixTab
+ $4.class
+SHA-256-Digest: XLLxcboFo+3/VvnrZkXBlvNilbBU+0vw6BDzyQXYjk4=
+
+Name: name/abuchen/portfolio/ui/handlers/SelectReportingCurrencyMenuCont
+ ribution.class
+SHA-256-Digest: GDdw32+T4MqKduS+R+lWN6aoYNQHm2RhW45Zm4UI3bA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$7.class
+SHA-256-Digest: P+IZ6G27JeTgOIRge8XtkPIGFjvfv7XbX0OVKuqfoNE=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$ElementCom
+ parator.class
+SHA-256-Digest: EWJ8KZO+FBObVJN+yvKwIoAIa+icep31rjUY8S0ZP1M=
+
+Name: name/abuchen/portfolio/ui/util/Colors$Theme.class
+SHA-256-Digest: x/ZncQTsKugPT2h60NEiZtl5mNtshUpcoxkgWkB3zkk=
+
+Name: name/abuchen/portfolio/ui/handlers/ImportPDFHandler$1.class
+SHA-256-Digest: N04/UdBuZ5UOFqScdqyhc+XzTtPFF7FS5D43yqcQbBk=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$11
+ .class
+SHA-256-Digest: O1GvXHsn3uo084dMigbrzTkBSosdlw7ch+8qTloVHt8=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/BookmarkElements$Bookmar
+ kElement.class
+SHA-256-Digest: m+nl7ec2aGRWxDw9a8wogbf2KUUm2dgvDLLIQTO3agQ=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab.class
+SHA-256-Digest: jRAZGhk+X0xV7qsg2p2n7uFk0g9gL44CzT65L09r948=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$TaxonomyFace
+ t$1.class
+SHA-256-Digest: FAZJYdIaGkycZTrwP120hgfCpkrYFxNDFW0YO62lLDk=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$12.class
+SHA-256-Digest: 4UmEjU2ZXnFIgVrFSRCqFv6Y5pDTlxDDZdvKfVEe8as=
+
+Name: name/abuchen/portfolio/ui/util/ConfigurationStore$InputValidator.c
+ lass
+SHA-256-Digest: HOR3wYgkXKMbkPKAhE2wbrhxjndIw08MM2zpzHGIU+0=
+
+Name: name/abuchen/portfolio/ui/views/actions/ConvertBuySellToDeliveryAc
+ tion.class
+SHA-256-Digest: /h1k3RCPUINlTCfuY6+vdC+1OKyx6LJv3eqrWL99nkU=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSelectionDial
+ og$Node.class
+SHA-256-Digest: rg7JnFEeYxqae844iGIdG4fSt5B+17WQo3I07SPD4us=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ActivityWidget$ChartType
+ .class
+SHA-256-Digest: 8Y86C15cLBMDSCBsU5rkYy68BQn5ruwahPvob82O3EI=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesChartLegend$P
+ aintItem.class
+SHA-256-Digest: 3mI09XaVWaTmPpjmBJW6n81vzxThjqUgkMiLpKIQNRM=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$8.class
+SHA-256-Digest: BGhFUB0IBpZQCQuKP+zhwhMvi5dgG1OirGB/1jn89XA=
+
+Name: name/abuchen/portfolio/ui/views/columns/WknColumn.class
+SHA-256-Digest: JTLvF64C2icBLNKrNQPfkP2vABMdmSmyL4dNy0kTDoQ=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels_de.properties
+SHA-256-Digest: vl7ftZILBJ/uMgG7nmyfjZpn8CGJvcRiBBL9KFkJ6Wo=
+
+Name: icons/bookmark_open@2x.png
+SHA-256-Digest: zGN4CEQiQj2FlkWXwBUb56K8s0Qdci0TSMYBStVQWoE=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$6.class
+SHA-256-Digest: +3Hbjvm9iKUJW5zRUSuYx8xj+p0sReiJYRBXaVzr5S0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/SimpleGridLayout
+ .class
+SHA-256-Digest: yWaH2cVqmFJa3VH2iafxctmJcj+zNNis0yVDpTfjPZc=
+
+Name: name/abuchen/portfolio/ui/editor/ClientEditorSidebar.class
+SHA-256-Digest: SoBYTJj0pomxNdRqy5J3NZrRtVH5SXwGYpqVjCKVHAk=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewPortfolioAccountPage$3
+ .class
+SHA-256-Digest: 5ZN330cAEBLjaSPZpYtBjP/WmxQt7P/Ka3A1BIJjuTU=
+
+Name: name/abuchen/portfolio/ui/util/viewers/DateTimeEditingSupport.clas
+ s
+SHA-256-Digest: InB1iFmn1H5eQv1dTykV+/wVTLsJ5cXh1IXUtCEK5bE=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart$CustomLayout.class
+SHA-256-Digest: 0w95DlMtVRm3yg3b6fWfA25izOSZweVcCD/jWHtiQ48=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$1.class
+SHA-256-Digest: qzwKdWhUiE4q2F98NxVLjb/ST7JthAErGOUPWIdjcsI=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChartCSVExporter$Defa
+ ultAdapter.class
+SHA-256-Digest: Rs155Ou3wjb8LEhabgiiFNth1TAY6swjnaNVOHEeV0g=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsViewModel.class
+SHA-256-Digest: 4E1NVEGqEShfiKX/cejH7KdsXHBIjslemKZ9V1r8qKo=
+
+Name: name/abuchen/portfolio/ui/preferences/ScopedPreferenceStore$1.clas
+ s
+SHA-256-Digest: ZQ3urAcCTsy4Le2tzzwzUQtGRblS9LjWwtltG1395os=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Event$Log.class
+SHA-256-Digest: 72jdtFHB/Uewklu09cI0Oa5HOn7xZOglgt0rKu0RLYI=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$ViewMode.class
+SHA-256-Digest: /TnW76PHuR+74H4X3I5nPWLzeRZErlEIb6DduUtYYeE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$22.class
+SHA-256-Digest: Y+302AjINJtu+1Q/ek5qT3N2k4fEY4g7Sa/07WhY+xA=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob.class
+SHA-256-Digest: wBhq0Kn7ghIdCw8N+9L5TKbJu0KmpSxibL2PE83SwFA=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$4.class
+SHA-256-Digest: W3pynZxLrK9qy7TljDdghu3ts1va7IpXZD/jlVegxh0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsTab.class
+SHA-256-Digest: Gc7H3vS7ESf5456hTh6rH0bkrmtLOrM6MUiFZXK8xqU=
+
+Name: icons/plus@2x.png
+SHA-256-Digest: PcBOvmOCtZNF/6OMkJM0BkgEUNXsg5ZGDTJbbzGdlMk=
+
+Name: name/abuchen/portfolio/ui/addons/ProxyAddon.class
+SHA-256-Digest: rsapX6zjrr/WKwAlqSTaSV1jyyb8RlrdMeIEzp/oHfc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$2.class
+SHA-256-Digest: 1tLPpoeGwpBLnvPp6sx2caGL74YlJvDc9z24mndDcOg=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$9.class
+SHA-256-Digest: Dqy4ncPQKMkXZ1KnCcgz5ry7mGWivLReYFLtWhQAVgY=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$14.class
+SHA-256-Digest: aDCZh3X+zJwmVZ6XrdS7z6LKq4pbrAObytnnhrSCGgo=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$Viewer
+ Policy.class
+SHA-256-Digest: IuDbd5C2owcxk4yvnK0kfKw807UDNQJyGIs16Jv2SFQ=
+
+Name: name/abuchen/portfolio/ui/editor/Navigation$Listener.class
+SHA-256-Digest: uI2mS14jxYecpfcahMdN7sWabARIIIqqvt5ndBpv350=
+
+Name: icons/filter_on@2x.png
+SHA-256-Digest: W0lv+hphmFvggJwS74Lx/xkf79qryew/gfYfeZyEUTI=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$16.class
+SHA-256-Digest: j7+no+W5ZMOFshYXyzOVnQGoN+FaSzmQ4P8frCro+6M=
+
+Name: name/abuchen/portfolio/ui/UIConstants.class
+SHA-256-Digest: svwwWcn3Qg5OWJxg+PF2bAdxZDN0me9wToptMHuyOto=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ImageAttributeEditingSuppor
+ t.class
+SHA-256-Digest: 759KcD/0laLD4ACvoPQ4ixcTwRHhhy3rWt6rDUuuKyA=
+
+Name: icons/error_notice.png
+SHA-256-Digest: pwcZHN+9VI1InxUCF7UifY2F8tYTpwD3g9Imr2cxxwA=
+
+Name: icons/handle_we@2x.png
+SHA-256-Digest: z4+QsAGuWuDxjD8b6SuuQ5oCRviU8Q+FUgfVMp9P2SI=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DataSeriesConfig.class
+SHA-256-Digest: +m+T2r31Xiy1O+d3Z23duDNl5GDWgBFuMxRiWicA/uc=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/Page.class
+SHA-256-Digest: lcDf3S7LRS9n5g6SEaf7U94+c0QLkps3Zr6dYhq/X/Y=
+
+Name: name/abuchen/portfolio/ui/util/viewers/OptionLabelProvider.class
+SHA-256-Digest: LUibVZm2RQeYmfJgdZTcUJKV8+ML7QA+ueM857eDFGg=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/StockSplitModel.class
+SHA-256-Digest: QWNPPDRWYC+RxNY+iHwmMKh7cBxEfNnao7YKFOnz594=
+
+Name: name/abuchen/portfolio/ui/editor/Navigation.class
+SHA-256-Digest: 0xlKMU5OJ6QYpFfUZwbXDRGa4LZjZaUgo/QSXDQNIzE=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$8.class
+SHA-256-Digest: 7sJAwW/9SLt/hY0zDyAkhcgZ9UKkd+jNBTkwQtMWIv8=
+
+Name: name/abuchen/portfolio/ui/handlers/UploadToDivvyDiaryHandler$1.cla
+ ss
+SHA-256-Digest: Db+dCDeWHR9DFUIvMWFJkHFJqFPh26nVFrXqM0TKroU=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio.ui/po
+ m.properties
+SHA-256-Digest: AEjuQ/jn2CxoJAsCg7TuHtprm4saQKOyCg6zN9wKbns=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/InvestmentPlanModel
+ $Properties.class
+SHA-256-Digest: 13sYJR+b2mJJ0Z3TiYBAm7Kfx+M4jwBFdn60WH+5Cdg=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$3.class
+SHA-256-Digest: /5+9G8eSJm8vEfUFyRJPAtv5L7AvzW5cILNZ4GHx2EA=
+
+Name: name/abuchen/portfolio/ui/parts/TextViewerPart.class
+SHA-256-Digest: 0WB1uDxnB9ft5/RMBlKeys0XGSB5k9xA5nywdTRUcBQ=
+
+Name: icons/new_transaction@2x.png
+SHA-256-Digest: Ptz9zO1Gp7Q0xsImM5f4ZfEQixn7svBH42WwT4CAens=
+
+Name: name/abuchen/portfolio/ui/handlers/ViewNavigationMenuContribution.
+ class
+SHA-256-Digest: Gt27l2Xnj6Up63YsjPsmttux/LG6wcQYv6aJcyKHNhs=
+
+Name: name/abuchen/portfolio/ui/util/BookmarkMenu.class
+SHA-256-Digest: zWr3qQZnejpHLfx8ASiSOEBBT70mm7YBxE7R5QEQg0w=
+
+Name: icons/clock@2x.png
+SHA-256-Digest: DmDU9RC6j/DXifFbuMvXM1sghahHNV/vyc51chiBtCE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$15.class
+SHA-256-Digest: tX86wPoMIo1JzdzqRpvUoX1L+UfNB3Y3gJmVudVcZD0=
+
+Name: name/abuchen/portfolio/ui/util/viewers/PropertyEditingSupport.clas
+ s
+SHA-256-Digest: 1fYLgAUaBYz95GqYXbRdzEQXWZP8t6QlEy/1p19VAz4=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartUtil.class
+SHA-256-Digest: kfrQfKUtwCvjL2wshA7FmXRWmELG+poPbPdIUxCr0x8=
+
+Name: name/abuchen/portfolio/ui/util/CurrencyToStringConverter.class
+SHA-256-Digest: OICLx0fOhtjgBScpSPPgiUot6P4Apl8UdeMyS+KzACg=
+
+Name: icons/category@2x.png
+SHA-256-Digest: 18PISoL+g8qjXK2bpsLovKzHUed8sKyr6Er3MSdlsuA=
+
+Name: name/abuchen/portfolio/ui/editor/ClientInputListener.class
+SHA-256-Digest: nh2Raz1COpuOZoCVxI7XnPw3Tm3x/UfpXBgn6/O5BAw=
+
+Name: icons/save@2x.png
+SHA-256-Digest: PAkunoxFXYWCIFdd+LEO0AsfyhLLc1f+0GXnDZiNVhg=
+
+Name: name/abuchen/portfolio/ui/util/swt/StyledLabel.class
+SHA-256-Digest: +dfsvrEyDwJ8TXBSFWJHUNcRXrWu+x+CQD41KH9pWzo=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/Delimiter$Delimiter
+ ToCharConverter.class
+SHA-256-Digest: yULFL4FCGQ/FKUw6afS7b/KmX2r7kg/SLelQJHISXy4=
+
+Name: name/abuchen/portfolio/ui/util/ConfirmActionWithSelection.class
+SHA-256-Digest: /onuDscmOGZJj9AjSKL2fFZF6T7/cQv1ho2xy6PaZZc=
+
+Name: name/abuchen/portfolio/ui/wizards/client/MarkSecurityAsIndexPage.c
+ lass
+SHA-256-Digest: rAqPZm0c63KnsXwh4xzD/U1y9nmbfk1Y+MDyQbcM/DQ=
+
+Name: name/abuchen/portfolio/ui/messages_nl.properties
+SHA-256-Digest: Z0CZwttK4Y/gk0VWXRfu7QC+oTd88wNHsEAynQIC+C4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$9.class
+SHA-256-Digest: 4ILtilkj2hY2FhRyBZNuHTfIZWZmOyBmQqMg2bjcBo8=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$8.class
+SHA-256-Digest: jdjYhWozEdXAGd4KRaqezPeld1AXjak36t0lgobOAdo=
+
+Name: icons/account.png
+SHA-256-Digest: JUBokisChXszGd4ujeImPGKLTwgoNpBon6aimIP2YF4=
+
+Name: name/abuchen/portfolio/ui/editor/ClientInput.class
+SHA-256-Digest: fB5g76/R6A1ZVcrMghwvA5FrXmNiZlRmawI7lbbHhK8=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable.class
+SHA-256-Digest: Ynkm2VPTCI91nUcctHRawARY9KxtrPXfCX0wEDJFceE=
+
+Name: icons/green_arrow@2x.png
+SHA-256-Digest: +JcRJtk7MSQpa5ybTW53uuUM61nmF122ayxcr841dqE=
+
+Name: name/abuchen/portfolio/ui/handlers/NewTransactionHandler.class
+SHA-256-Digest: oJT40NE2fHCWIT0ZuqGBMQwm6Z3lcvJQ6U6usYyDgLg=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenSampleHandler.class
+SHA-256-Digest: bAkRL7IT4ivMU0V4jbp5DjPj+XBJj+1pj1/iFoJBvBs=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$8.class
+SHA-256-Digest: BVwhm7F1WzAcIcOL9M+5000Ct1g+6dQtKtpWq93WGA0=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityTransferMod
+ el$Properties.class
+SHA-256-Digest: 13y5vYVkZu0W53uTzlNaqCjZDVRbMd0sqRS/m8lsUCI=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$ComboInput.class
+SHA-256-Digest: VPQB6HH0H+qYzOpL0gBBPAzzDePB9VSm9/31z8dvt3A=
+
+Name: name/abuchen/portfolio/ui/views/ReturnsVolatilityChartView.class
+SHA-256-Digest: pFWppZQI3cKmR6IrCEi0I2IQ30E57FJ8qdGg+SaiVro=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportSelectionPage
+ $1.class
+SHA-256-Digest: /MrZlWl47SworbKDfCR+nSoE56dLFUrGsMxrCcfkKUg=
+
+Name: name/abuchen/portfolio/ui/update/NewVersion$Release.class
+SHA-256-Digest: F5MB8FyUoyNc3/YnlpfEhw9D3thade82kGhpQYRjNrA=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$8.class
+SHA-256-Digest: GDEtYnQaO/I04v4J8aNx0oq1VucBdGdRJdute1KLIoY=
+
+Name: name/abuchen/portfolio/ui/theme/FontDefinition.class
+SHA-256-Digest: vc0OHQ+/JupoRtwxe2QmBP6KexMOHKiwtz+Pd/RJC1E=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportExtractedItem
+ sWizard.class
+SHA-256-Digest: arqpukL3i2t7dCnf3mBNWV3ivRReA+JID4JPACyLoZU=
+
+Name: name/abuchen/portfolio/ui/wizards/client/index.properties
+SHA-256-Digest: 3ngz1AlA0NTiOuoHbs9xiXK7yMx6odM5lEz8ehwVa4c=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages_de.properties
+SHA-256-Digest: OYzikv1UXLEbDD7nEkE3vxG+q/aaJUAr6J5aN4qIGO8=
+
+Name: name/abuchen/portfolio/ui/editor/Sidebar$1.class
+SHA-256-Digest: Ki0Th0I+YA/v9GHnAmjB1/fJOeSq5pWGbgjlFTJc6mE=
+
+Name: name/abuchen/portfolio/ui/parts/WelcomePart.class
+SHA-256-Digest: D5QQRCWorPtJ5ASqLy6o7gnjMkeBzdvNEvf160ibBog=
+
+Name: name/abuchen/portfolio/ui/wizards/security/RawResponsesDialog.clas
+ s
+SHA-256-Digest: 7EyUR7sBowpsY2zOH3j7rbnZQ4UJDB/yipm9CPp7F3Q=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$ExportDropDow
+ n$2.class
+SHA-256-Digest: z7hFFsUD7doIav8WyerRxj8O8vGCWOuJTy94WfP6igY=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$18.class
+SHA-256-Digest: pByaX7VgXf4IHZIoJEXRnFLFCzmW4MyIqES2cpr6CbU=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/WarningMessages.cla
+ ss
+SHA-256-Digest: 7DyNRoR22xaKLMTp0PtnbZBtfxsI9cX8G4I/zcL43K8=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$4.
+ class
+SHA-256-Digest: 4upoGyk9hhPOCYGyP+vSCAeGjAXWpQ+88DJ9nKNz5aA=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ImportIndizesPage$2.class
+SHA-256-Digest: ijpSILZeKiWdE3KLTXQI4y9AuKUs5HHd/7Yn3uMrpM4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$ReportingP
+ eriodLabelProvider.class
+SHA-256-Digest: wQcIsXEyBquYgnZ/ZmGH4ITXBRT0V81XZ+1fdgI3TJU=
+
+Name: name/abuchen/portfolio/ui/preferences/CalendarPreferencePage.class
+SHA-256-Digest: B7y4kvAo6PF/ke36lJwuWGdj9LOLEBbR35WRxr4KxJk=
+
+Name: icons/view_table@2x.png
+SHA-256-Digest: A2XZQnKnwokXZpb0fKvG07u3J+Ua7ydKQfxG8D02kKg=
+
+Name: icons/security@2x.png
+SHA-256-Digest: 2Nj40URf/n3MOXJOrQMmElJoH4uOBAQ/5ix0n3xzIMw=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SearchSecurityWizardDia
+ log.class
+SHA-256-Digest: CJWbRJwdt31dLEJTwBdM8ZpGW18AFMggHiML5ZKHqjQ=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/InvestmentPlanDialo
+ g$1.class
+SHA-256-Digest: zzsom42AwljTjVUt/HxYRRrYGlfHBVs8+T35P9vE0cM=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$5.class
+SHA-256-Digest: odk3i5xfXUm8ybymL+ok51QEyk29X/ODTBM3DWoKOCg=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$11.class
+SHA-256-Digest: ZbjpirraKqfQnVs+z/0w9RwjRIRRp5Jyc29/qHNdNP8=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/HeatmapModel.cla
+ ss
+SHA-256-Digest: Ua9GkbJEydZq5fEfZz6ZTzin53mhfU3GE/rR97XedjA=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$12.class
+SHA-256-Digest: 0WO5YD1iC5KhvW4hTjDPVjbBjHIZAWYaVPxQFR6VkUw=
+
+Name: icons/Thumbs.db
+SHA-256-Digest: iOLf6XAtA6MKP/wY+qpwjtOdKoH/DM7hzw2ny7qSy/U=
+
+Name: name/abuchen/portfolio/ui/handlers/CSVConfigurationsMenuContributi
+ on.class
+SHA-256-Digest: LgqTaaPNilOrrMvs+EMXPY5aPVFiojVp+LHHxK5o4Fg=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyModel.class
+SHA-256-Digest: V8vcIK0GPmJPMdtJizs/PZHJ1Uy613BrFgDdXtSmwVs=
+
+Name: name/abuchen/portfolio/ui/views/AbstractHistoricView.class
+SHA-256-Digest: pMvsf6xNDFx0pK8IZjzsZANZdeRcW7X0AOunz13pnSU=
+
+Name: icons/view_barchart.png
+SHA-256-Digest: neLdcmk+d/4bXUhwgemWxmqxA3mGTzIJMte7fMdxDfI=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewAccountPage$2.class
+SHA-256-Digest: hj6sEOKxZUxn9Dgr8aIoR98W2wqOv3CaoMgmj36EcfE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$24.class
+SHA-256-Digest: /kx9UJfM+pn0rVvB2Kwn4ShyCVRK76c0BpxU+h2EGEI=
+
+Name: css/dark_linux.css
+SHA-256-Digest: aa6HMfX4fCtZjnYiItBghUcGokXBpkZ3wjJHUbuOV2Y=
+
+Name: name/abuchen/portfolio/ui/handlers/MenuHelper.class
+SHA-256-Digest: q84eekIyFebyG7zQRGZ62Xt0UcV9yOls4PtKTsuBhDY=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyConverterTab$2.cl
+ ass
+SHA-256-Digest: 1aCnBo9Ut3Qo+FaCXHwEu06h2uT9fZSUPjmwdvIpBqw=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/CommandPalettePopup$Item
+ .class
+SHA-256-Digest: H3I50UQHzu8mbhM9S3ZoRNH3s5Kwpy+5I4eTJtUSQ/c=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$11.class
+SHA-256-Digest: IVPJqefJUGLCMPk1uSIhLA6cFiD2x/baqtYjSmitfuM=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$20.class
+SHA-256-Digest: eqBiB4AWyLiqFvr0J1aBrUWjJm87cZLWD+kOiXeF3r4=
+
+Name: name/abuchen/portfolio/ui/views/columns/IsinColumn$1.class
+SHA-256-Digest: wheJYK2C7kL8baYa64ed/5bPxhtB62R9BNYleZkci7o=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView.class
+SHA-256-Digest: z/CdsjiZNky4yeUlJsf6QoV3dEpeMajt5BjTQ/m0nSI=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$3.class
+SHA-256-Digest: MLFd/Zs09kFYeZhmdKD/ovtRiXoSyC02Ue0MgLwF0zw=
+
+Name: name/abuchen/portfolio/ui/util/viewers/MoneyColorLabelProvider.cla
+ ss
+SHA-256-Digest: gDLjKD2FkbRa0lCVNiBdhfIoHP22vC11Udb/VM7q++Y=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$AttributeL
+ abelProvider.class
+SHA-256-Digest: xtm6+TeiE8BSGWER0pS1L2SQoZq7vrN0NjPlHwq9uZM=
+
+Name: name/abuchen/portfolio/ui/dialogs/DateSelectionDialog.class
+SHA-256-Digest: GzQ5k2PunaJkponqdGNJHR8hRFcXHVYqOuGKhAPnHpI=
+
+Name: name/abuchen/portfolio/ui/util/ConfigurationStore.class
+SHA-256-Digest: RDuR+MHsy7oE9Ooh2NZg2Rwv8N2VdyV3LidGwbW7Ipc=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ErroneousImportFile
+ sPage.class
+SHA-256-Digest: lAaYOKfPoGjOSphmu8x5waMCNGHPUMLp6jTurVqPKMY=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/InvestmentPlanDialo
+ g.class
+SHA-256-Digest: 2cVzvP/6ZrvoCfA7/u6Hyjb6gPkSW2NH+o9BaFWmgPw=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractSecurityTra
+ nsactionModel.class
+SHA-256-Digest: eE88mfNHzR6CKzrZ+7EYHg2ZXswqYSYenxtCCpRlYL8=
+
+Name: name/abuchen/portfolio/ui/views/ReturnsVolatilityChartView$ExportD
+ ropDown.class
+SHA-256-Digest: 9AslAD0cKZiVlP1X/yAGywFL5Zrp909LcVe/qrEvEA4=
+
+Name: icons/online@2x.png
+SHA-256-Digest: swt48vvBneZwsd1X3SClPMmns5sIo2o5lrZ+wcZRB2A=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Event$File.class
+SHA-256-Digest: M/RNqDFyoDPqKpdfqdJ9qUUA0JStLE+anKCowXV/EhU=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditClientFilterDialog$ContentPr
+ ovider.class
+SHA-256-Digest: H3dTgVB3y8WV8Lw86BE009FKT3PDRzZBT+xX7IeDEw4=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$NoteFacet.cl
+ ass
+SHA-256-Digest: R+5+LkG8tQnyfcmgBuihHnZLF9OnrvYDqU5PYTOJyt8=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$2.class
+SHA-256-Digest: BkVp51eDqYhL+VkjJs4dyR7u+zY3Gy8nSoUCR5t1Y10=
+
+Name: name/abuchen/portfolio/ui/util/viewers/TransactionOwnerListEditing
+ Support$EditMode.class
+SHA-256-Digest: KQNe4qSfUzdxfgxYH/sSMv45+l5U/odSbR3uGv5Pngo=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$8.class
+SHA-256-Digest: Aul0IRgoV8Sp+oUrp7kR0oQocIkFC8m4p1n0CdpMjvg=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$13.class
+SHA-256-Digest: CxU0RnLxVyG7yNAP/SpW/RlznLQYEMV5fOLOJclzk10=
+
+Name: name/abuchen/portfolio/ui/views/columns/SymbolColumn.class
+SHA-256-Digest: H6UppCH6hxWvczPVCFfmU11L1OlB1tfXI9Uq1Kmvs1g=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$StringVa
+ lueProviderComparator.class
+SHA-256-Digest: 18S8AyiAJo1EMxwPeOJq5YD7Bvl21ZQ83HOL9INXI68=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$17.class
+SHA-256-Digest: //JKatRHrgzryzBiiov5vfLhz/EVH/nJqGuUtIbbjzQ=
+
+Name: icons/view_linechart.png
+SHA-256-Digest: sZb9Nh66W9WlDpujCrYkvc6/0VNHNJtlvwwPeaYvLFw=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChartToolTip.class
+SHA-256-Digest: 5VYaFx7Oio0ffetzvd917GWvjitfyCwOekqC5rXVEMA=
+
+Name: name/abuchen/portfolio/ui/views/columns/CurrencyColumn$CurrencyEdi
+ tingSupport.class
+SHA-256-Digest: OuSMdN15cScsNkKS1dcCi6k4SyCteS7X8XAglshGxD4=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewPortfolioAccountPage$1
+ .class
+SHA-256-Digest: DfEd8m8RRkVOutWEAMXELHP9c8o8Rh+BXO/hpOvlXsM=
+
+Name: icons/chevron@2x.png
+SHA-256-Digest: bw8UPC0c5PAarEl3n7PrrNalzT+n/AGX7kbPehH+WGc=
+
+Name: name/abuchen/portfolio/ui/editor/ClientInputFactory.class
+SHA-256-Digest: JRddUJSATYbHlPDOW9GlUtF9v1MFIUV4N4M3NvB7xis=
+
+Name: name/abuchen/portfolio/ui/util/viewers/TransactionOwnerListEditing
+ Support.class
+SHA-256-Digest: LBA7rfi9+9ZHdZbieZgWb2Amu2C+1guUXgIJBc0OjWQ=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNode$AssignmentNo
+ de.class
+SHA-256-Digest: I7np1A92vx/THSvlDMkKxcQE+AVAoTV/CpT47KtteA8=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$7.class
+SHA-256-Digest: xKVB641G4KweJIWFgo3+iQJ1HtpzXrcldA2Hba9A+wk=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$5.class
+SHA-256-Digest: rVnnM+rLz1agxC/BUIcamBnOp303XK5YzYX4YvT4mMo=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$5.class
+SHA-256-Digest: YNIsghROkC8QCdUerDJjXFjwAkW2hAx/xndZpEMtOCw=
+
+Name: name/abuchen/portfolio/ui/handlers/ExportHandler.class
+SHA-256-Digest: IOPUWiu2i91wItioP7cAjahVRbPm0h3RkAfN7mjcYzE=
+
+Name: icons/handle_we.png
+SHA-256-Digest: B5f1HyQ4p6fd8tfyzJVKQd+8XVE4Rv2BRsIdy55qE4c=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$22.class
+SHA-256-Digest: zDFu13SuVtM4APv4nGl9eKg+2EsaAoDcXMg9meIr7Qg=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ClientMigrationDialog$Mig
+ rationWizard.class
+SHA-256-Digest: etQ+Z84rZmuo1yqWF0HopyjTDzqEu87EcZdWGzuhqh4=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthMatrixTab
+ $2.class
+SHA-256-Digest: cDzSedOgNzeWqnnwL679ocRHR3oHMP+PKrojdsKwdvY=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn.class
+SHA-256-Digest: Q9XpM5CJx59rugh0NHehjLH1FThRsDGpExVC48Qe9p8=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage.class
+SHA-256-Digest: LUyaZLwyeJKg1Z0MWqWxKJawKZGz88e9R00CFZFRLHI=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$25.class
+SHA-256-Digest: t2yDrOifH7tsFacbc0gia38P2a4Ol6LctsczyvbAfyM=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesConfigurator.
+ class
+SHA-256-Digest: ns4VKHgU1D+sLjmljK3fSI3k5HuOBi4legsOFANfozk=
+
+Name: name/abuchen/portfolio/ui/dnd/ImportFromFileDropAdapter.class
+SHA-256-Digest: Nu67TS5uI/p+TnPOIhzGmCmO+oCDjXclQAx11UO6Wn0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsViewModel$Line.cl
+ ass
+SHA-256-Digest: fbRaOmIr6dBUZGlfnIqYQJlUtPIFJu6nV/Tp1MVsCPU=
+
+Name: icons/watchlist@2x.png
+SHA-256-Digest: Syt7Bg6qE/TQDspg8HojNg/mxqGSHValS99eLR79Y5g=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$BeanComp
+ arator.class
+SHA-256-Digest: 1+2gBwQD5+z59hxoTbBIkfxWcIQmArKrZF53cJxrpAE=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView.class
+SHA-256-Digest: pk33807xaXlnnLkzBHiUwej7dOKp5ne6om4zmp/jcZ8=
+
+Name: name/abuchen/portfolio/ui/views/labels_pt.properties
+SHA-256-Digest: O41pK6CffiIoPEEoTTsvbHI9nE3N3+5JnGjukZUWkSI=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/LabelConfig.class
+SHA-256-Digest: wcQB3+V0hd5qhBrLT5oyXOOyDevblV7gAZ4465xw5Vs=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$ColumnConfigDialog$2.class
+SHA-256-Digest: BrjxdvbR9+gM890Zn+7LRwqdhguuU2p+T0EFmxjaIJk=
+
+Name: name/abuchen/portfolio/ui/dnd/ImportFromURLDropAdapter.class
+SHA-256-Digest: mcp60ykM67uFDniowmqGSlMsxpVCAaTVPxeoHzHl000=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/ColorSchema.clas
+ s
+SHA-256-Digest: cO+81HptuQGFEReK1lPK430cZd4x4WVOLCOxMkW32To=
+
+Name: name/abuchen/portfolio/ui/preferences/AlphaVantagePreferencePage.c
+ lass
+SHA-256-Digest: CqdmdVri1vc+afKY5acl8CY8tUNplPVrCSOY7dPPjps=
+
+Name: name/abuchen/portfolio/ui/util/ViewDropdownMenu.class
+SHA-256-Digest: QAH9oWEwhLXUKZNyCJ72sOV2RpWs91uCu3+6bsc3pQ8=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$4.class
+SHA-256-Digest: RvXujg3twQdKuT/x69Lz7HfCpPbg7w1TOyw4NpSUFI0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerYearChartTab.c
+ lass
+SHA-256-Digest: emz5KfTATaNVUFWnu6UnJdgc0xbI6M+VDhGwaxY7cBM=
+
+Name: name/abuchen/portfolio/ui/handlers/RecentFilesMenuContribution.cla
+ ss
+SHA-256-Digest: McOLpF05lDw/6LFFsRegjRjjiwFDfHIWlL9caI2xdmc=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayout$1.class
+SHA-256-Digest: bNL+dZzBFQSH9ig4EDl25d7Nh8VbZAaeW9NVqvrxmFk=
+
+Name: name/abuchen/portfolio/ui/views/labels_de.properties
+SHA-256-Digest: DoWezOS2LBFJeqSikGO/Y9ufDURREnhCLBlVVjTqEb4=
+
+Name: name/abuchen/portfolio/ui/dialogs/SecurityPriceDialog.class
+SHA-256-Digest: T04r4N/3Esc//F0egXA181RvFqm5JekJrN8hVThwHQ4=
+
+Name: name/abuchen/portfolio/ui/handlers/SetCurrentViewAsInitialViewHand
+ ler.class
+SHA-256-Digest: ydrjn/wU+HML7oJD8QarAQAyrjmjMy6EjLiWeSP+x6o=
+
+Name: icons/check@2x.png
+SHA-256-Digest: vu3JhUmlK+JbB6gvQXoCszuvMrUYJB6hbahBiXDLHpo=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenSampleHandler$2.class
+SHA-256-Digest: yeWBQoIngbbvmcSyvbwbUHaPYKSrdBSF064fAnsvu4E=
+
+Name: name/abuchen/portfolio/ui/preferences/ThemePreferencePage.class
+SHA-256-Digest: MNDh2638O9uamEBshB0vCJnF2loIp/ZsXRy7j9u/rSY=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSet.class
+SHA-256-Digest: IjKZrZ0dlwy+5mHeIqRfE4w85CWWqqqMivgThui/CME=
+
+Name: name/abuchen/portfolio/ui/log/LogEntry.class
+SHA-256-Digest: Xn2WX4NBCRIL9D2jY7BJBnpoPgthjT+7gfqVSSxbMsY=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$3.class
+SHA-256-Digest: KcUcY87JS/ANRh65GzmmoYQ8SR0k0OLIqLLaiZM4bRM=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesChartLegend$R
+ owPlusChevronLayout$1.class
+SHA-256-Digest: SsCtu+icHDBnxlsZ5jQQOhYK6wjaf6p69+D1qVWBM0E=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DeltaPercentageIndicatorL
+ abelProvider$Data.class
+SHA-256-Digest: OR0U6O78ZTMl3dcnYAxpIcAcKOOCAlrCuxxhJlw+FZI=
+
+Name: name/abuchen/portfolio/ui/views/columns/NoteColumn.class
+SHA-256-Digest: MHouQ5GjSpoOl/6h5Pjn41mSwUSxSaFAaL0vLKMiS38=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ExchangeRateSeriesConfig
+ .class
+SHA-256-Digest: Pevsd3wUp/f6tl/RxrXP/Nhlw7RGBiHtQL9HISStWRo=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportSourcePage.cl
+ ass
+SHA-256-Digest: pgfKXMFqNS+GyvkH06C3vpSLc44wPX5XUgDwD9bH14s=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$DateTimeInput.class
+SHA-256-Digest: H4NEqti5yRFPv/yzmtettxe2sEDggpFIgacTGRz7AfI=
+
+Name: name/abuchen/portfolio/ui/util/IValidatingConverter.class
+SHA-256-Digest: s8kTVxdk7muC76cDtyjFCYSh0A7sr+XsczhgL1gwQSM=
+
+Name: name/abuchen/portfolio/ui/dnd/SecurityDragListener.class
+SHA-256-Digest: dFTWteHR2IB+OvIGE0QU1pITMmQ6SJRPrGNuH5BcX0A=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart$1.class
+SHA-256-Digest: 9pgwTi3eoUOMZndFQn9Ua6iPsUVWjUIKZJjPfyQLmx8=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransferDial
+ og.class
+SHA-256-Digest: JK02fRvyNFKTmBXefIHs00Ms0zqu18bmjHRcewI7quI=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$3.class
+SHA-256-Digest: rqQCpmSkCTI1t4X6pKogPgt67pk18/byF6haAyWkS+k=
+
+Name: icons/note@2x.png
+SHA-256-Digest: Y4qSXbHseQcEpco8Ing0TT+DsULC4AOz/eAreSyvrro=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart$MarkerLine.clas
+ s
+SHA-256-Digest: ufW82cqtZYRi0fnQ7f6HDKhcC+jBoo4dm2w5vkUrWok=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/TradesAverageHoldingPeri
+ odWidget$MetricConfig.class
+SHA-256-Digest: a2bOf5s18p6nfDpJoV5gieluRkQivhhu/0rLVXNr/xg=
+
+Name: icons/calendar_on@2x.png
+SHA-256-Digest: V56kosbAYaV5Dlnis7NqrOeAtlIu0cS60SQHkdNCg5g=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$11.class
+SHA-256-Digest: WVdVRgsWGrzQ0Ubyyoivm7hYH4W2XXU36vKMZVi4qjs=
+
+Name: name/abuchen/portfolio/ui/wizards/security/HistoricalQuoteProvider
+ Page$LoadHistoricalQuotes.class
+SHA-256-Digest: Zp+6ndYcZnDNcaraI7fm5eQNTAcbLO5+clxPsLUqu7g=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$14.class
+SHA-256-Digest: AC8/ALXdRT7pFfPXhXyO6zBdmbmD8FKwyGEOD09R+nM=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel$Taxon
+ omyDesignation.class
+SHA-256-Digest: jUaB6zuJLFK+NFfE8y+FLgYp8KT27hQJ9bHWcw2kyWA=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSet$1.class
+SHA-256-Digest: 49WrLO55ZXkKkGiR0lEZR1m7+cMbMJq+0Xm8tQztk1E=
+
+Name: name/abuchen/portfolio/ui/util/ConfigurationStore$1.class
+SHA-256-Digest: piNIUCmE5fEcutve0cccosgNZAYmts8wMxnB2mscue4=
+
+Name: icons/pp_128.png
+SHA-256-Digest: WnT9hcx8Nfl5Cr5YwzJIQTycEb8DFxkoJmCL/b0DaxQ=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/SelectSplitPage$2.class
+SHA-256-Digest: +8vxq9/Fl/QaYHUUAEI+KMUXquwliwWWYbdCfFo3zxU=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$ToAttrib
+ uteStringConverter.class
+SHA-256-Digest: HVn7TiMfxbzDCZq7/LWj7pek3SVIcQCQDTqMv7Ph0Gg=
+
+Name: icons/pp_256.png
+SHA-256-Digest: iX3I8wrS2bTa5CVZY01IZ4aILpfYze22UyCNx1A7jA4=
+
+Name: name/abuchen/portfolio/ui/parts/WelcomePart$1.class
+SHA-256-Digest: jyEPzMHjlHvYZReL8ZSB1Mxm5z1J2RtYF4xbQc8vK3w=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayout$SashMouseListener.cl
+ ass
+SHA-256-Digest: eX+F7S6rW6tVi5xkajBxK5mYwaSCKov4qhodWVHPyXU=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$1.class
+SHA-256-Digest: Ao64TzyXULnzA6bQc9IvLph81z1x/kDL6TT1jmMGhXU=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$27.class
+SHA-256-Digest: k3I+NTa2gEBru0Yainxk4wPEH+5dK1c6HE6m4MVknQ4=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/CommandPalettePopup$Elem
+ ent.class
+SHA-256-Digest: 82+nDwuL7TiIl3NlSQzKuzcgxRPSmNYdoNSjEm/QLjI=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel$Attri
+ buteDesignation.class
+SHA-256-Digest: 8hBRgzMpSCG1fe8bMyU5i8bFxksXv+FY5ToN5RSJAHk=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityTransaction
+ Dialog.class
+SHA-256-Digest: yBMzns+IaOMUwYBwgviAK5K1pF5dEEdxcwZVTi1/Xsk=
+
+Name: name/abuchen/portfolio/ui/util/QuotesTableViewer.class
+SHA-256-Digest: ArK3tgzgucNzQvwnZWkTeofm4bIdhAvag6eK5rNsLG4=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveAsFileHandler$JurisdictionF
+ ilesDownloadDialog$1.class
+SHA-256-Digest: /cD+7Nctcr4TCTqKIk6MaoaEhdkO4JvMBijZu6u5ai8=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewQuotesPage.class
+SHA-256-Digest: tQlab2FJKDG9LUWLnqdENrrNM8mZPX4liAYio+detyA=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewPortfolioAccountPage$P
+ air.class
+SHA-256-Digest: 9NYuK08iryoV3YXARcVHsu27XDkgEdTlOV07LglsskM=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditReportingPeriodsDialog$3.cla
+ ss
+SHA-256-Digest: UG+b/yR2xGUmSpu8HcRDMnMdcZBreOGUuhKQqMJLIwI=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$ColumnConfigDialog$3.class
+SHA-256-Digest: 4tmqPqzPOTw2CJP91+ufHdUhtbwU82Idkwsr0L7hzZY=
+
+Name: name/abuchen/portfolio/ui/views/columns/TaxonomyColumn$TaxonomyOpt
+ ions.class
+SHA-256-Digest: tYa0uaZd1nSGUN5dnFkQZr+mSEsG3KCmeiBFG6I6oNc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$29.class
+SHA-256-Digest: ALpI8BxYsdsK6i/37davE/F87XutiFeLZG7xIs6JNcI=
+
+Name: name/abuchen/portfolio/ui/views/columns/CurrencyColumn$CurrencyCol
+ umnLabelProvider.class
+SHA-256-Digest: 8dRu5vE0fjSqvMViqEUig7/YoZIx0Oa9MLxROqar3d4=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardLayout.class
+SHA-256-Digest: 3gZn6LXaKznoXu4sGBPqqADfF6/C+FF2s+g8pw4qvME=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthChartTab$
+ DividendPerMonthChartToolTip.class
+SHA-256-Digest: nQCQIB4CZNGZ/kd61Y+DwGoBWKgNUVn3L29MdV8+CCw=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenPreferenceDialogHandler$API
+ KeyPreferencePage.class
+SHA-256-Digest: hj983XjHrOoDIv2gieOE1h6c7kwRJ1M8w09lx+etD84=
+
+Name: icons/view.png
+SHA-256-Digest: C+9ZTC8xY4YVRJYYsKSK7wthRE85Eqwwu2CoF0M3VfA=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenFileHandler.class
+SHA-256-Digest: ZbLRTm6nhyvZB7GFoByzZvL2vfAR2hDmr8FB4lOH1XY=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/StatementOfAssetsSeries
+ Builder.class
+SHA-256-Digest: xyxtbWUvozdyPkqeilAX8kar1qPTuNpMZ/sGDa9FFQU=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/HeatmapModel$Row
+ .class
+SHA-256-Digest: WIpZyZhn/sNYq1hBj6WN5363C73J/4nT6UEjpyUwR7E=
+
+Name: name/abuchen/portfolio/ui/views/currency/ExchangeRatesListTab$3.cl
+ ass
+SHA-256-Digest: DOIi3/Hh62HkKcE5xmmNXh4QjU2R1korUYfBEG5caQg=
+
+Name: name/abuchen/portfolio/ui/views/columns/IsinColumn.class
+SHA-256-Digest: Ry4tQIURC0y3wB6Ta5UtZItqAQxHQghReMxsFmfSpKE=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$1.
+ class
+SHA-256-Digest: GVQhm/rI4uCfnuEBqqT0X4b/ktucDTLZa6T6iaUvN3E=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditReportingPeriodsDialog$2.cla
+ ss
+SHA-256-Digest: hQDct9RfZ433LzAS42w8Q99uV+j0j4vKr3OZ6qLm2TU=
+
+Name: name/abuchen/portfolio/ui/preferences/FormattingPreferencePage.cla
+ ss
+SHA-256-Digest: oauLU8m+e89bqviXe1xZa4rKsn9m7+i74H2Nqq2lK3U=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayout.class
+SHA-256-Digest: YFJDU3nk4rB62yVLSrOAKfIfXuILmxY7O1NU9F9dNP4=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$1.class
+SHA-256-Digest: ixs3A8W/h09/A54sjReCtPq3STFrUS/K23nD9ASf9+0=
+
+Name: name/abuchen/portfolio/ui/wizards/security/LatestQuoteProviderPage
+ $1.class
+SHA-256-Digest: jc/qIRMa0FYWKGY0xbhoNHJ8vCzqSV5StZWW3Ke5rEU=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveFileHandler.class
+SHA-256-Digest: 4ga+wLrE3WL2hchgY4p+o75pwWzwoNeM9f3Td/QvReI=
+
+Name: icons/banner.png
+SHA-256-Digest: oguRHkvBc3HTrPYXV8nzvd+IgChS2BZYNlMpS8DcZos=
+
+Name: name/abuchen/portfolio/ui/util/chart/StackedTimelineChart.class
+SHA-256-Digest: P77hDotBUUhTS4fEgTwW+Xr+9XBKlMLbHIKCTAxdC2s=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$StringToCurrencyUnitC
+ onverter.class
+SHA-256-Digest: rWKTtiFBkqSa5FBTGreqOn5lnTpoISUYTnUDA1y1XJA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$FilterDr
+ opDown.class
+SHA-256-Digest: lmVGLWdE3QyI4zxJnkay7liVH2d+2o2+K/XkAqHGNQ8=
+
+Name: icons/warning.png
+SHA-256-Digest: /otCuYdbAw1wifpB7a3J0jKn6BxgV22vHEDaie/Mc18=
+
+Name: OSGI-INF/l10n/bundle_de.properties
+SHA-256-Digest: up9ZWfdr57jNt3s9WYvO+hi60ScfvW5MLTNSK5UkgiY=
+
+Name: name/abuchen/portfolio/ui/wizards/events/AddCustomEventPage$2.clas
+ s
+SHA-256-Digest: gxdcTuC5vniWeTr2N9rEntpJH6j1awQ6bVK3bb2Vias=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$ExchangeRateInput$1.class
+SHA-256-Digest: ejkgv5F1AUpl2y0R102FWu0pQ3KK/DaYlLvejCMbMuE=
+
+Name: icons/investmentplan.png
+SHA-256-Digest: 59sauPf6qArrf62JSFvNlRhSULaULVapgq6U126FdYc=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$5.class
+SHA-256-Digest: BjRusvDYhWrVmDf0osHBostFFku3tVHIEgCBYuc3oCc=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/WidgetFactory.class
+SHA-256-Digest: HPTp1GLn/36Tg/ClMW06Db39+D+fcwtT4zl8bYQQYH0=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$Mode.cla
+ ss
+SHA-256-Digest: 5tbwmEQqfmCilG9EXS+NXnR3snL70HdnD0hsjTkHNEI=
+
+Name: name/abuchen/portfolio/ui/wizards/client/NewPortfolioAccountPage.c
+ lass
+SHA-256-Digest: kpMVJrfTWLlkWgkL7GDjrEKWnFltCWsbaEBf2A7pbu4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$1.class
+SHA-256-Digest: C8Fv5l1cZiQ8Vhnomt46kzYJ/jmlx81NYnudDWZh8Wk=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$15.class
+SHA-256-Digest: F6sYVuUZcRpIS9A3w3ki6FzkMuCmLehIHvsu6ZTTnEg=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$Input.class
+SHA-256-Digest: 5Zf8k+173O4Z7lgWCwPoUzan0kMwUqLkVWdWYHl3gqw=
+
+Name: name/abuchen/portfolio/ui/messages.properties
+SHA-256-Digest: Pw3uIg4txRp7I6G1NX49Xl0/pfPMBXWpmSt28VYsQxA=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$15.class
+SHA-256-Digest: mb2EjA2BubFSYqlbW6T92dhxMQJ2e+yR/GIKM/m4dcA=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages_pt.properties
+SHA-256-Digest: HDadLyPwujGfpBzjua0AlLpTo0KMbVVHN03ka72rD7g=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$24.class
+SHA-256-Digest: 4+FG2CpSDhxgHvwbobSxLXEpUITw7+zoGxE17B51Kxk=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: do9Vn6kU5PGTBmj9EG4ksxDcuebnIjBGmt+xDdReVhs=
+
+Name: icons/view_stackedchart@2x.png
+SHA-256-Digest: QZ7eiM3sRIoTbd4Cs2H7kArHN4WRLe5MzY4RHPlZvTE=
+
+Name: name/abuchen/portfolio/ui/theme/TableElementAdapter.class
+SHA-256-Digest: d+0kN/uGaVu/fnfxpD6aCx0XanlwywpurCSLo2s0G4U=
+
+Name: name/abuchen/portfolio/ui/messages_es.properties
+SHA-256-Digest: e2f2zzgjlccLXNugKeTStnIxTpB3rDWc8cQQG0doqxA=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditReportingPeriodsDialog$1.cla
+ ss
+SHA-256-Digest: mJbYqvuGR0J90msR1uGxBrR2oZ70U+6XIsUzI1Ptxa8=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$14.class
+SHA-256-Digest: azVzlK+V+Ixqnlu8sMRm84I+CMKdHunsMfcTNI5HS5A=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditClientFilterDialog$1.class
+SHA-256-Digest: egOh86l1w9m/VO6tn0DD13jyR6ls/24A4zYwITftq+w=
+
+Name: name/abuchen/portfolio/ui/theme/ChartCSSHandler.class
+SHA-256-Digest: VbOiGqjLIa+Bj89SinP2ccM4GfcNcEoIE1ROJbBXps4=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/ColorSchemaConfi
+ g.class
+SHA-256-Digest: Z43pxtDmM5HInuSe2UnxFL+//3GMN96JDJ2toHMcuyk=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob$Target.class
+SHA-256-Digest: lBszELxmh2ETdajbC9eYkeVch8oEEI1zQyCdfcOVO94=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsViewModel$Mode.cl
+ ass
+SHA-256-Digest: 62xMKnYs4JaXwWRGa7SOzD1NPVPsRmxp/v8xgO85J88=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$16.class
+SHA-256-Digest: On8qj7S6ndvo3di/e/k7IjVTF4ejQR5SdOEFEQTzK/w=
+
+Name: name/abuchen/portfolio/ui/editor/ClientEditorSidebar$2.class
+SHA-256-Digest: MtxOKyLGqY/ocr3yT/FNdzBrjI+nJGKF24iCHxOS5ZE=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$6.class
+SHA-256-Digest: 5OOfqMQnTMGPyWs3/fjcLR5S5fSGNNEf0t74faxCSG0=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/SelectSecurityPage.
+ class
+SHA-256-Digest: YGZhKMCMT0KFc5GUhZpi+kyUW6SDQiKsro6ukJT0fxs=
+
+Name: name/abuchen/portfolio/ui/util/RecentFilesCache$1.class
+SHA-256-Digest: 4k/TKXmNATpPbR5aFCcsB+IjOEjftCTOHjQI0A/IhBU=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ListEditingSupport.class
+SHA-256-Digest: abt2Sv1IuBlASaG1zQ6AfCleVU5x5F47HIA9ya60Ni8=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$ViewerSo
+ rter.class
+SHA-256-Digest: pC/CRu2bufkNa12sWoCpuy0kWMjo3QE245AUfkFDLss=
+
+Name: OSGI-INF/name.abuchen.portfolio.ui.util.theme.ColorAndFontProvider
+ Impl.xml
+SHA-256-Digest: vZMfe6bub5GnNdUnFZ5BHsOMSRsA4i1FomBiqCJ6kiU=
+
+Name: icons/view_plus.png
+SHA-256-Digest: 5iPb2n3SQeTM9r6dSK6rZwWZ6Vhm+HjMth5vwdafq5c=
+
+Name: icons/check.png
+SHA-256-Digest: iMfJzMktzcJp3qGn7llh5VB2VAG0GMJqyZEZEAdtIJI=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractQuoteProviderPa
+ ge$LoadExchangesJob.class
+SHA-256-Digest: xq2Dpjv0oOU1D9eAaIitCFTv7LY5IUibbg7VHxwWLvQ=
+
+Name: name/abuchen/portfolio/ui/preferences/QuandlPreferencePage$1.class
+SHA-256-Digest: kPPFxedUsz6t7n3KvKcjjbbBTsr6D0U8ywl4qLe8wXA=
+
+Name: icons/pp_16@2x.png
+SHA-256-Digest: LMKYUMJQo/2whVGaLRWwGw3wYdXfWTL74u4/eLF8nhs=
+
+Name: name/abuchen/portfolio/ui/theme/ThemeAddon.class
+SHA-256-Digest: RJp856IrASj/Hq68YePxOvm/P17gcpXqZ1OhwjmoI0U=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$3.class
+SHA-256-Digest: ycwfO7NZ8BQI60uCkh5qGiNudYKU9Lki4i+EgghiPyI=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportSelectionPage
+ $ExportItemsContentProvider.class
+SHA-256-Digest: bbDbR4qLZHYP7C8nzP4Bj3NntOGME4OdHYVHuZawknU=
+
+Name: icons/portfolio@2x.png
+SHA-256-Digest: FP4A1aAbgrf5k4JIZasxFXCwqV898t3uzRXEroaqo7U=
+
+Name: icons/view_piechart@2x.png
+SHA-256-Digest: viTaqmStUgbTeBh33oPjkOqnFwRJaWoscZWX8/bb4OY=
+
+Name: name/abuchen/portfolio/ui/util/AttributeComparator.class
+SHA-256-Digest: KFRGbsBPs2MnCI6J6gLqB/AVYKWBj/2dCDj9UP8F3wM=
+
+Name: name/abuchen/portfolio/ui/preferences/PresentationPreferencePage.c
+ lass
+SHA-256-Digest: 3O3BZpeFkVrqIWBl6fvypbxtNV4uUJgdXXLxBScD6Us=
+
+Name: icons/save.png
+SHA-256-Digest: /1HcU3uz3DoKnhDFI0yoDuvqPWSbGfTzdDPj0/pXQ+s=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportWizard.class
+SHA-256-Digest: IEH+mVkNsCwfGxif3QWYWDoPh2N6z4gFfLX9NY0OQ5w=
+
+Name: name/abuchen/portfolio/ui/util/chart/ZoomMouseWheelListener.class
+SHA-256-Digest: AzIE7P0675RtTm49IgwJu8GkJOGBgVN9yQrQhx11yxU=
+
+Name: icons/divvydiary.com-logo.png
+SHA-256-Digest: VRIuD4wn5/IbV7GlZ1FZwpQTWrkjFe8X7nDUa3UJJlo=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/PerformanceCalculationWi
+ dget$TableLayout.class
+SHA-256-Digest: 2ZbRTc6kWqCNJRvs6Oyj49RyfF28BNT3lU7VDyvQBVA=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$1.class
+SHA-256-Digest: u8sFetwQAvnsn188m8kzxN2MBLQNRHxS7PrWNMZwN8g=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$Model.class
+SHA-256-Digest: n1M+pEb7BJ2bgXdKbJW7BF+0vUB7L/ljXcDpDSBIW8E=
+
+Name: icons/calendar_off.png
+SHA-256-Digest: 8Kgo3QNDRVdGoQRRVXcm2ARIteJRNPeyzN/Q1QdqdQ4=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$2.class
+SHA-256-Digest: AOli7/NdQZBKsS8lMRUs27Tx+RdihkTqljoU2aguCnQ=
+
+Name: icons/pp_64.png
+SHA-256-Digest: tglx6O2sjbzLjMCtlx9poL7Krpr9fpqYI4VSOYFIbw8=
+
+Name: name/abuchen/portfolio/ui/editor/ClientEditorSidebar$1.class
+SHA-256-Digest: nWXvNw+WDXuONnPEQIhx6H/jnn6s50dA90b94EydqTE=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$4.class
+SHA-256-Digest: +kJyo9Or4XSKPUE9fz9x0XfHOL/NBylTR9pG9VUDFMY=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionM
+ odel.class
+SHA-256-Digest: LL9p4hUKO/pjj59nFD2MqryPE9UN5G7Cs/1Bhm6IKi4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$19.class
+SHA-256-Digest: BiaRSfZS39SCOhcqR5vi6ayWyRgFM5o2rRS/LyACa60=
+
+Name: icons/divvydiary.com-logo@2x.png
+SHA-256-Digest: pEBQu8ahcCX8urfPGmBxH9EAm4B6RlJAEDN7M/ppixM=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart$ChartInterval.clas
+ s
+SHA-256-Digest: tO672byRZCimZpoGw/45YstWDWGSowi1saLFnnM2kWY=
+
+Name: name/abuchen/portfolio/ui/views/ChartLineSeriesAxes.class
+SHA-256-Digest: 5gDfma9CNdqbSE00nInyeT3NvgwMCWAF5qFL29NHBtM=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$ExchangeRateInput.class
+SHA-256-Digest: msnnWhHnGewrKDruwBhFdk0QGNLtEcqMPHZUOUIPNQk=
+
+Name: name/abuchen/portfolio/ui/theme/SidebarElementAdapter.class
+SHA-256-Digest: 3vzripeEkK4fMuBmpoofw9VE5J1SY/Tcm6/UGbkZrxU=
+
+Name: name/abuchen/portfolio/ui/selection/SelectionService.class
+SHA-256-Digest: y8cE7XoETUcnPgHc/Pp1x8BtgsTQYlfMVrCUkIOdHB0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/TradesAverageHoldingPeri
+ odWidget.class
+SHA-256-Digest: 0Y1S0sRXUCmJLj3JlpL7KX/MR0ad1a6undY/RoM1r7Y=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$1.class
+SHA-256-Digest: BsU6lYC5nTUOSDnsbZCPWMBWXl6c6KXoXGTMD+IzoMQ=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog.class
+SHA-256-Digest: NQS0+P44Quh0Tn9pqaf4+Q52Csu1J7DcPk0XrKYJVUo=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerYearChartTab$D
+ ividendPerYearToolTip.class
+SHA-256-Digest: EHairzcC7w8QTshaBIEmGofELOTjRC0kpw2TlayjOYo=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditClientFilterDialog$2.class
+SHA-256-Digest: nuW/MIy56KdmlAKWLEo4dQ9zcfsgHsi+Oa9V8waQIwg=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SearchSecurityWizardPag
+ e.class
+SHA-256-Digest: EnjnYAtaAszKqj6Fm8vpvEWXBPdiVS6ixQ1aAXkIx7k=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$DateTimeInput$2.class
+SHA-256-Digest: KbbjSwaTnrGq//l16hGD4Ncwen9vn46+dyOKrNyWhHk=
+
+Name: icons/pp_512.png
+SHA-256-Digest: sJTq/k/os6wzD3FajVq8f9MlnZWMQYrKohlo5eXLk3s=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/EarningsHeatmapW
+ idget$GrossNetConfig.class
+SHA-256-Digest: ZwOC9QoTVfdK/aAweJyecvNIpsWMBrjREwcxEz4Nynw=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$10.class
+SHA-256-Digest: //P/NCsDtkBFlhdk61fJzHw5sq0gNQAfHzeF7K1dtOs=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$16.class
+SHA-256-Digest: ga0Vbf37Ze9DEcdnyoF9qkPMCrUudcuBd+JjlwDEvBs=
+
+Name: name/abuchen/portfolio/ui/util/viewers/TransactionTypeEditingSuppo
+ rt.class
+SHA-256-Digest: jNscLOCOpM5N2Usov0GhLL3xFAK5PNS9KfXjxe0P/eE=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExtractedEntry.clas
+ s
+SHA-256-Digest: 2PyTMucKVAt+ZFgK+r1QcmPJNjw99hp8l0WEsrl+cOE=
+
+Name: name/abuchen/portfolio/ui/views/actions/RevertTransferAction.class
+SHA-256-Digest: LQCZE6YLyUnM+OloYl15kIVy05C1vJt+zhNLkXSxmy8=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$CreateSecurityDro
+ pDown.class
+SHA-256-Digest: e2GV/AN1CvAQWpw0vQ1gmeazXTFLpTLgUy9OY7m+3iI=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/VerticalSpacerWidget$Spa
+ cerConfig.class
+SHA-256-Digest: bMYSI0Yh6O/A2pYeYmeXBbEU4pR5epX7G8hfxkxlVAw=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractQuoteProviderPa
+ ge$LoadExchangesJob$1.class
+SHA-256-Digest: crqukWWN0Ha5o7QsIUhtUA5tQjfOG22Mklv/ohfU+W0=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$KeyMappingContentProvider.class
+SHA-256-Digest: ZJa27N9MXwvbbAqRrlmlHHTUMdIn0w1j6sJIgYd9UMw=
+
+Name: name/abuchen/portfolio/ui/editor/Navigation$Tag.class
+SHA-256-Digest: Dzih9//z1IL2pN1WJhC5Ip54r9N2q7JPVTyxvV4dsFw=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportWizard$Ext
+ ractorProxy.class
+SHA-256-Digest: Totui5GAUp+8Gk7+ukapplhIa1Ycl0Qwda61f5e+I9M=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$TaxonomyFace
+ t.class
+SHA-256-Digest: YqE7M89hixqlHiRHzEKfP+b/1BpsDw+kIvJz+IN+YKM=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$AttributeC
+ omparator.class
+SHA-256-Digest: UOT9cDgIWRXiXgEy4Y5qYpBxwn4SQcvjbaO8OjETYAE=
+
+Name: name/abuchen/portfolio/ui/messages_fr.properties
+SHA-256-Digest: T8AynO2rgONKSwm3LPx5aN1L7En8zkRxN6F/2F6hTEA=
+
+Name: name/abuchen/portfolio/ui/util/viewers/NumberColorLabelProvider.cl
+ ass
+SHA-256-Digest: vES4OcVJvLVvkGRSQYJz9HlTQEtpW3W2fSXDHN2YxF0=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$27.class
+SHA-256-Digest: /pDLw+xRNWAQo/pGGGo3JKlanINKphoFXsoaQOABbGk=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$1.class
+SHA-256-Digest: ACSz1yBVIDTXLvJ9cIA4OHbZrVhqlhWgnV2yQPZskqI=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityDeliveryMod
+ el.class
+SHA-256-Digest: Pf6dOuz5lX7MT+sp8lGYnm9Wa/ivVBn8A4TLnAsXOCQ=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$2.class
+SHA-256-Digest: CyK9af3vkM41PdhU0IPMRXYnBOrziA0Gm1J9kUj/DoI=
+
+Name: name/abuchen/portfolio/ui/views/currency/ExchangeRatesListTab$2.cl
+ ass
+SHA-256-Digest: G2MlghXphZflMTJqEHTDPD63LH9FoY2+sGjMk/D0Dfc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart$ChartDetails.class
+SHA-256-Digest: GDTGj1kmzOvNDTvv8bN63nNwZqnVadF0hWfy9w1aHM4=
+
+Name: name/abuchen/portfolio/ui/addons/OSXStartupAddon.class
+SHA-256-Digest: ho1weQbxF4aFq8qKFrJBuPm3E2VLiKPVhelVHAELF1w=
+
+Name: name/abuchen/portfolio/ui/preferences/ProxyPreferencePage.class
+SHA-256-Digest: sxLuUZ48Rg4GPjA1vW1qPMZL83aV/Z7vaaIN+Lx/aYI=
+
+Name: name/abuchen/portfolio/ui/views/HoldingsPieChartView$JSColors.clas
+ s
+SHA-256-Digest: vdMisPhiV6aCMAi9DFQKInNMbB+SOQNZlJA0x2AZjUg=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$3.
+ class
+SHA-256-Digest: QGj2eDNyoC6xtUkz0XGQDjMb61jnpUrDJzHHO0eFLIc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$17.class
+SHA-256-Digest: LK8H+KOUsIqARisbwqrF0gQFR078I/ausbvTFAy37Vs=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/AbstractChartSeriesBuil
+ der.class
+SHA-256-Digest: uUUBR0LcF/ab3CsH47cGa9aCkqS69D+LASAxoWYr4nI=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/EnumBasedConfig.class
+SHA-256-Digest: Dbh4tykasYJQQqWduzPQQIpbkaIbFyshFFpCiovwxHI=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$DateTimeInput$1.class
+SHA-256-Digest: X5WC+/42jHrisaGjsooIt52s4QU+yue3DdqlZTTO4Rk=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$12.class
+SHA-256-Digest: CXuqNbxvT8KV0pRUazS7gjErqueQVcJgeESZax0gDhk=
+
+Name: name/abuchen/portfolio/ui/log/ErrorLogPart.class
+SHA-256-Digest: tRIdTbRuaug+n/iIT4Jd2X0HL4MmUk+qxe5ip3mNy+0=
+
+Name: name/abuchen/portfolio/ui/preferences/UpdatePreferencePage.class
+SHA-256-Digest: ngyTF3ErYE/WDAzcFTkkUOoEzQfOVBY9uyGHzfqElyU=
+
+Name: icons/red_arrow.png
+SHA-256-Digest: GhAzyuXsF0SFrAMLnrvCOzvxq+02JRsAarpdOka475Y=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$28.class
+SHA-256-Digest: ivQLlOAuDSMHgjf/jMR7uTLvaZMwYZfDWBEvzgjxoQo=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$3.class
+SHA-256-Digest: 3cfMluegkOWdtWSZ8mgz1mwLmsnBDWlWryWQbfK6TP0=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab.class
+SHA-256-Digest: 0pvHjzqB0WJtiry5aQepDTMUR8YEak90V8KMY/JwCkc=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ReportingPeriodConfig.cl
+ ass
+SHA-256-Digest: ej4eOeo1cq2E9Je0P2rpOBkdgsD/HJpRGh2DbqhlWBY=
+
+Name: icons/view_donut@2x.png
+SHA-256-Digest: 04AdgfaLwdNk1SAwZMrYRPD3RXHXVNrZY6+/L4pFlRs=
+
+Name: name/abuchen/portfolio/ui/theme/ThemesExtension.class
+SHA-256-Digest: X69PmDx2lfsNApyRBEXJNh3RZn8zUObm4m9zWkKdfrE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$1.class
+SHA-256-Digest: 1XrG3Ns0tIqUzDa33aCqFrI/o3WpCXFWyNQnhd7jBnY=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ChartWidget$AggregationC
+ onfig.class
+SHA-256-Digest: RiFlEcSBhFt6Q3LWsykFjeLg40sgHN8Unj8+JCScxb0=
+
+Name: name/abuchen/portfolio/ui/views/currency/ExchangeRatesListTab$4.cl
+ ass
+SHA-256-Digest: mWLyShbcAJdWaYbmSqGZzwHaS9oVIOgFO2CjCtOXurI=
+
+Name: name/abuchen/portfolio/ui/handlers/ClearRecentFilesHandler.class
+SHA-256-Digest: eNA/LRTIgbG/+pzfYj08NtNXVrJhFTeg3ecDpanbAUI=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$2.
+ class
+SHA-256-Digest: llmo3/3DgsOYV/ck6+Gc9MTu9ql8g6CCOAzjm7ZlIAw=
+
+Name: name/abuchen/portfolio/ui/jobs/SyncOnlineSecuritiesJob.class
+SHA-256-Digest: O5ETxgUPQ3FAqb4Wm+u8uDm6ccF6csaQFzo/0qa/mC4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$AbstractDialogActi
+ on.class
+SHA-256-Digest: a0R1gpq7s9u2oNi0b0S3UPDZtXOSpzhr+tEnfAgQTIA=
+
+Name: name/abuchen/portfolio/ui/theme/TreeElementAdapter.class
+SHA-256-Digest: kpJMOaeouFg++ThQPoTU9HQ1a13opo8348xKtlZOj8M=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$FilterDr
+ opDown$1.class
+SHA-256-Digest: q4ZzmrJdi3A67e3/STk+E8RbRsBDRSP7yfIRkBeTMQ8=
+
+Name: META-INF/js/pp.js
+SHA-256-Digest: pNGVew+Ay6s1H79EiCoYezFPCV184Pm72uPGtSg8nvU=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/NavigationElements.class
+SHA-256-Digest: FauPlnJia7ZSboChUxzh+9xTaA4L56+UF+CnY8KnhDs=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels_nl.properties
+SHA-256-Digest: H+wLP/8JAd0lbvbqga/GGtvwU8EmuhJsvCNJOliBtbo=
+
+Name: icons/config.png
+SHA-256-Digest: 8HpZvBfdo27w2q7dLOHQfIMmzUQmGiyTuYsvvCRDV8A=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$11.class
+SHA-256-Digest: eT/UVV/dh3w+lyqXH0ckFPXkM6FD429uuhJZ2uyw7/0=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DonutViewer.class
+SHA-256-Digest: 8uq3Iu2EKHH068INfsm1ZTl22rZNINBLppv+c3dVXPY=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/TransactionElements$Acco
+ untTransactionElement.class
+SHA-256-Digest: gqTspXEj8GIBiLTcj3BJeTutF71nSfn+f7t+UjVuDS0=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyModel$AttachedMod
+ el.class
+SHA-256-Digest: AJl1ZEjo5LrdAc8Wcwqqx8/vlkQY9wmKehDUd8why70=
+
+Name: name/abuchen/portfolio/ui/editor/PortfolioPart.class
+SHA-256-Digest: Hv9PosHHpHLFDVpaW5+42F2UaNTHsA6FKMFgGSN/bl8=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractTransaction
+ Dialog$ModelStatusListener.class
+SHA-256-Digest: tdF0gOiYAAIUC0/0hQpHgm66WI61g18zqQTIybMwizY=
+
+Name: name/abuchen/portfolio/ui/editor/PartPersistedState.class
+SHA-256-Digest: D+FQPTmsIaV48bNAjg6zIgtHtIp8LEENLccIIpPBpEo=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$Cl
+ assificationNotTwiceValidator.class
+SHA-256-Digest: RpUJQPH3dkk+voBoQM4nK4rX0CWJYdpJhCxBBcZ2m40=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart$NonTradingDayMa
+ rker.class
+SHA-256-Digest: 6VLzfWicS7MVDgtqJHlxAaN+QF84X14IG1Ht5cvFyww=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView.class
+SHA-256-Digest: s63IG/t5hcAuIIkKETWJ8Jx0pZJx8ItezhnceOj05Dg=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer$3.class
+SHA-256-Digest: H8TjmqTxXaUcTCTVpHf9k3R7lQJBriO9Sbq09sJkF6A=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyConverterTab$Exch
+ angeRateTimeSeriesContentProvider.class
+SHA-256-Digest: 5Dav/043sXgJieaGmfVqpdJtjaMMw1e540rJG3JliWA=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$Gr
+ eaterThanZeroValidator.class
+SHA-256-Digest: VwHfytCI/gdci1dwCOk0HgJfltvGaDNZHJagW8mPGVg=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob$HostSchedulingRule.
+ class
+SHA-256-Digest: OdW7+KlzsO5+SzzGD45VB67cIur9kKESlOhdTw8Gj9o=
+
+Name: name/abuchen/portfolio/ui/views/AllTransactionsView$2.class
+SHA-256-Digest: kcDZNeWOo191cjTsAILV0HjdFxvuMWuO76wF9pzXWgg=
+
+Name: name/abuchen/portfolio/ui/views/BollingerBands.class
+SHA-256-Digest: WPN7MrOXl6Da1GjRNx0/RsYGC27O0zLI5fCv8BojvQw=
+
+Name: icons/category.png
+SHA-256-Digest: IB2qyUf4lOuCsc4wVNWmOkXQ/YGuHrnOobx1hxCNBlU=
+
+Name: name/abuchen/portfolio/ui/util/LogoManager.class
+SHA-256-Digest: l0W7/MlwjE6TqI4JH9r1TS1m3rU11KPFpLV1OS+35+8=
+
+Name: name/abuchen/portfolio/ui/wizards/client/BaseCurrencySelectionPage
+ .class
+SHA-256-Digest: cmW/0/IkruDjXaEqsT7lwPBQjqZ7pfBRPJDnc8kn6qY=
+
+Name: name/abuchen/portfolio/ui/views/settings/BookmarksListTab$4.class
+SHA-256-Digest: SSplD+r4QxZOSyNkPx3S+V2ARk/CNy2FWU8/uen1js8=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$9.
+ class
+SHA-256-Digest: xDCA53YXw9bvoH+9SattEGExETIhKcp5YqibCTFDmDs=
+
+Name: name/abuchen/portfolio/ui/util/TreeViewerCSVExporter$2.class
+SHA-256-Digest: RGs8rbJKLulwzNDqw1DCF2Tw2SYvqhCzVWCd9Cdeo4g=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu.class
+SHA-256-Digest: alAxVolUBL2Qwx70bTCtqKqNZxHo4KBrcTr8LNmN41o=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/NavigationElements$Navig
+ ationElement.class
+SHA-256-Digest: 9zPPT+Mht/t7nN02C62iRqXKsI6QKtzFYebHiTUsxm0=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$6.class
+SHA-256-Digest: a7EwWKLAPTnO4Ugt0L8QdlX8isqI8gRnX3T3/Af1TQY=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer.class
+SHA-256-Digest: bXnd9WQ/npNP8PuBqi/qywTkRkd7/pNjua3+4zIny0s=
+
+Name: icons/banner@2x.png
+SHA-256-Digest: hqFOQ2nvzs8ZJQ6JPQAJq0AYprCszFaiwW5f64E3xUI=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$Listen
+ er.class
+SHA-256-Digest: JO2o77Yj6SnxpmnFfbF6bWLI9rGS0v1qLTR5miv6eCg=
+
+Name: name/abuchen/portfolio/ui/views/BrowserTestView.class
+SHA-256-Digest: G+lfxYHX3dnpbi1czAcZUXunuhhE2+BaCY8Ui+nlblU=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditReportingPeriodsDialog.class
+SHA-256-Digest: S8MER9DGzS/mF8lXcvYE7vcpWgDoiWNO52kWFVyRcBY=
+
+Name: META-INF/html/flare.html
+SHA-256-Digest: /cCeVmL6wFr7Dti4cbHwmRwl4JI72IfWq6hUf66Widc=
+
+Name: name/abuchen/portfolio/ui/preferences/PreferencesInitializer.class
+SHA-256-Digest: W4BSfEYDyDm3Y9KPE4ATVQn+A7W/Jc1LA0VaurtvDqQ=
+
+Name: name/abuchen/portfolio/ui/util/ConfirmActionWithSelection$Runnable
+ .class
+SHA-256-Digest: UwwzA+KITHlofZ+avNJJweR2YqLZ3UX7WHS1nsH6C0A=
+
+Name: name/abuchen/portfolio/ui/util/viewers/Column.class
+SHA-256-Digest: hjNrV5Wc+yD16OCEdH9/j/BQZYr9uNNJ24u3SdsDDjE=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$ValuePro
+ viderComparator.class
+SHA-256-Digest: 3UnMhjmNYVGFpaCBxJINepYsyovTNn1Vlcr+Jd4We1w=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyView.class
+SHA-256-Digest: Anw+NHXKh3bqZIf6WINpwL6MjhcelgDahz36RXF+4Po=
+
+Name: name/abuchen/portfolio/ui/handlers/ImportCSVHandler.class
+SHA-256-Digest: 2kS3w5nXMDeABWlBSq33O16RXrOx+Kque2ILyrvpVFQ=
+
+Name: name/abuchen/portfolio/ui/theme/ColorsThemeElementAdapter.class
+SHA-256-Digest: YjLr9DJbbO2LesuuN7AYDYvvfwMZsbVlwtGKR87Ss5w=
+
+Name: icons/error.png
+SHA-256-Digest: brF5uO84GihAjSD670+cGALjPwMfAkB6fmGR90PqR6E=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ActivityWidget.class
+SHA-256-Digest: qHAPUmVE27MzD8E1mGAoUz0VTLAnlCH0DjWha28pBeE=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyConverterTab$Curr
+ encyConverterModel.class
+SHA-256-Digest: MIHsXGBEPEOJr+TdwaHMfCdCjTlaeRJmL7989aRHnpw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ExpectedReturnsAttachedMo
+ del.class
+SHA-256-Digest: Sxy26GXmKC61BmrDxGUL7L5buPyagTZB+8toyeZlQV4=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSelectionDial
+ og.class
+SHA-256-Digest: C3phcjw0IBRHHXNi8XUj1p1K7P0/zq9e7cN2/ESHdTE=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Parameter.class
+SHA-256-Digest: NKKAHVjqKP8xm0d4w7rhIMriwC4v83++eA/bSZBwyY0=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$ColumnConfigDialog$1.class
+SHA-256-Digest: cq8Zp1cgpo6y+L7gSP+b7JANuDMawasi5oSEMiefwOs=
+
+Name: name/abuchen/portfolio/ui/util/SimpleDateTimeTimeSelectionProperty
+ .class
+SHA-256-Digest: IKaAbl6L0yO6EfdZYWa4Jq9nFe28EweT3gHU95yyw+I=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper.class
+SHA-256-Digest: zqB8o+Mu82KtgNriT3s7tqLLwamhaOJDx5oPDBUSaPs=
+
+Name: name/abuchen/portfolio/ui/log/LogEntryCache.class
+SHA-256-Digest: ZJHDkqaSRr4hM3kgEM95OUS7NpUG9hMbbHJe6KZNRn0=
+
+Name: name/abuchen/portfolio/ui/util/ClientFilterMenu$1.class
+SHA-256-Digest: ZaE8gayhoT6qSXxDnrqtra16B0tmRVWOuVtcgWseyIM=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/BasicDataSeriesConfigur
+ ator$Listener.class
+SHA-256-Digest: vctxIzI8NISP5uqz1Xj/yZue/EnKd3d22ut9zCxGvZY=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$3.class
+SHA-256-Digest: 1dabxNP0LaPYbTfZvcYorvEECt3mwki+zMHthv4ahgk=
+
+Name: icons/investmentplan@2x.png
+SHA-256-Digest: HjC7jLjZPm0BS0iNkw+FqbLNgTaPg5FZFo8nLr0EAyw=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$1.class
+SHA-256-Digest: Y7rxUeYnT8fhkP6Fyp+lzalgjl2Qv/LxhCNvjZDWIE8=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$13.class
+SHA-256-Digest: 3lNev3dhfPbAogzZII3ZGktyFm8Br9BbKkDTrmpJV6E=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/StockSplitWizard.class
+SHA-256-Digest: alv0+l1MStENr54KcJogfUUWRcqpvG4YmkQ+srm9yyE=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ClientMigrationDialog.cla
+ ss
+SHA-256-Digest: Kwf/qqo1Rl5LfAbYIrlktMdFRUbqyaF8yBeOCu4LGn0=
+
+Name: icons/pp_64@2x.png
+SHA-256-Digest: WnT9hcx8Nfl5Cr5YwzJIQTycEb8DFxkoJmCL/b0DaxQ=
+
+Name: name/abuchen/portfolio/ui/views/AbstractTabbedView$Tab.class
+SHA-256-Digest: r50EdBkUcgyrVmGOsMCjIbCei/LBcmHlwVYFrtXIUQA=
+
+Name: name/abuchen/portfolio/ui/handlers/AboutHandler.class
+SHA-256-Digest: Kc4TrYoXmpf8HOxIoo5edLCQoVV5QTmcVJ2zo2pyrEQ=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/BasicDataSeriesConfigur
+ ator.class
+SHA-256-Digest: ArfkkygDlOOzjzh0XYDj7PfwZNY68sjZV7/DDeH9rwk=
+
+Name: icons/error_notice@2x.png
+SHA-256-Digest: bgYGzkGqdyQgVzftyU9CaW5CDFZAtT27Le11x9s2Hm8=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportSelectionPage
+ $2.class
+SHA-256-Digest: gySvHmIkyrtHeWEurvur31A4FN1EQqlJFFFOFV/NBSk=
+
+Name: name/abuchen/portfolio/ui/views/currency/ExchangeRatesListTab$1.cl
+ ass
+SHA-256-Digest: sKX1P8Goz772gmMVo8oY7ClHRK4MpcLOxTOegzc0mFU=
+
+Name: icons/pp_32.png
+SHA-256-Digest: LMKYUMJQo/2whVGaLRWwGw3wYdXfWTL74u4/eLF8nhs=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenPreferenceDialogHandler$1.c
+ lass
+SHA-256-Digest: ZexjMr2lbIk4yJExOW80RqzcIyZorjtMoBHYhYXWtT0=
+
+Name: icons/watchlist.png
+SHA-256-Digest: jMnPsNRR4uV1iH0vb4p1PkQuE2a8fZkn9ha496K2IIQ=
+
+Name: name/abuchen/portfolio/ui/jobs/CreateInvestmentPlanTxJob.class
+SHA-256-Digest: Kf/PDc6Kdc8Lw3yD6rIL5ijsm4OXNn39SMS3do3+qOI=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$ImageLabel
+ Provider.class
+SHA-256-Digest: 8soAgVpN6lzeIxC7U89nvsLgRcu5LWemLpC2faDzM+0=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayout$SashMouseMoveListene
+ r.class
+SHA-256-Digest: l6jO9B50fYh3pX5t3MaiZnw+pk/iDUoYiT7fNK4lePY=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$4.
+ class
+SHA-256-Digest: lgO5LUyurvonMrRQ3QnDCPMMEbpsUgwqfxsga62jneQ=
+
+Name: name/abuchen/portfolio/ui/util/viewers/MoneyTrailToolTipSupport.cl
+ ass
+SHA-256-Digest: gERadZJYhvoj/P0zp8TmA2sYLFmgBvjfgz8MmqewsCs=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$Element.cl
+ ass
+SHA-256-Digest: cW6UMF5F5R3ra08RaSleclfl0xL0cVQsfVFCqrKzqIE=
+
+Name: icons/view_treemap@2x.png
+SHA-256-Digest: uFeGyupWMUCshodI/DD2lc6W3cvHHBImGbAWKiCrwVE=
+
+Name: name/abuchen/portfolio/ui/dialogs/PasswordDialog.class
+SHA-256-Digest: i6h5BdPGx2AqsHh5z40Ws+b5Lh70NUSre0sRHVXGwxs=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyConverterTab$1.cl
+ ass
+SHA-256-Digest: Aa+8por+FaGgSS8nTfbXQMwqqIG2n15yucVlSxhWSZE=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$1.class
+SHA-256-Digest: MXi3Zvfz0watrCixYrGBDZJYqwdFDGur4eM/T71HIu4=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$ReportedIssue.
+ class
+SHA-256-Digest: a/KxhlWAUdCCLPLf3qgka3dtx9RLc0mmPwwVVxnE1H0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/HeatmapOrnamentC
+ onfig.class
+SHA-256-Digest: ynWkHNhxdvfQB74NHA6Hs3DJfNTYnMYO08G+c9vtvm4=
+
+Name: icons/view_share.png
+SHA-256-Digest: 8EbbqKr3zjIGxoL1YZcEQ4vO8j4XMpOif0JbsYneFns=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels_pt.properties
+SHA-256-Digest: hOJVS40sUgZJLiK5/4oYo2gk/Ba5Z0dWX43yDEEnl/Q=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityDialog$2.cl
+ ass
+SHA-256-Digest: sQ2/Nx+pcv1sWx63SRBZbuTlxuyc+fV5rQiDAxXTNKM=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$8.class
+SHA-256-Digest: qgPY0iYapdyUlBoq/4bgCcn8dDO/Kmm9OblGju8tPh4=
+
+Name: icons/view_donut.png
+SHA-256-Digest: JB/Pw/wQPK6OrG/8cEtPi6nFQtoumP9pXknjdfz/yM8=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$7.class
+SHA-256-Digest: a6W2u5/67GsarpXdT7cKgD7AgA9LyC0TpC6UIfHegCM=
+
+Name: icons/view_selected@2x.png
+SHA-256-Digest: 2BCJqGJg+NVOTUyHHn0Wq58AEROsxDyfTHB+3lbMDoQ=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/OpenDialogAction.cl
+ ass
+SHA-256-Digest: fxZDuIUyYiR4C/fIo94kLORksRQYrf8lOzJWa3pbHk0=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChartCSVExporter$Seri
+ esAdapter.class
+SHA-256-Digest: 7vDWOLD+Ldr/XbaWOM0QSpe2gEGpW52BdpXV7HsEBKQ=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView.class
+SHA-256-Digest: to1FjO2ghH+PHFk3eRPtAwmH059TQkauKixTOjIb89g=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$3.class
+SHA-256-Digest: ePUE3s/AfiOi7ZEQsC+2dCy1eIdNeXwXNbP6jBf7sEU=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChartCSVExporter$Disc
+ ontinousAdapter.class
+SHA-256-Digest: 4BMTTlXHVCgrcV9z5L75809JCl1wKuFBwaUeAezJQdg=
+
+Name: icons/green_arrow.png
+SHA-256-Digest: 5DzccAF1s7TTxPgaE3iTVvj4/4AnJVi9UZKiHEyz/Rk=
+
+Name: name/abuchen/portfolio/ui/views/SecurityQuoteQualityMetricsViewer$
+ 1.class
+SHA-256-Digest: /p4oRnwqxGIBHDfWqFZiogdHSQWGOzaFc4mfY/oL99A=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ImportIndizesPage$1.class
+SHA-256-Digest: hecD9tAKo9ghM15B/rByjdBJJLtmLssPqfL3F+7FKrQ=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveAsFileHandler.class
+SHA-256-Digest: G01AHHVdtVI3RMZMFcoy0YN4+80CT4jq8qJ+Wk89ylA=
+
+Name: name/abuchen/portfolio/ui/wizards/events/AddCustomEventPage$1.clas
+ s
+SHA-256-Digest: KRiI6LnbrJIy/YCEnJ4zBOjZdsNEELFRTy5Rvj5qYZE=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/CellDataProvider
+ .class
+SHA-256-Digest: 4jPkn8dOCvXZbTRsvIxsj9r0C3Jy3aXTO8I5Skl89d8=
+
+Name: name/abuchen/portfolio/ui/views/columns/TaxonomyColumn$TaxonomyLab
+ elProvider.class
+SHA-256-Digest: BZeSbMH3QvIFag5jYwpkJ4XUJk9AzBZrCE+/p7aqkmk=
+
+Name: name/abuchen/portfolio/ui/dialogs/ReportingPeriodDialog.class
+SHA-256-Digest: YYxent3L95ZpLxswLA9923uVuowa89zXWPFIwXJUDBs=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TreeMapLegend$LegendItem.
+ class
+SHA-256-Digest: sQX1WfbKRTGRGvlZuEuB0CK6jiRxn/Ff6dSRNTob4bc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$QuoteReportingPeri
+ odLabelProvider.class
+SHA-256-Digest: lV3wNTgImCDMEQUtGD8X5w/KfP4qQtkOqxUqf1HZEUU=
+
+Name: icons/xmark.png
+SHA-256-Digest: F8UyxA/SXTa7O8C6bELe22EFEsjYIfpIYZWD9ym7i94=
+
+Name: name/abuchen/portfolio/ui/util/viewers/SharesLabelProvider.class
+SHA-256-Digest: Ttxkh/hIFp1uf7uY1AQeN9gTBamzNUYigoVyQu+pLCE=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$10.class
+SHA-256-Digest: 2+lcApCzv5RUHi4t7Dbm/yqwY31u63H3LNb/4w+75iI=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$15.class
+SHA-256-Digest: +g8jKlsYmLr0DqmsjJd8XX6CDwkZA61Pdmu6kCPlVSk=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$AggregationPe
+ riodDropDown$1.class
+SHA-256-Digest: x/j7WGcO0jOdZ4BKIEb8OBdwX0d/mt49kd4hnC7oepU=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$2.class
+SHA-256-Digest: jGtk1TelJjglkmPaN05uJQM5OR1pZ1WlvNdKiLyoPTY=
+
+Name: name/abuchen/portfolio/ui/util/ClientFilterMenu.class
+SHA-256-Digest: eSFq48LBm2nVGf1zilDxVAPN3sEGAmdVahYXLkSEIsw=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$11.class
+SHA-256-Digest: q2lgAPcO6W5iI94KvwkCiG2kAq6DLPeoL27NnQaudUQ=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportQuotesWizard.
+ class
+SHA-256-Digest: AmJ0VvjoMLNUBec3ZqPUVLAkBBLX8YpIMy3LS3nbIeI=
+
+Name: name/abuchen/portfolio/ui/views/AccountContextMenu.class
+SHA-256-Digest: KiR76J/Wifv07IAjjS2P5DonJjW/l4SosoJ7MrPJExs=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsView.class
+SHA-256-Digest: GdOrVGiQzhYrZrk6mHt/ZW+17/I/iPKmmb8CB7FCZbs=
+
+Name: icons/chevron.png
+SHA-256-Digest: lpie6rDpBoarEvbC5zkZW/g9/Inn1S/G/0+/HKEodmc=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$CurrencyUnitToStringC
+ onverter.class
+SHA-256-Digest: U9sf2tAkVRRAjcVZz13QWVlom+TPl6TIGtSmhYYwYVk=
+
+Name: name/abuchen/portfolio/ui/util/viewers/DateEditingSupport.class
+SHA-256-Digest: Lvt3nmuPdv9F3ccwdFVZEoYOr53KWr4uZmtzf6aLTP8=
+
+Name: name/abuchen/portfolio/ui/views/AbstractListView.class
+SHA-256-Digest: bluTwMTQNwcz+b+Clv8D3fEG8J6hUxjCK6kco9PQQOw=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$7.class
+SHA-256-Digest: 4UQ6kP4zXQxaim/QHADAHre06e3IzzwHfhfGzj+mNJc=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsAccumulatedChartT
+ ab.class
+SHA-256-Digest: HNb1ayK1yDSWd3XUIIhP4K1eSwf0lWBCmteEBjMVUaI=
+
+Name: name/abuchen/portfolio/ui/util/ToolBarDropdownMenu$1.class
+SHA-256-Digest: IC5pcsiPWbBKNf0xr2i7NjFbEpo5hmOl65OThahUGXs=
+
+Name: name/abuchen/portfolio/ui/wizards/AbstractWizardPage$1.class
+SHA-256-Digest: xVSD1b/1wHOrTYQRSp346p1k6LL3hh5Xyk8BjMXfmng=
+
+Name: name/abuchen/portfolio/ui/util/ClientFilterDropDown.class
+SHA-256-Digest: EI0Oa46TLLfzSNqIfemnWz8TeS12wxoo/wlCs84Hs/s=
+
+Name: name/abuchen/portfolio/ui/views/columns/SymbolColumn$1.class
+SHA-256-Digest: tM6yAd+X+369qCv3UQovWWlZQtIxJLM7cJkDqBh3n4w=
+
+Name: META-INF/js/d3.min.js
+SHA-256-Digest: xkEoWEC2R3sOXaM8jnaKT43guoCyTbkiGAFratj9x1Q=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$25.class
+SHA-256-Digest: Qs3RDB0T2249UKo/bP/iBQ2u61VY9vzTbpahStXoRs0=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/Delimiter$CharToDel
+ imiterConverter.class
+SHA-256-Digest: ZPdY11p/mkDZ+SszYkFqxJfy3uFuUd45gpSsSxr0I04=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChartCSVExporter.clas
+ s
+SHA-256-Digest: s3adMJX9uf0YPSLn3o8VByIYiU0DAwndjgo7siYlYUQ=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/PerformanceChartSeriesB
+ uilder.class
+SHA-256-Digest: +wB5PcljfrGCijTlZa99WktguqW+/8Iim0yy7+9MmWo=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardView.class
+SHA-256-Digest: G3PwOHW/mUfRvafRfBSIS6rVv63xV/d8j5cb5SJG2R0=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages_fr.properties
+SHA-256-Digest: 9JrVQPDWQqaGLNKR043LhLMN9rI876GfCkDMWhJSuzM=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SearchSecurityWizardPag
+ e$ResultItemLabelProvider.class
+SHA-256-Digest: 6SzFM0W1PWJ+9AraAfjzOvdHrv0NYeB8Gw4j23yXWcU=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/BookmarkElements.class
+SHA-256-Digest: SZjX+zWByabLe0wAuQ7sWLW870V6Nx6H/GIVeFzaC/o=
+
+Name: name/abuchen/portfolio/ui/wizards/AbstractWizardPage.class
+SHA-256-Digest: dtIO+Gz5YxuFqtXKK/0LjXdsR1Eirr9XZWrkAXTSIsM=
+
+Name: icons/view_linechart@2x.png
+SHA-256-Digest: sZq8JaExcC65fsV5F3+VxEWjCFV+6DIm+Lamn40p6fk=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenSampleHandler$1.class
+SHA-256-Digest: NZ4v8SLrllo8CqP9+o0Zlltt1+OW5jgNDRzZmIBQ91k=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/SelectSplitPage$3.class
+SHA-256-Digest: u9UlAH//fWeQrRK9uT6/hAXL3ACw7OmkcG08VzeLtyA=
+
+Name: icons/info@2x.png
+SHA-256-Digest: EAegBSVFqPJVlJOfJWhiwSh7KX2zS8uESmI15PuhGs0=
+
+Name: name/abuchen/portfolio/ui/jobs/AutoSaveJob.class
+SHA-256-Digest: XuqhBdk5rDX1GCkigrtjj4xLexyaHaQYWpZoIavi3tQ=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$9.class
+SHA-256-Digest: mXaWUwKyXY9WlqxLTUokJ0BKq1yvrywkRKPtVqICNgg=
+
+Name: META-INF/js/d3.min.js.LICENSE
+SHA-256-Digest: z7vDi8YzWfQe70H5IxR1TWZS/RoX0BbeNEkm1d40t9U=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyModel$DirtyListen
+ er.class
+SHA-256-Digest: WxyFKIMWCmmHOE7S6ytPv+8BmOHO9NShkJhUi2fn/Kc=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$AggregationPe
+ riodDropDown.class
+SHA-256-Digest: fT9keU83Q34XY5TUpcUd0zsHRExhthO3zsHM6t/Y5Cg=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ErroneousImportFile
+ sPage$ErrorContentProvider.class
+SHA-256-Digest: v7XdbqEGsoAwNLSpi5jOlLrawF/ZrqofcnjMVU4Vo0Y=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditReportingPeriodsDialog$4.cla
+ ss
+SHA-256-Digest: 76aNYq6uH47MqXZyLC7zaE6zAZae0YxsNaW1euxyWo0=
+
+Name: name/abuchen/portfolio/ui/util/ProgressMonitorFactory.class
+SHA-256-Digest: 7NfV6Dpz4ITjt+af+s9t0g+oaZiGn+MX/dPDqXxuBG4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$ElementVal
+ ueProvider.class
+SHA-256-Digest: wxbYlz5f0W72SDcT0ZN/K+qsB6j3Rh7Jkg0azQxsahw=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/TradesWidget.class
+SHA-256-Digest: u9e8ZsQWeumydDULrjBZwyFAoXp+hb3U75Jjfs8ysSs=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/AbstractTradesWidget$1.c
+ lass
+SHA-256-Digest: dXvnTfoues/ws0ywXQ8hhM6uymIIP8tolf37CQf4N9M=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer.class
+SHA-256-Digest: MBQXcbgbKBvuNA7M/Vrd14VMh2kw7dU1nkB1nRXh0QA=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$6.class
+SHA-256-Digest: jObWmoRg2R1yLNluZ27K8cvH9ppFGTpYRYuipyGjLyg=
+
+Name: name/abuchen/portfolio/ui/editor/Sidebar$2.class
+SHA-256-Digest: zeFkJFfrfAM6kkziCPYyQVBipkxNFWniyYMPJy3SlO8=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ReportingPeriodApplyToAl
+ l.class
+SHA-256-Digest: tGadEakuVMdb7/dfq37mPVO6CcSQ1duTBO4hBiBD7tA=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page.class
+SHA-256-Digest: Fs2Le+uNHA1AXaDQxOp9Uphsen9RYgQoO2PDIEECwog=
+
+Name: icons/quickfix.png
+SHA-256-Digest: GWgIPWR/ARztl6XyXOgnkRescDOiJgrcO0YYmnfGbrc=
+
+Name: icons/new_transaction.png
+SHA-256-Digest: 4LyGdwixAH6ZBOZndKYd1Q2StA/3WDsWRzTxYDBHjrU=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ActivityWidget$ChartType
+ Config.class
+SHA-256-Digest: kAToctZZNM6leNzTh+PJ5phjPYDpj5uEmUmEMtHmrY4=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$BookmarkLa
+ belProvider.class
+SHA-256-Digest: KSfp5K5Pu6VxQV2WItlkJl6kvzo2S9Oyq4LH/qak2lg=
+
+Name: name/abuchen/portfolio/ui/jobs/AbstractClientJob.class
+SHA-256-Digest: vJnVRGvHVYhnmBRzQR8rCvbvw1ZGftbFEPepxXVbQm4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$23.class
+SHA-256-Digest: +RFwFjRlKht9eIf/zHjCVFM2D9XRsEk9TkHQJ9DB/Ds=
+
+Name: name/abuchen/portfolio/ui/views/ExponentialMovingAverage.class
+SHA-256-Digest: ChgFfbvj1rXACutYqKaIavaTCBGNitRGy1iW/zRo4K4=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$2.class
+SHA-256-Digest: GxL3sK4wPYCoi18rnvIzu51DpTKVDWgqcjbZ/pVeMLk=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$10.class
+SHA-256-Digest: hDxLF5h8Ovj/Y0sftnHHOsTgdPmIFcOje71Pcuuki9M=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$5.class
+SHA-256-Digest: QjYg3BbrQ4pQz0hUPppaME6VJZFeXYJjVAyI2xKz+f4=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerMonthMatrixTab
+ $1.class
+SHA-256-Digest: +bxoAInGYaKz0oYUVhe4VW0+3btGbVG8hWpYXH1FKQc=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$1.class
+SHA-256-Digest: UqkAtcRx+ayDSB0IeQqz8eEKu0SJEpphnLSMMeEO5L0=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart$2.class
+SHA-256-Digest: Y3fhM/3uf6Uqybom2X53R5o7PdyXWUWX/94PdussbHE=
+
+Name: name/abuchen/portfolio/ui/util/ConfirmAction$Runnable.class
+SHA-256-Digest: TRoa1OgfKWCdNl0ps5KZNeZ6xtlXoFW06SnfP+iQsFI=
+
+Name: name/abuchen/portfolio/ui/views/labels.properties
+SHA-256-Digest: A7ZjmqBzQN936cxQUtdyYYuxYGZEntCugs/iS6vUEeM=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNodeRenderer.clas
+ s
+SHA-256-Digest: ZwvinTZNfXO1oLJMwgYgRd2anH7MkLT55OTn+tTM30I=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$10.class
+SHA-256-Digest: ov/rly7FtJUXbRjnLoFF4zMKLOHythtilxriMt6ZuYI=
+
+Name: name/abuchen/portfolio/ui/views/settings/SettingsView.class
+SHA-256-Digest: 5fYJ4GhL4T2VHg0ngwWJFiGG7I54uPXfzlG6vWBToCI=
+
+Name: icons/view_selected.png
+SHA-256-Digest: kRSejsSB2QvVkZ2JCi5zD2/Y+Wi70B1xwgLU+e1sN74=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/HeadingWidget.class
+SHA-256-Digest: np3qRiBBjknBWKFKEStpu3ckg1SQY0ZQrMYpVokp3Dk=
+
+Name: icons/pp_16.png
+SHA-256-Digest: DsT8Cv75BGLN9yHnC9d6jK09zeWgCS9O/2lC7EimyWI=
+
+Name: name/abuchen/portfolio/ui/wizards/events/CustomEventModel.class
+SHA-256-Digest: MQhwz8fk/x81g8Pmsb04Qz+4gPt9GrJbOrJdbUCHUEk=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart$1.class
+SHA-256-Digest: 0KgOkptoOtoWkTtUbnaan1rb9AvL7l5+8HkFodFLh4Q=
+
+Name: name/abuchen/portfolio/ui/util/viewers/MonthEditingSupport.class
+SHA-256-Digest: uQB6F746Leu15foG6P/e6/F0KJCUzn5dv5WVDLjftfg=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/EditRebalancingColoringRu
+ leDialog.class
+SHA-256-Digest: S7mITFiKtN+Fa7GQ3fQuZDyTvo+Uk6ea5F7H7MZLNPU=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu$10$1.class
+SHA-256-Digest: wH4sXHOugT/nxXCLXBNcTwxkczQp3qtqfWk9NOwt/VQ=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$16.class
+SHA-256-Digest: fMmCPtCEEKsXiE4QbfzScPt7nE8O3xmUP9RUA84V164=
+
+Name: name/abuchen/portfolio/ui/views/labels_nl.properties
+SHA-256-Digest: sFi+C2EhDvfkXxNlpIb9xyMaPC8t30pU5ntJ2/hlNu4=
+
+Name: name/abuchen/portfolio/ui/views/settings/labels.properties
+SHA-256-Digest: RN7j1lgViSBrlTMg6NIQfJCJpk3Dw8hTPTgtnjEoqcc=
+
+Name: icons/filter_on.png
+SHA-256-Digest: pvg21WfEtA+YKlXYwmahWF5ttBGKo6F90gKLKzhATzI=
+
+Name: name/abuchen/portfolio/ui/addons/OSXStartupAddon$3.class
+SHA-256-Digest: AIhs57JEdMZ1k5W1tBglAd4fMJrYUGZv5H7wbX2IR9U=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$4.class
+SHA-256-Digest: 9bkjvFVGkNWjRmWIqTcGEAfC/3SCxyO+O/n0gn0TrZs=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$1.class
+SHA-256-Digest: ucUhinQKjuiwLJp1E9GKrMiricPAPYx0Gtj1VhKjkik=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$3.class
+SHA-256-Digest: ERJWJLccYHslCM+be9BIiKwa+8zAiQ/YMLj3Xt8jHhI=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/PerformanceCalculationWi
+ dget.class
+SHA-256-Digest: yqp0FaRYwPVWk8VQAbKrFmpbZMnFKBquMTIQmbD6KUA=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer.class
+SHA-256-Digest: cfti5+X82QNG/aDB0UWWSkhmwGNxWV9cGPRX4ly2+es=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$4.class
+SHA-256-Digest: VftPQLPpOee+SnqkE2SxSp7FhjDAFSsFD/4G9eiSsns=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$26.class
+SHA-256-Digest: oeru+7/vWt9i7es4QnNw8HEGipVN/T3JnZOzp3C8Qqw=
+
+Name: name/abuchen/portfolio/ui/util/ContextMenu.class
+SHA-256-Digest: jxchrVW5mXydw2zCI25Km72b7teTBIECfn7lTpD7aR0=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$5.class
+SHA-256-Digest: 402/ZTEW5xq75gdaZ4V3yLb4qpmYphgSCDMG18Dp3KQ=
+
+Name: name/abuchen/portfolio/ui/util/InfoToolTip.class
+SHA-256-Digest: pzOxhBOr3xOkqmOUkoS9V/L0kmwH3Ys3ojy20GbhyB4=
+
+Name: name/abuchen/portfolio/ui/preferences/ScopedPreferenceStore.class
+SHA-256-Digest: uGqkdDG1hav95jHhvSLtqG6SYjizFR3PzMRqqMrQG4c=
+
+Name: name/abuchen/portfolio/ui/util/AbstractCSVExporter.class
+SHA-256-Digest: zX8vVmiuWCJYeJ+Mw/rtlvtDtTOqq4p6TQkCEXQs69g=
+
+Name: name/abuchen/portfolio/ui/util/viewers/MoneyTrailToolTipSupport$1.
+ class
+SHA-256-Digest: +/5wpEe141GtFJf4N4BaikGF304znUj3r9DvtdBmfj4=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$13.class
+SHA-256-Digest: dgd67RpqLkZclCVrRleweOCaam5RwiK1GNpMMJx51es=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityDialog$1.cl
+ ass
+SHA-256-Digest: uBEvcgRwndqbPYWb6Xesdi0ESMBMjhvxwqnYualgNp4=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$BooleanLab
+ elProvider.class
+SHA-256-Digest: 5FLmB/5yE8NrbQg9fll3drJsgkbyY8RiQvyWyBl2iE4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$2.class
+SHA-256-Digest: y5IEkTsEndRnUKpnJvyaf5FAaEFhCta4dj+QjzTR4X8=
+
+Name: name/abuchen/portfolio/ui/util/StringToCurrencyConverter.class
+SHA-256-Digest: 1qYittPiMEbY3pKT8p+hntCfqPoidb3iaX2uK5ZAFDE=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$7.class
+SHA-256-Digest: VrSCFXWJbPfa+hbI2aORAtrwvWTu0yP2ejcYcWVfN7k=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/WidgetConfig.class
+SHA-256-Digest: ZX7t1iN18L6IrWN1wLdeo4INfWO4V+U20ZAj5yU05/g=
+
+Name: icons/info.png
+SHA-256-Digest: k5Y0Yg2gEwR4SSCrM5NRTvaIAQDaGThVeQb/Ev+pyxI=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$14.class
+SHA-256-Digest: JMOE7kjQ46rZP9xkU65yqb9MruT28a1Lgw4HwWXNbKI=
+
+Name: name/abuchen/portfolio/ui/views/TransactionContextMenu.class
+SHA-256-Digest: GfPpQ2vS6jpf5x/ADQCHJlaDh99DqX5ui3VZINMuuuY=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityTransferDia
+ log.class
+SHA-256-Digest: ddrV4Tw0XsaaC7IC6w2vO1ABh8c+TYGORuyuoYkJa+8=
+
+Name: name/abuchen/portfolio/ui/views/columns/AttributeColumn$LimitPrice
+ LabelProvider.class
+SHA-256-Digest: p/24U0+KKGvG6QnQK1zIki7cwFMWkB+lMP5m0ygQmQc=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$5.class
+SHA-256-Digest: ghScvqeOj9lR7oa/PBpnJhnmo5g1rr7oQFph7uBUYwY=
+
+Name: icons/view_stackedchart.png
+SHA-256-Digest: dSeNdztvOK9vtppUqV4REKxf4GzffF21rGT9WmsN2pY=
+
+Name: icons/invert_exchange_rate@2x.png
+SHA-256-Digest: SODXjKOmLWUhrr6YsjRh3HoN6K/XaNeswTazhp00h5c=
+
+Name: name/abuchen/portfolio/ui/views/columns/NameColumn$NameColumnLabel
+ Provider.class
+SHA-256-Digest: 0xh/dboScZ+IXpEQgkL4nWIOK7I681LCYeKxMLCoQws=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TreeMapViewer.class
+SHA-256-Digest: mfU18cWirG3kMYj7LOfbJczjI6kZki9FSdzbm0W3lho=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$2.class
+SHA-256-Digest: vtJ9Tm1g4TyrK4ZDE2uE1SSHV7wobO9z5q3kgjlRUeI=
+
+Name: name/abuchen/portfolio/ui/util/EmbeddedBrowser$PathResolver.class
+SHA-256-Digest: Gv2QCN2S7HvETlMD/v3rjX2fT9xzBMkmgeBrcRpfBP4=
+
+Name: name/abuchen/portfolio/ui/util/viewers/Column$Options.class
+SHA-256-Digest: fVll/gLGWh9kfq6X24ztBdG/536BDm0Ddx7nMoj7EaU=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper.class
+SHA-256-Digest: JHZZCu05wZofV6hl0ZCmM8vRnKSmpwU6Q0u1qYCW90o=
+
+Name: name/abuchen/portfolio/ui/theme/ColumnViewerElement.class
+SHA-256-Digest: qMhz9mEMbGVc5UeoliagmYJyxj+BRg4v/NXUhGh6+Mk=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$6.class
+SHA-256-Digest: ddpvFnvnzARhDkjpLJzB08PKHCJZQklo2zSJzuaZurU=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/PieChartViewer$LoadDataFu
+ nction.class
+SHA-256-Digest: WWArByLzceXgg1gD+02NR7Z1zzjw8idCbwqLnu55tSI=
+
+Name: name/abuchen/portfolio/ui/UIConstants$PartStack.class
+SHA-256-Digest: BHqDzHYyCQLGlZz4Xp0EfEUdJie8uVKNxsZA7JFqyQo=
+
+Name: name/abuchen/portfolio/ui/update/UpdateMessageDialog$1.class
+SHA-256-Digest: TkhGR1KHMwfFIiJNDiikoRe0qD8yqXeoPAEvk2vBU4I=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ClientFilterConfig.class
+SHA-256-Digest: NvkvolggYqBixEIICgoXGKF1PfvDS1HtMsDq9aZO55E=
+
+Name: name/abuchen/portfolio/ui/editor/ClientProgressProvider$MonitorImp
+ l.class
+SHA-256-Digest: PIGlXk1XQo5mOXVo+DkwhPQTuDzAE6M3NgyBlkcVNBY=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel.class
+SHA-256-Digest: vapJypPp6gyX1rZOmJBYUEupOM/RS1DI4jc18vNxocc=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$ExportDropDow
+ n.class
+SHA-256-Digest: F7sI/Bkf+wPwHIy5PA/08QHYftpn+Pooahnmv9XTHUg=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/AbstractIndicatorWidget.
+ class
+SHA-256-Digest: GriyxP5WYI7oaPs0Kmks17Yx49tzqi2XqsMlK1rQkX4=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/ExcessReturnData
+ SeriesConfig.class
+SHA-256-Digest: 3n6nv00GwC0OYSxuYBmj/O4M/3qgQ+6LYBniYuRQGVA=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$18.class
+SHA-256-Digest: h1HtET+RtQSz7wR/cp9ozIJQ/1RFsqz3TjJTiY7gGJY=
+
+Name: name/abuchen/portfolio/ui/dnd/AbstractDropAdapter.class
+SHA-256-Digest: rY/nizuyaZfVsDAIstT2dht3p8lsmwxxlpDXNvW0RPw=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$6.class
+SHA-256-Digest: pQy2G4IfPpIZhCq7Eb/PXzL1fRt6yLOngt5s6g4ozR0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$1.class
+SHA-256-Digest: olA2E7qo0aw9iJWOlurHGy8yV3NFiGML9xCJRp3HlEs=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$6.class
+SHA-256-Digest: rSRrwqsac/oVZ35hf7LBAF5TR8Q1KxJpd9BAqlMa080=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$2.class
+SHA-256-Digest: vdMcdH0aLtuRL27dw+lT5Hfld+lkbLMWkKVAIKBzGPc=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveErrorLogHandler.class
+SHA-256-Digest: /PNBjlD4jvRXJW32ANvBUxzPQEIAy3fYMM1LGlhmr7o=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$10.class
+SHA-256-Digest: 7Vegi81KVeeeVKdGRpi4MJvIM/35fZUMpGlL56yG5oo=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$12.class
+SHA-256-Digest: +XCrjKfSksnfz4LUxKVha+zaEWYYvIRbQNiTVi5jLgM=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyView.class
+SHA-256-Digest: AfORH9ajI52fJIyLKhoYCvagw8vsO8OaVohfWfplHo0=
+
+Name: name/abuchen/portfolio/ui/wizards/client/MarkSecurityAsIndexPage$1
+ .class
+SHA-256-Digest: w5yW8RA73Ak68UCYszVvJmkbMndBU74xDO3oluG3P/k=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ExpectedReturnsAttachedMo
+ del$EREditingSupport.class
+SHA-256-Digest: BIuuOYkl7o45s+k5yj7Ea+ZOaU/5SEtM9yo0mz1ZBS0=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ImportIndizesPage$Propose
+ dSecurities.class
+SHA-256-Digest: 6LyOo8suXsurMJ5b3aUty80AXLRMloZ0Wx0w4w7B1W0=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$1.class
+SHA-256-Digest: F8xOAQlukI1O3qP9rZYOHqxOvJzT587S6mgbyiqTp2w=
+
+Name: name/abuchen/portfolio/ui/theme/SidebarCSSHandler.class
+SHA-256-Digest: DM0f3oENha6oTOVq7EEkDdJcXJSa+KWviBuaH22B7XY=
+
+Name: icons/view@2x.png
+SHA-256-Digest: TuyynVdDfZ+6hGrreo4qcz7PcV2/XK3nz5n2URZuDx0=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/CommandPalettePopup.clas
+ s
+SHA-256-Digest: Kfa3lpCEGzRgLd1tcSWekOHiPjKzRE/6TtDDqrdcvAA=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerQuarterMatrixT
+ ab.class
+SHA-256-Digest: VdOJEKrVK4xjBtSLw06lpi6Mt3IV9ozMr/VvDkGNftA=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/HeatmapModel$Hea
+ der.class
+SHA-256-Digest: X2CMNPewpgoK8YHy/6rtNJ/wJcQSFvOvcPWxKOwU2t8=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$1.class
+SHA-256-Digest: sOYb1i+qAeO83JHPT0NNDTB9EkGW828LBtnmepfB+6c=
+
+Name: name/abuchen/portfolio/ui/util/viewers/CellItemImageClickedListene
+ r.class
+SHA-256-Digest: X0/JRBTI+maBvcs0feqMTNq46XPmI3ccQ919aUtsLX4=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractChartPage.class
+SHA-256-Digest: reZpG+l+FoCaERIw3njKDfy6Zxe1jRdu0XHYbAj6ukE=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnEditingSupport$TouchC
+ lientListener.class
+SHA-256-Digest: TSfIH1xxamYQexQw8wshs8R3ldOFcJdIP0GR99acqqw=
+
+Name: name/abuchen/portfolio/ui/util/chart/ChartContextMenu.class
+SHA-256-Digest: wJfL1Do7uXjUhp1Cv2VipmxIu9215jMdBNppRZ34aJ0=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/RebalancingColoringRule.c
+ lass
+SHA-256-Digest: yg92js2J4gOkM1DdVTZqlloAdpWtTHHvb+3meVkzLn4=
+
+Name: name/abuchen/portfolio/ui/util/chart/MovePlotKeyListener.class
+SHA-256-Digest: xQy5X04WiMiTt2TfYzcY7LV7VWL8q11ZnfzGrw3vXQI=
+
+Name: name/abuchen/portfolio/ui/util/ReportingPeriodDropDown$ReportingPe
+ riodListener.class
+SHA-256-Digest: ShVLEXEa5kwKfDYGC02cYx5HD71JsqRmGSvdaYpOGSo=
+
+Name: name/abuchen/portfolio/ui/views/actions/ConvertTransferToDepositRe
+ movalAction.class
+SHA-256-Digest: dfne3wKA+yTW+X66+VIl9LZm1f4GeM1NFS5CuxC4M9E=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSelectionDial
+ og$ElementFilter.class
+SHA-256-Digest: I17wFQ4FkqMzyLH7qbH43f2vJzEQ/RU8ACYjnev0YQU=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeries$ClientDataSe
+ ries.class
+SHA-256-Digest: zSMCbxBFcdiPkrqv6APAfLszYJY9yFuRv6n3c4higqc=
+
+Name: icons/calendar_on.png
+SHA-256-Digest: vf7rOGKyOXe1AOWzjTWTot8kxQZ6LWGyoBc8XrHHQXE=
+
+Name: name/abuchen/portfolio/ui/handlers/NewFileHandler.class
+SHA-256-Digest: sPnWeKxSZ3GwZNx1S3W6i/z9fG3TQgM0pDRTbor2vcY=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$5.class
+SHA-256-Digest: 0F71Qw4khK89UmJx6VeetyM3vlUB3ZLeusEukcuZRrE=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter$SortingC
+ ontext.class
+SHA-256-Digest: jszLHEggPGaHns/L8G+ZnkJ5gqLp5tgYzvHtqSGQTTc=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$17.class
+SHA-256-Digest: hy2kgNOsEYnePBJkraNMuwbt3+i2kxnycXHW4tULRjQ=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$6.class
+SHA-256-Digest: N+10MHoQnhpm15p9YaXgAu1z5S9R6ZwMm4+9Mt6+E5U=
+
+Name: name/abuchen/portfolio/ui/handlers/CreateTextFromPDFHandler.class
+SHA-256-Digest: 9228h7cO7fiKCAjrI+kKTFarV7+/mPDS2rY05ukZBaY=
+
+Name: name/abuchen/portfolio/ui/editor/Sidebar$Entry.class
+SHA-256-Digest: AzAMRbhLHwc/JDjZO86ezLBn0r1FsaJlgD8odWY+Wdc=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerYearMatrixTab$
+ 1.class
+SHA-256-Digest: re3BDonh3xoBFcK2kxDau8rjVl1ggWsN8OuVdlZp5/A=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/ColorWheel.class
+SHA-256-Digest: KBJId/l+IF3jqNaPN8KVmE+HT9KcBkiuGxVjslppjJU=
+
+Name: name/abuchen/portfolio/ui/views/actions/ConvertDeliveryToBuySellAc
+ tion.class
+SHA-256-Digest: aDEyRGLwqEGMiCWJ5wmOa5nUKSwzLhC7MIbUOwhqPgk=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$ImportLabelProvider.class
+SHA-256-Digest: ZiabD9Ob6QU4u0DtZQuN75s3HfOCQyGoAufs8n84V/Y=
+
+Name: name/abuchen/portfolio/ui/PortfolioPlugin$1.class
+SHA-256-Digest: 3ibwfzorxLAotqC4cAqakVgn2Z6gUPwKMOXPHbD+VOo=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$3.class
+SHA-256-Digest: kx4zXV+ARDKyy8iruS3SgkOXkCmR4v++h5q1K/8oR+U=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$EditSecurityAction
+ .class
+SHA-256-Digest: Ap+QXKYOL4ZVaqRGlEgna4sSfdMJgcWKMXdohRhivsQ=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewQuotesPage$Transac
+ tionLabelProvider.class
+SHA-256-Digest: nkjkE7RMqO4WncK1U4P4h9/HmdJ8X8eIkGyeiUu56Vc=
+
+Name: name/abuchen/portfolio/ui/dialogs/palette/CommandPalettePopup$Elem
+ entProvider.class
+SHA-256-Digest: s3Vbc9QN8gb3Q/zpWgfqKKH/HhLOwVLxsBFJSb6SvuY=
+
+Name: name/abuchen/portfolio/ui/handlers/QuitHandler.class
+SHA-256-Digest: 4WWIHw7zoYrD/WaFbXxcKZPrhK4C0hCI7UQdwHVS0kQ=
+
+Name: name/abuchen/portfolio/ui/util/NumberVerifyListener.class
+SHA-256-Digest: uWvRIS7BBlOAjn6aOuzBMZwXZZRJi6axybN7QfMa1uM=
+
+Name: icons/add.png
+SHA-256-Digest: 0J/QPaNrrr8wN6XS8hbYh+quohXl+TP239uC/+kU+jc=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$9.class
+SHA-256-Digest: v+86YaA/hDapjUgz8Rpw1shV+9bau2xXfQpMoThlj+M=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSelectionDial
+ og$NodeContentProvider.class
+SHA-256-Digest: DQUfReHXXKg5ee2Qeny/IYbcieVsw5iD4loeAy33RRo=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/StackedChartViewer.class
+SHA-256-Digest: Ny+Z6JPUd5VF1JhJiv596Vi/ZRKxtZVWFXECTQ8XkpM=
+
+Name: name/abuchen/portfolio/ui/preferences/ScopedPreferenceStore$2.clas
+ s
+SHA-256-Digest: a68t7QXkXe0MbQh8DDrCUsP3uGjWmvz35H0Wm7lQbao=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$10.class
+SHA-256-Digest: C3DDBwXwSW94bPnpCdm6j5oXV5Tuz61h5nxdyo2Vy10=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$21.class
+SHA-256-Digest: v0EjoiIqZ72U98v7/HVz0gS6Q1X4tTwZT+aoV1M+h7E=
+
+Name: name/abuchen/portfolio/ui/UIConstants$PersistedState.class
+SHA-256-Digest: j/tgr4htT76H1xtp+gEbt9u6B9peTojnRwQRTpkrsxs=
+
+Name: icons/view_piechart.png
+SHA-256-Digest: HOrMTV3a6meQt3zKQB+iad7fFUl7By/91cKNyurCSHk=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$15.class
+SHA-256-Digest: +Jbf5GOp7kONcUMz3IV3FUewsf7urvOUZ1gbZnHGDrk=
+
+Name: name/abuchen/portfolio/ui/dialogs/AboutDialog.class
+SHA-256-Digest: eaOBP2AlHpenu87/9S0D059IiO8Kjx7m2Ye/4Td5Rzo=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DefinitionViewer$1.class
+SHA-256-Digest: A02SG04Qf13umTAwZfC2kak1s8YMwiSqoVQVCCPDO30=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab.class
+SHA-256-Digest: nS5g1iXgqNAwfrQr9gY+o4lwtaFiHcYK0cd43ifyJBg=
+
+Name: name/abuchen/portfolio/ui/views/currency/ExchangeRatesListTab.clas
+ s
+SHA-256-Digest: v7NwuiWZJc8fJ7kA0zf4whVtNGXhb0s71hMRcY1X6yk=
+
+Name: name/abuchen/portfolio/ui/util/IValidatingConverter$1.class
+SHA-256-Digest: CG9DEroEkWiD64Qo4zPYdy8ntySbjlIsxlhZll0knUw=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$2.class
+SHA-256-Digest: O4Au617gXWmJ1Hqb3qdL+Hecpd08M6byFStsHKD2koo=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$7.class
+SHA-256-Digest: 4NtW8nkbNlPWcUqZM9KUUxYDgl2PneEL5sMA8rlTMTE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$It
+ emContentProvider.class
+SHA-256-Digest: fJg6p++GYqx/nDxZ9Z50ac2zy0XxDdSq/ZvETQbLwP8=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$20.class
+SHA-256-Digest: l1xR5al8vwEkseW26EeTm4nUKnxD8e3qe9CkjKTT14U=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$11.class
+SHA-256-Digest: psbVw8zIaxRkbX2ZNnqzlRZSN73JXm2YrPWw4DTmJRE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TreeMapViewer$Model.class
+SHA-256-Digest: oRUlsvqKTxV/f9wnOjBYiRCNVpJHv0E81xK/Xl5cJv4=
+
+Name: name/abuchen/portfolio/ui/util/TreeViewerCSVExporter.class
+SHA-256-Digest: yBIdzd0pHYGptOWd9TFeACKySyNzmJufd0l/Y8H4kgc=
+
+Name: name/abuchen/portfolio/ui/preferences/ScopedPreferenceStore$3.clas
+ s
+SHA-256-Digest: wMBQ2aiZmOJghLR+S9vU5O0vINTVMrT8ou3s11f/e78=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractSecurityTra
+ nsactionModel$Properties.class
+SHA-256-Digest: yyyRCbR8lLwgBx6y831piJDg3n262gBO7Vj1El+tm04=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$1.class
+SHA-256-Digest: SvyUpT91hB1+djDwaucH9j1jReJswJozS590BRvxyFQ=
+
+Name: plugin.xml
+SHA-256-Digest: 0iNSTLTgixuy6MzGFIaIJnTnKpCQR6fuUrv3ibKKoA4=
+
+Name: name/abuchen/portfolio/ui/util/RecentFilesCache.class
+SHA-256-Digest: IU3YtlkxhzDii+XPaDkOgbKhxEODM0tm255DSqYKDq0=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$4.class
+SHA-256-Digest: nmLmGHr8s7XBOKIz3qE8S3uR6pNNPXFNtqOQcDtnE+s=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportWizard.cla
+ ss
+SHA-256-Digest: 6MY1YT48UyIMmpJR9ufRI9pEUk7qgXxOHQVNzWa/qZI=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$MasterDataFa
+ cet.class
+SHA-256-Digest: w9yLZ9Exx9THcw54yOf6TMlZVpqa8TLbJSTlt4upFzg=
+
+Name: name/abuchen/portfolio/ui/dialogs/SecurityPriceDialog$SecurityPric
+ eModel.class
+SHA-256-Digest: FJvCx7wsRrao9rTRJ1+XoYp8QgduPLI1vjMnYjp9820=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeries.class
+SHA-256-Digest: x9liTUN1sa1r36fTYDww23k9aVIlS95eV0iBJq6ubJI=
+
+Name: name/abuchen/portfolio/ui/parts/dax.xml
+SHA-256-Digest: o2VBKFlrif9vLd/U4P19/tSKhzQaL4zeLmLPycI9tfE=
+
+Name: icons/handle_ns@2x.png
+SHA-256-Digest: NfZFhDQX/mpop5R0rNiX9ByvjjI3dS5jHRSRQa3frpw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$No
+ deDragListener.class
+SHA-256-Digest: 32ZDmrYHIHEQJpvCnXM9zILxSKtzY31Eu33LEqzzsJo=
+
+Name: name/abuchen/portfolio/ui/views/PortfolioListView.class
+SHA-256-Digest: y7vcUM0fGYafpxfxpP0FqNC19mGqEMgKM0fayWVPbko=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$1.clas
+ s
+SHA-256-Digest: yaoh8lne6DqngqaXRSc/Y3wLMJrAJJEr9oYpcmNTr0U=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer.cl
+ ass
+SHA-256-Digest: NiHku9fk8ZeOchy6F6YoptIJVAvHwdPyAxGlN/HX3Gg=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeFieldType.class
+SHA-256-Digest: eCmHQSdic7YyHZbIabrPKnIKgZLXGHzTKwLbAw6dHvs=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView$16.class
+SHA-256-Digest: LOkrmekASKdRrFPTblcGHZN/kZrzi58T6A+CjOiWhu8=
+
+Name: name/abuchen/portfolio/ui/dialogs/ListSelectionDialog$ElementFilte
+ r.class
+SHA-256-Digest: GNBzkhYtLnCVTUr5XmIyRkPTccViYGEOzpKgCD2nbFg=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardView$WidgetDrag
+ SourceAdapter.class
+SHA-256-Digest: N5VPNN1xvr619yHkdIigwQTMuvddmP7nl9wIrbrPqSg=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/VerticalSpacerWidget$1.c
+ lass
+SHA-256-Digest: wFbhUvZ1COLzp6vDhV1yGc9yj6N3lWMkD+bQllCdghY=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$9.class
+SHA-256-Digest: NWiWxRbT5ICzMm/BfaH7+l1jZWocD2tKkBknYKyd4uE=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityDialog.clas
+ s
+SHA-256-Digest: lXpMOlBJxFUjdJM/ks+oK1Qmi0AMnBzfWyIa2gtJGdE=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$4.class
+SHA-256-Digest: JFfySNJ+gqAvw0whrUxz784cEAI2PxhR4Ic0nTgfWsA=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$3.class
+SHA-256-Digest: CdCrdQeYhbMUHUUCbuzyiCPZALT+TYWZ0R2rMaZwTMw=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$33.class
+SHA-256-Digest: 8uvgkQvxRr+z6Szo8AsDCkYDfyWs7/o61Wz5GuKOecc=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/WidgetDelegate.class
+SHA-256-Digest: EZ2e5zeoe+ho/Z3iHH+o9UCUHh2YpsuRlANEneRHVEc=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart.class
+SHA-256-Digest: 9pt4jfIE3N7dDEny3Zh9xw0oOt3omtIGdYISIGJHAXY=
+
+Name: name/abuchen/portfolio/ui/theme/ColorsThemeCSSHandler.class
+SHA-256-Digest: 77Ysc+eqCoUtPlfkamTl0VIHTMIEgxdU75rEWztJr7U=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$10.class
+SHA-256-Digest: /ZSDNwZo2hv68TbZNLE19M2j4IdExjEcfDte198peS0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/ChartWidget$ChartConfig.
+ class
+SHA-256-Digest: t0hevE8axmvSy4vSEhgNsUkRdPHUA1dnqKIlFKBm2uY=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$12.class
+SHA-256-Digest: yJv96TboA7wyHIPh1mQFTMJWOFs3VoSrkkHxNolEGZE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ExpectedReturnsAttachedMo
+ del$ExpectedReturnLabelProvider.class
+SHA-256-Digest: qjW2Bp6IGoTejRIIQYRMpNcKsXPBZe9Tluf9PpDko24=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView$PerformanceContent
+ Provider.class
+SHA-256-Digest: IqAG4ui9zJd9+1OiVqLl7F6izW3usOab/akt8WJdXzA=
+
+Name: icons/invert_exchange_rate.png
+SHA-256-Digest: iOO2PdhODxwOQfmXXHIf13guvfgu4QtV0gqftwN2Ah0=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$ModelStatusListener.c
+ lass
+SHA-256-Digest: 387hsfnpQICtioH6hXSsE1NwXKLdteJKe5fOu8BH6cs=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionM
+ odel$Properties.class
+SHA-256-Digest: Rb9UjbQUWYXpCcc8POIKUUkiWxVP0OnVHvqIuHz+lZQ=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$3.
+ class
+SHA-256-Digest: 4m+rRi6xsgWnasmraPC0IChmiF3qs+4Yk4ybd9dUEuE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer.class
+SHA-256-Digest: RDe4NvbkyLMSkZpHQXz0LB6XxvPvAfOTG4JSKvFIGTI=
+
+Name: name/abuchen/portfolio/ui/util/ClientFilterMenu$2.class
+SHA-256-Digest: PrzNw4hsi9kxxKcMOX2vl2Qe3HANgUdcPdq7a83+p38=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$19.class
+SHA-256-Digest: vdDaKu/m1JaJCdQXBkHBCJpSPHu9QPxBGmGx9ub5WO0=
+
+Name: name/abuchen/portfolio/ui/util/SimpleAction.class
+SHA-256-Digest: BXqLa9+4zvttda3bUnnfDVBwJI/jWKnN+gXnrbys+Sk=
+
+Name: name/abuchen/portfolio/ui/wizards/client/AddTaxonomyPage$3.class
+SHA-256-Digest: 0nStnJ8KUKPN2J4lK9/vVidZl9Sy+CRerIvchAuj9I4=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/ExcessReturnOper
+ atorConfig.class
+SHA-256-Digest: qg92YR7gNW2cb//+lgidXB2Ghdypy+A2ZcHc/XVkwdY=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveAllFileHandler.class
+SHA-256-Digest: iB2u90S/E3naxITsMnHWa0jODdsKg0hBv1hDwbIajQM=
+
+Name: css/light_linux.css
+SHA-256-Digest: OHuT3OxKzFQXx7gAhfTHuXnqhrrxEnbJJEuG1WzrO3U=
+
+Name: name/abuchen/portfolio/ui/preferences/QuandlPreferencePage.class
+SHA-256-Digest: YBMTwIVxdhBu4tZYTcKSWdbM5P4b/cu+i+ce8e47cLs=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportSelectionPage
+ .class
+SHA-256-Digest: PfuKVKv3jIZO9bAnAtMRvlX3IYqgVGzmHgCC0i3b9Ik=
+
+Name: name/abuchen/portfolio/ui/views/AccountBalanceChart.class
+SHA-256-Digest: kKuImF7RwYb1bHDEZaOdb3NMFEnKMvimu3xCr1QcjI0=
+
+Name: splash.bmp
+SHA-256-Digest: SMhcdpk9NUh9/j7DN6+2scNCfdJ2qvNW+qsB0CfK23M=
+
+Name: name/abuchen/portfolio/ui/util/chart/TimelineChart$ThousandsNumber
+ Format.class
+SHA-256-Digest: zeEyCImjLcEcYpm9jpd9StL0WYiTWatZ/WSZH8UbbO0=
+
+Name: icons/view_rebalancing.png
+SHA-256-Digest: fAuUG+dnQCpRQ3D+TrQLvMLyaYWSE9Xkyn45es/JLzk=
+
+Name: name/abuchen/portfolio/ui/util/ConfirmAction.class
+SHA-256-Digest: xdqnbjm6B9skvFRF5FVG8sqpGowduQBPjxKVqV4TUww=
+
+Name: icons/view_treemap.png
+SHA-256-Digest: GWwXcHgxZEFlDXFpRM7/2rMjgxbYHEuCY/ImcuA9zgA=
+
+Name: icons/add@2x.png
+SHA-256-Digest: 3wk9U4NA2vtM9EQAo2iPWjb557Cwr/TVhgKAkG6Ut54=
+
+Name: name/abuchen/portfolio/ui/handlers/ForceClearPersistedStateHandler
+ .class
+SHA-256-Digest: Y/xig4TbIxqmchO+bZAJWUd2pNTF2psa6NBUVWXTJ7Q=
+
+Name: name/abuchen/portfolio/ui/editor/ProgressProvider.class
+SHA-256-Digest: 0saMpF5ouf2sbwRTgHSGpfdpSPKEaVKIlSNRk6fP1JQ=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$9.class
+SHA-256-Digest: OVc86V09unI1WNO9m5muhkB96YpootlERBz4uJ2c208=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$5.class
+SHA-256-Digest: XJxSFkXPZVbkoFyQOMge2KMiCQI1fQ6gGpCzLVoklbo=
+
+Name: name/abuchen/portfolio/ui/Images.class
+SHA-256-Digest: A2+T8GXpTdWmmxV0OImcWx3U5t8G8TaKJrILppbAMOo=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnViewerSorter.class
+SHA-256-Digest: F9+L6Y8MTIWWUJHM/dZlJOw/9AXCh0izfqcN2g+eC5I=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/SelectSplitPage.class
+SHA-256-Digest: DukTKHctY10g/HEuc90qdhWGUWf3/iWDhJSKkn27sCY=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenBrowserHandler.class
+SHA-256-Digest: jOzMofXr1Y95ncjizbAEH7ZFGxo5Ht3JK76B3UpjMug=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/EarningsHeatmapW
+ idget$GrossNetType.class
+SHA-256-Digest: /6znAH1fbwY6pYZQy5yVkRjhT/hmJWI9l6sxAC7x6Uw=
+
+Name: css/dark_win.css
+SHA-256-Digest: BvWHf4Y5hOnaVkSTqhLPP5EZdCek6Ft5Zy5uoHGnrak=
+
+Name: name/abuchen/portfolio/ui/util/ToolBarDropdownMenu.class
+SHA-256-Digest: npQH+JkT71ADGkXuz3ruzRXgStojo2JtGuJq6U43/zY=
+
+Name: name/abuchen/portfolio/ui/views/AllTransactionsView$1.class
+SHA-256-Digest: 5L7mthRTvZTmHUPX1sjVhlS0YYvMvoep96rw4yDQerQ=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$4.class
+SHA-256-Digest: fusVgeZyeb1BX+Hupwp7V4A1w/azbHoYRr29jmHmqb4=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$8.class
+SHA-256-Digest: t0vkod42Teu7x+bRW+mBa55f4ALAh8M/q6bBdxAjbXg=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractPage.class
+SHA-256-Digest: QXFrvO9fl2ErLAgCnjVWdiRQw6FZkjMmXn5X+x88sHs=
+
+Name: name/abuchen/portfolio/ui/handlers/ImportPDFHandler.class
+SHA-256-Digest: a2WCgeZmhUozYTBkW1/MiXFkf4edt9Sat8bVGk/BeHo=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer$2.class
+SHA-256-Digest: BAjdBBL3EBTVeI32NncIBqzaXiz6wMINp1A6EZ4r6uA=
+
+Name: name/abuchen/portfolio/ui/editor/ToolBarPlusChevronLayout.class
+SHA-256-Digest: jZ2T7+FWF3pcYuboq/yRYWOLQ+vn/Saa15Id1FNlRQI=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$5.class
+SHA-256-Digest: 0kPIkCW9fv6+eKRTfSFaE3bRYzd3VezUmBIRWFfQ4cI=
+
+Name: name/abuchen/portfolio/ui/handlers/UploadToDivvyDiaryHandler.class
+SHA-256-Digest: f0M02DkVfKZBAabsFH9bZchrHEzYWU+wgsobPcwryTA=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/PerformanceCalculationWi
+ dget$LayoutConfig.class
+SHA-256-Digest: lJX9b3xA2pyySWySE5gU8Ajj2Weah4143WmG+yyU49A=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesChartLegend$P
+ aintItem$1.class
+SHA-256-Digest: wWwLUYUA9yorJtXuyw9YcRdQiVlvhASJyd4pH+95FRw=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/YearlyPerformanc
+ eHeatmapWidget.class
+SHA-256-Digest: DVmj2YSoxa4+o4XCy/Z8KaI84rZ3qRkmCXO10uKd1W4=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$14.class
+SHA-256-Digest: 66m9ycjWQ0AADcbwbgq5cPWX2wMB+PkHXkNY51qws6Q=
+
+Name: css/light/common.css
+SHA-256-Digest: xYuwzcyf5R7ZjZgNbqseG5BhIHeaXO3WZDgvUXG6s60=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$7.class
+SHA-256-Digest: YRprEauP+Jjk/Uv60bdHG92TEfJ8Ifzyd8r9TojpbRU=
+
+Name: name/abuchen/portfolio/ui/util/TreeViewerCSVExporter$1.class
+SHA-256-Digest: JV21l3H2+Md+n2C0CwYGc/vlO60LBIHQUqF9nK5Htqs=
+
+Name: name/abuchen/portfolio/ui/util/Colors.class
+SHA-256-Digest: 1AoLOGp3hpoZdDIv4acAmVNDbeJuMwmYmkQ/Jet3dUs=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$3.class
+SHA-256-Digest: nh1ew49czce8FzKxS3l7pwQX02YcVj908G4U4B2rQLw=
+
+Name: name/abuchen/portfolio/ui/wizards/events/CustomEventWizard.class
+SHA-256-Digest: 7ZpNVVhZhWRNlrLC8YiCRJv1i+y5mQvNhRCYuVZLWTw=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage.class
+SHA-256-Digest: 3HKtb6iDvbPoPcgMIJM16mwScLKdTqA4vmW7pwZGdF0=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportSourcePage$2.
+ class
+SHA-256-Digest: eLGvjI18+P4hoapoV73yGumv65VaGH7LfUl8HPUTrvM=
+
+Name: css/light_mac.css
+SHA-256-Digest: f8tppLSqiElYgmoHDhUIFYECQeG7FlCuUTf1yCHFFnQ=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateQuotesJob$2.class
+SHA-256-Digest: da6VmYNjyjBBOPT7d/O4//pQLi35ouvkAlbOFmM/Oso=
+
+Name: name/abuchen/portfolio/ui/views/actions/RevertDepositRemovalAction
+ .class
+SHA-256-Digest: AW6etcTbGEs2SWXYEL8+Ot+SIZkK8PcduHbQsdoPpaY=
+
+Name: name/abuchen/portfolio/ui/views/AllTransactionsView.class
+SHA-256-Digest: spKqb277HAiyb9wh35XDZ1adheTeh2Wib+yHPomBj/I=
+
+Name: name/abuchen/portfolio/ui/views/ExceptionView.class
+SHA-256-Digest: xPmb5YeYniEmj1Cy06kOR02nvDWdaR8HftWtB2+oZKI=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewTransactionsPage$T
+ ransactionLabelProvider.class
+SHA-256-Digest: hjPvzj7GBwTvTzKGhQusFw4KWxDNlRD4GkRDi6nIzoY=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$6.class
+SHA-256-Digest: 8/xGb165Rb9yU6aGREsVkreK7ms+Zq0fOsxlEmlUWSU=
+
+Name: name/abuchen/portfolio/ui/views/columns/NameColumn.class
+SHA-256-Digest: WdtFtNqZQML5xTChb/FBtFm5Btf3B0Hk2R8HXY1Uzz0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardData.class
+SHA-256-Digest: yr3/uoEqCQI6U6/WfSGgBqRDspSrZcsWylK2g3AbrAI=
+
+Name: name/abuchen/portfolio/ui/dialogs/ListSelectionDialog.class
+SHA-256-Digest: 6FGxg7HGc4Khde7rGrNcuWgHduGk//KW7SqZ3w7qz44=
+
+Name: name/abuchen/portfolio/ui/util/viewers/StringEditingSupport.class
+SHA-256-Digest: BgLm+9Y8f7yizl5D67iA0BQ4eafKv2jqIJOGQjFfB78=
+
+Name: name/abuchen/portfolio/ui/Messages.class
+SHA-256-Digest: oeGn1WurPdXy95OVkufR981YC8MzlsuOXnB/mhWXL/o=
+
+Name: name/abuchen/portfolio/ui/views/SecurityQuoteQualityMetricsViewer.
+ class
+SHA-256-Digest: bJRmHUe7OlFpaC74O3gPUUPw6ytfp0rcBcuhbgMvbyQ=
+
+Name: name/abuchen/portfolio/ui/addons/CopyMenuToNewWindowAddon.class
+SHA-256-Digest: LcMIW3NEyp3q+QcVXY1qzdEn+2Gj1K27tN5UzoBbC3Q=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceView.class
+SHA-256-Digest: uDGIAR+V9ZMAn3b0EiwW7nhD9v/6YkRENmS3kqTqu3w=
+
+Name: name/abuchen/portfolio/ui/util/DatePicker.class
+SHA-256-Digest: 9plmpnw37tj5h3BQJ/wKz+J/dK40R6kbON4baBaVYfY=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages_nl.properties
+SHA-256-Digest: HdWc5jKsoq5xwYNZRWMoIVKNRsdZZdExt0vINCYY0ns=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AbstractQuoteProviderPa
+ ge$2.class
+SHA-256-Digest: uegN/u/9b2BuIXtyc9ymnZBvmKka59mvidr1PYmp8Qw=
+
+Name: name/abuchen/portfolio/ui/theme/ChartElementAdapter.class
+SHA-256-Digest: JBCU6WbhNMyUJZsflRV+ZFT5AFrbPcWCyPs/hCh2aEc=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AbstractModel.class
+SHA-256-Digest: NBcNg3JsrkwXHB/IOoFrQnyvWqugSON17uyC3ShbBz8=
+
+Name: icons/red_arrow@2x.png
+SHA-256-Digest: fzmknNJpUMlvAPgTrhBPdm+n0Luk0t87QJrYTINcHPg=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$4.class
+SHA-256-Digest: 1+mIr/oWDFESlhNYBYH2cqFvKMLKveLzcndeYTUemps=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ValueEditingSupport.class
+SHA-256-Digest: I87h60Hn1Euq0kdI5RNCwBgb6j5vOsHZVbWNA5yKCW8=
+
+Name: name/abuchen/portfolio/ui/handlers/SaveAsFileHandler$JurisdictionF
+ ilesDownloadDialog.class
+SHA-256-Digest: HHGlKptkM72v5FZD71Y5Nwlr6Br7TgyUt+NfT6NnWtY=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$3.class
+SHA-256-Digest: Z4eHhJHmGXJ9hg7zB+G+7nqj8qdxJ9u8Xm4dg/Na/iE=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$2.class
+SHA-256-Digest: qiJgYfeALOroiYtuwUCQxFnDFW40PRvJORGCHVBcv7o=
+
+Name: icons/bookmark.png
+SHA-256-Digest: VH9AybYljKEb2q8HlsrGvWfNEp9l8qZxUuViIaMu74s=
+
+Name: name/abuchen/portfolio/ui/update/NewVersion$ConditionalMessage.cla
+ ss
+SHA-256-Digest: 0bhG4nXsw3CkTUdZiCSJ/mYvcEz0NzehSLEtzjOjWmI=
+
+Name: icons/clock.png
+SHA-256-Digest: ebtZUzKZxMeMRpmsJ18nTBxf1Cis1/Ojb4MxBv+a7co=
+
+Name: name/abuchen/portfolio/ui/util/DesktopAPI.class
+SHA-256-Digest: OST/jy2qJdvVrPxEwHPH1vSZNSUFw4Ydi+gk+DY1sHY=
+
+Name: name/abuchen/portfolio/ui/views/settings/AttributeListTab$6.class
+SHA-256-Digest: yz/h93owaOOd+D9jqWr3q0NGcwilxOoKv/EHBreTsRI=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/StockSplitWarning.c
+ lass
+SHA-256-Digest: tNil4xMEpFSqD3nfbNo9bDAR8V0sGNLyvLiLPP84+QA=
+
+Name: name/abuchen/portfolio/ui/preferences/DivvyDiaryPreferencePage$1.c
+ lass
+SHA-256-Digest: +qHOveSRxugmPsaDJAHXhsMUE+1HyEIOXveeSdNpHdo=
+
+Name: css/dark/common.css
+SHA-256-Digest: dKUlVdOmJtHh+iROEYAWJqprz/9LaTP0I4FFuOz9jMs=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewTransactionsPage$1
+ .class
+SHA-256-Digest: GWFxfblJuv5GC8dRslI3FexDcqjNf87+j3qWaWQ5DOg=
+
+Name: name/abuchen/portfolio/ui/views/ReturnsVolatilityChartView$RiskMet
+ ric.class
+SHA-256-Digest: c8JwJANSwFiXQQpDt7pYwvKqFAH9bUYo5TO5d+97ovM=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$No
+ deDropListener.class
+SHA-256-Digest: qo6j7isVCL+VxCDDFY3c8Oy9pb+VSOIw6sIRIHmcNMw=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/CSVImportDefinition
+ Page$KeyMappingContentProvider$Entry.class
+SHA-256-Digest: vpSE3epUQrwGb2A9QribC8jn5YllpXiDF4libJDOd0E=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$9.class
+SHA-256-Digest: Z5onFRgm38B357k9cVkKVbGnYw9stjgGKpeOLLmARzw=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityMasterDataPage.
+ class
+SHA-256-Digest: s7UnqatL8NqbihqBd0BeS2c1UOtI2FwAhLaz+CP52Lw=
+
+Name: name/abuchen/portfolio/ui/views/columns/IsinColumn$IsinEditingSupp
+ ort.class
+SHA-256-Digest: CiVtHFM6FFwNMURi6wkVMiEq12CegWY3hwg0VrrQcrs=
+
+Name: name/abuchen/portfolio/ui/dialogs/AbstractDialog$1.class
+SHA-256-Digest: vyVwMEMWL7MsK4gQXgQRwRjTfIYVD9SbPPj1ROEiUa8=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyView$FilterDropDo
+ wn.class
+SHA-256-Digest: 6S9jkuk30t5XDHGMjiyhn4IemofauKy6LuHbNuA6tJA=
+
+Name: name/abuchen/portfolio/ui/views/actions/RevertInterestAction.class
+SHA-256-Digest: l4m4MmGXon5hXkudWRF/371RzYFs/shIal4Cjjv2Ffo=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$12.class
+SHA-256-Digest: Wix+S+x3IybwnVa75rwr14Ewz2ESpebECIL3TlPRYMY=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$10.class
+SHA-256-Digest: 6WkrPmTYd5BirGtCk9Ls4anXBAG20RL6BNqh6f4eEe0=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$6.class
+SHA-256-Digest: qJU3W5f+hhE1v/+qT5eyktSpPto0H3NtcM1Mqbb4Eas=
+
+Name: name/abuchen/portfolio/ui/update/UpdateHelper.class
+SHA-256-Digest: LURqy6vDVOcaAdC6zesRXqt3VwTN/uX+RhC3w2oJq+U=
+
+Name: name/abuchen/portfolio/ui/wizards/client/AddTaxonomyPage.class
+SHA-256-Digest: cSSuTydfCBqnpQe8kU9q4HS+8xR250ky8hNSfcUzW3A=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$5.class
+SHA-256-Digest: Flx5Tf42ew75En/KA9aoGAgLOi0Y2Rwcsn0R6OJqJYE=
+
+Name: name/abuchen/portfolio/ui/views/SecurityContextMenu.class
+SHA-256-Digest: dukC0AoqOl/IrVQ/Mn7a8/G/IANxK/Wirl0e8CC1M3o=
+
+Name: name/abuchen/portfolio/ui/parts/samplemessages_es.properties
+SHA-256-Digest: uC5MnpIJFGdd2UohxnV6/5j7rMJZJ2qaekgP/ooqyLs=
+
+Name: name/abuchen/portfolio/ui/jobs/UpdateDividendsJob.class
+SHA-256-Digest: uZUP37tSeo40QMAXhqWzoEcdk51aoBXWMs+W4imKXjM=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$17.class
+SHA-256-Digest: Ibg6whrO2CxfrR4usfMGw8X9THzkGPUCWGUhQkoaYIs=
+
+Name: name/abuchen/portfolio/ui/util/DropDown.class
+SHA-256-Digest: ClzV/8lRNdGI5vl1BntH3h31MPoPcPfPeamqI6T3tSw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$1.
+ class
+SHA-256-Digest: 2NpntXwDe2Jx8ZCSadyHYt42HVChSnBoFkvp5ArZWkw=
+
+Name: name/abuchen/portfolio/ui/handlers/ShowHideSidebarHandler.class
+SHA-256-Digest: kGteYuUAKI+ZCQwcpClzsHLD389Z9x9Uw2DTFatCEBc=
+
+Name: icons/text@2x.png
+SHA-256-Digest: j/3EVqltKArmk5aCHZpZW8eJrQ4odo+WDtlV3mSCqIU=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesChart$ChartRange.class
+SHA-256-Digest: 9HvbdmuHyYvple7Z/1yuCCynLcaRi+FIXDB/6Q702QE=
+
+Name: name/abuchen/portfolio/ui/views/currency/CurrencyConverterTab.clas
+ s
+SHA-256-Digest: pnn7R6cp3zWOuS5u2Pl1KYsLsjngk3LeUiLtgnXkGfg=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewImportedQuote
+ sPage.class
+SHA-256-Digest: uhXrF4NwQOPrVUwc66r74le7wT24UNsahQJR1rvqCYs=
+
+Name: name/abuchen/portfolio/ui/dialogs/AbstractDialog.class
+SHA-256-Digest: 0nX6UmDIFsLvRODddZXFPaOlA1nLYpnxenXbDPgXWS4=
+
+Name: name/abuchen/portfolio/ui/handlers/SelectReportingCurrencyHandler.
+ class
+SHA-256-Digest: 5smwGbfrBAuFNVxR6rr9lDJ3EA88nWjQY98ZxJv1Uk0=
+
+Name: name/abuchen/portfolio/ui/views/columns/WknColumn$1.class
+SHA-256-Digest: KmU68qndLbl3KG+hHtWtwHeCW9YtcmlfVz/4ENIi/IU=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$1.class
+SHA-256-Digest: YjijzQwUoEJJ7fQntQsEksyZo2z4mo8PL4j9sFXv9ng=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$7.class
+SHA-256-Digest: tDvX+uyQJS8NX8eYXFDWFMu2SeuJVIy00kRW17QPMNg=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/ExcessReturnOper
+ ator.class
+SHA-256-Digest: 9oEXJQ6LRtgaWVq64Zlk4yS/n5kA1fudZe3toYD7qAM=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenBookmarksHandler.class
+SHA-256-Digest: JvravjtEGeI6Td2rJMJx7eEkp/hm5vI+Zo3Po4Sk3Nk=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransferMode
+ l$Properties.class
+SHA-256-Digest: xyN7Ph7+hKKMVl33d83jENsuLXBr7MjrfmDChKe26ok=
+
+Name: name/abuchen/portfolio/ui/editor/ClientProgressProvider$1.class
+SHA-256-Digest: hXabYkYtceysRrHXaING87ZFedfvytALo1uVhu2faHk=
+
+Name: icons/plus.png
+SHA-256-Digest: B0IGj3te7eQFDm9r68DHI+39Yng4kVVG7/HXftPID4k=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$15.class
+SHA-256-Digest: vOUBDEQT0P4OWVB4W4HLtLx1Zx1Zs33WHZxc3zRqPpI=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$6.class
+SHA-256-Digest: B/wUnwKPz6gsjDTCbb1gSl+ivRf6Tl+lumnJZg5XJXE=
+
+Name: name/abuchen/portfolio/ui/util/chart/ZoomInAreaListener.class
+SHA-256-Digest: q96jcs1tfhd8p9jI/Oc3R08vow/o23hEz+qzOPPXyek=
+
+Name: name/abuchen/portfolio/ui/update/NewVersion$Expression.class
+SHA-256-Digest: BParz2jDkurrStndGwOPS3YFNhmmxioXrmlQVuPKPyE=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$6.class
+SHA-256-Digest: zRl5covEnu5KA83AIaimJ2PncPh2HQ4sxhC3mJiQ0ic=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityTransferDia
+ log$PortfoliosMustBeDifferentValidator.class
+SHA-256-Digest: 8wv/JaioZMTwOU0VPAhFdbaOfzDZxgvWgN2u//tDE5w=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnEditingSupport$1.clas
+ s
+SHA-256-Digest: 5TbLuIl53XtlmBmUT09a6JBR+jveKX9gwmhC06XTYlk=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesChartLegend.c
+ lass
+SHA-256-Digest: Gfm4xheiIsqe0qTuhYx137C/uTGaBHCB/QN40W/dmhM=
+
+Name: icons/view_rebalancing@2x.png
+SHA-256-Digest: UYcBr4vINGwAIEoNeo0sG19UiNFlyaIXUisWMzQHDU0=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenBookmarksHandler$BookmarkPo
+ pup$1.class
+SHA-256-Digest: q2OXBXkbXdoISo4hmizFJjhSNFTGMCTfXqW4G2JuagE=
+
+Name: name/abuchen/portfolio/ui/views/earnings/EarningsPerQuarterChartTa
+ b.class
+SHA-256-Digest: ZYr4CPXoH+UINIQj+cjonyQjGCLHZxFb2cZ32jK4WGc=
+
+Name: name/abuchen/portfolio/ui/util/chart/ScatterChart$1.class
+SHA-256-Digest: xAeiuNX1r5Bz9lRJfq9LPkC4nc7hs5UFg9G24g9UQ0g=
+
+Name: icons/pp_48@2x.png
+SHA-256-Digest: HS5U+dzwDd9GPGxu7BUN6O2FI/D+k2Npz2RrUQMu2NQ=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ImportSourcePage$1.
+ class
+SHA-256-Digest: NO/vjdgkQ6JNjFy3Up92CHLiK3gSozjdwRD7JnBuNFY=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/CurrentDateWidget.class
+SHA-256-Digest: Pgp1b+oo0FJvzLQXLpByc4mGFFAwukEocju4+HmBxI8=
+
+Name: name/abuchen/portfolio/ui/views/PerformanceChartView$AggregationPe
+ riodDropDown$2.class
+SHA-256-Digest: V7KcfvURjaE71MIOLjkyEZsbDOUhrpb74TQqyp6eX1Q=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$3.class
+SHA-256-Digest: 93XQ9VoC3m5Ix9H3S69i0Yzy34VDSeF4V/UVJVZs0E8=
+
+Name: name/abuchen/portfolio/ui/editor/Sidebar$Model.class
+SHA-256-Digest: WsfbPvPnfSWfkUM7n5uN1acCd8VTKhGAo9cm6AJrRcs=
+
+Name: name/abuchen/portfolio/ui/views/SecurityContextMenu$1.class
+SHA-256-Digest: haYKyDXfjhgkxSSf+Icn15YPPziDrXaBUMWFNHHmVtA=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$6.
+ class
+SHA-256-Digest: 4oBLQ6bJLtWO3SIzXNa0HGzuwhDMj2yxAG7470F3lts=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$6.class
+SHA-256-Digest: 6ttvqHDxmM5X+WCn92NNWMBNahyKVpSVXSyVEUEzDM4=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenCommandPaletteHandler.class
+SHA-256-Digest: Gi03dShrw16Io6hBV7HQYx2o0gETUEuVddmwn24e3M4=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenViewHandler.class
+SHA-256-Digest: ki3j3lEj9Buf9cgywNv8/36rB0XKz+4vg37BThU6Ze4=
+
+Name: icons/pp_128@2x.png
+SHA-256-Digest: z/6UhKDeOfLMQFuP04W3XSbwVDCicbh8xd4qv26rZV0=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/DashboardResources.class
+SHA-256-Digest: 4muH/rm7HNWfhhL4saQyL4kC226b8Y6UlhDDsWvfmh8=
+
+Name: name/abuchen/portfolio/ui/views/PortfolioListView$1.class
+SHA-256-Digest: FiwWX7C+k7H2VvS/9bp2ZF+zA0FwTwYhvi/pq5J7Ai4=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$5.
+ class
+SHA-256-Digest: YUF3r8kLmA1l3vuO5g/QvitAZkF80uX5wtOtZZvcZjw=
+
+Name: icons/export@2x.png
+SHA-256-Digest: FqXjtrcd8d3qxgMplrnNPRYbHW755C6O7AKwqirzn0w=
+
+Name: name/abuchen/portfolio/ui/addons/StartupAddon$1.class
+SHA-256-Digest: +Gj4i5Y2/7aQY6NadtSAWCe2CP4xGCfLpznilXxB+Qo=
+
+Name: name/abuchen/portfolio/ui/util/SimpleAction$Runnable.class
+SHA-256-Digest: XECt5ctLZiPRpntpEUBDSTJTUy9r/Scw9AfoUHgT1bA=
+
+Name: name/abuchen/portfolio/ui/UIConstants$CSS.class
+SHA-256-Digest: IyTKG7+KE/JHweA/by8jcYwrQp0MF7cD+T5D74XzYuY=
+
+Name: name/abuchen/portfolio/ui/preferences/DivvyDiaryPreferencePage.cla
+ ss
+SHA-256-Digest: v7XdIwxoEqYldJBmSQRWaX0RoCq/nfmV6TzZitoEm3c=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer$1.class
+SHA-256-Digest: 4mk+f72Lmf4hlMagtpjWoG9teLeOaIJTZ9DGAhnIkKI=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/StackedChartViewer$Vehicl
+ eBuilder.class
+SHA-256-Digest: q5k5wLE+w9TyhytoVs7mvXBICoQPkviDrR6rErWrP2E=
+
+Name: name/abuchen/portfolio/ui/addons/StartupAddon$UpdateExchangeRatesJ
+ ob.class
+SHA-256-Digest: +l37N9uUi8TStVAYuAyEzzYcjlI/Yanh3vJCfDb7mRI=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyModel$NodeVisitor
+ .class
+SHA-256-Digest: WpxM4EZO5hAYKeAl/6YXqv0PiuAC8RUtgZEF5I2CsJg=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ColumnEditingSupport.class
+SHA-256-Digest: 3xt54qD9gmTTvzXKuNgCBt/gYANXmhe9/ZkX/IrtHqs=
+
+Name: icons/interval@2x.png
+SHA-256-Digest: 2FBxdMGP09NxsI3bw7TN06YfNAsihFwbG0jBoJdSWHc=
+
+Name: icons/remove@2x.png
+SHA-256-Digest: xIWsnJ8CRfUcOMd5RGICynFq1tTwAY9p5HJmEj1YkN4=
+
+Name: name/abuchen/portfolio/ui/preferences/LanguagePreferencePage.class
+SHA-256-Digest: 1KOKzr4wlEFSA09rAfrPtCPGKZpwCZN8/MOvSECFm5Y=
+
+Name: name/abuchen/portfolio/ui/PortfolioPlugin.class
+SHA-256-Digest: bb5wD/Z/WPP8X2DVvVYSDhvHebRtBqcXnXCDTAEOEk0=
+
+Name: name/abuchen/portfolio/ui/views/earnings/TransactionsTab$7.class
+SHA-256-Digest: LLNo5lzl0h6M+tDCEM7wbCSznkv3qNZYWlTZMeUGTKw=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$30.class
+SHA-256-Digest: DA7tGcpJ/1hELbg5LAhLz7bhJP8goFVwgBFTjdoFhGI=
+
+Name: name/abuchen/portfolio/ui/theme/ColumnViewerCSSHandler.class
+SHA-256-Digest: NvKhlpaVxDZrdBq4Mkn1aIYMSCo9w1gIZSJFzpmrrrQ=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/PerformanceHeatm
+ apWidget.class
+SHA-256-Digest: YrF1Jk1ejQVySCi3blKvkwHwFEMFU4zdclL87MAzNLk=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DeltaPercentageIndicatorL
+ abelProvider.class
+SHA-256-Digest: +Q/z/dEbQuR8EGRWbEngCt8pz7rzL4tp6JK7IGChy/Y=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$6.class
+SHA-256-Digest: +y7kXezBsnjQDuTa35rX5/LPnhcNkiFVce3fcJjIZwY=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$8.class
+SHA-256-Digest: p3/ounRicgoc2uQ08+htGnm2lTPtXQtlXBgoaa6Yr7E=
+
+Name: icons/warning@2x.png
+SHA-256-Digest: TTlur8VngfT9dHojG33hBLxKzHuwxy3XtDP4pesYxhs=
+
+Name: name/abuchen/portfolio/ui/handlers/UpdateHandler.class
+SHA-256-Digest: XRXwuZD+7bNDhLPiIsvtjYF66EiMa8Xi0MdBgzLUAvc=
+
+Name: name/abuchen/portfolio/ui/views/labels_es.properties
+SHA-256-Digest: VNP7RSNC2UgAkHSu+UWm48uDMBRlAAazK9CxiyoAcqg=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TaxonomyNode.class
+SHA-256-Digest: Rk+5Tb7Sh0pd7SpAEo50cMEtQNcvG7d3nuW7xwbBMUI=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$1.class
+SHA-256-Digest: EvVi/DPjCnRmc+F7CFPMsM2XUi4Sa7bmpra2pUf/KjE=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/TreeMapLegend.class
+SHA-256-Digest: M5Lw85+HgBJFTy+3wEwDW++vR55W7+fqTobJcOdIXUQ=
+
+Name: name/abuchen/portfolio/ui/editor/Sidebar.class
+SHA-256-Digest: 2Du5rzjcpsdXnbuiS+ILtIcKu2W2M6IISFN8AEjjOoo=
+
+Name: name/abuchen/portfolio/ui/views/SecurityContextMenu$2.class
+SHA-256-Digest: JdzFWlGkMvfp+LeqLsQlwWyWtl2jq0YsOIHd674VsrA=
+
+Name: name/abuchen/portfolio/ui/views/labels_fr.properties
+SHA-256-Digest: uNfTVhs6qdwodlR9lx1UM8tZ4539NP6ZnKNq7Tc+ZJ8=
+
+Name: name/abuchen/portfolio/ui/views/SimpleMovingAverage.class
+SHA-256-Digest: 2ywT+5fsMmFUhpQgJP0J1C3ix/RtK0isY2ZvRflUuP4=
+
+Name: name/abuchen/portfolio/ui/wizards/security/RawResponsesDialog$1.cl
+ ass
+SHA-256-Digest: FgYt/bYoXCqpxuYr0nZYtAf17T2o7hlvnzGYZnY38M4=
+
+Name: name/abuchen/portfolio/ui/handlers/UnityDesktopHelper.class
+SHA-256-Digest: wTkq7cbK66rvGd5VWmag/iRncBGGeJQmV6ak/PlyVpc=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$7.class
+SHA-256-Digest: TFL4fEbbhtPAD8YWEMw7hE+B+kExZ4U7E5WY4pOsim0=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog.class
+SHA-256-Digest: VXonkkwI55AS/rogre29XLknHfjID5HWtUswezGGAjc=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/MaxDrawdownDurationWidge
+ t.class
+SHA-256-Digest: 6QbDHqNbTwpA5BBB9I8rQMyzbN61gbg29WQP8dwcWgE=
+
+Name: name/abuchen/portfolio/ui/util/ReportingPeriodDropDown.class
+SHA-256-Digest: uP22KqAz94ZTOysrrn60MyHkujmVuPMQLcVcgomRm4g=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/IndicatorWidget$Builder.
+ class
+SHA-256-Digest: /7kxghrwXKuyWyRr1qzbcxFztRDVPsEnJBMIfu3dpSE=
+
+Name: name/abuchen/portfolio/ui/log/ErrorLogPart$2.class
+SHA-256-Digest: caVhACQFTvS+eL3yrFMPPDvZXwbhwRWMo5m/tOM7kz4=
+
+Name: name/abuchen/portfolio/ui/views/SecurityListView.class
+SHA-256-Digest: l9fYPtSdFGkCcZ5sbMrDpLCEUCiINoqomOpXP8yWsWk=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/IndicatorWidget.class
+SHA-256-Digest: Ff58MtVtJ1grP4Hq6PSCHI7a0sL0tSzsIHl3xDxtBZU=
+
+Name: name/abuchen/portfolio/ui/messages_pt.properties
+SHA-256-Digest: W21SFLjTnNzv3HgCEs06Yk9eeHtEIRrQzKsllSr8438=
+
+Name: name/abuchen/portfolio/ui/views/InvestmentPlanListView$8.class
+SHA-256-Digest: SeeUkqSvkThLzLXoIeJYeMrINGXxto8/PZ0Oyzg5JRk=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ReBalancingViewer$9.class
+SHA-256-Digest: pc+ggtbjR/Gkv1JGEwinXDKOL3VdP4YaGf3hWTzQNqI=
+
+Name: name/abuchen/portfolio/ui/views/actions/RevertBuySellAction.class
+SHA-256-Digest: ugHhsqwUDZUUMjFqsl30QJi8xTG8AoNYd3QFZCCgDRA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$31.class
+SHA-256-Digest: 0gts5pWzf7Ga2Iu70sjc/ysD8hm07AOtDj4b8SwURsE=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionD
+ ialog.class
+SHA-256-Digest: TcW1BC1lRZeXDT6ZKylfDzt0X5xid/j9a9HNjWc3w3g=
+
+Name: name/abuchen/portfolio/ui/util/chart/ScatterChartCSVExporter.class
+SHA-256-Digest: zXeGW79Hc4UDwPj0bIRIINVV971a+To6r0kvBtgr7U4=
+
+Name: name/abuchen/portfolio/ui/wizards/security/HistoricalQuoteProvider
+ Page$1.class
+SHA-256-Digest: pIcwHMgUDYlzXjt026GILGyy77Y6z3IaRXneZl8PXxQ=
+
+Name: name/abuchen/portfolio/ui/util/swt/StyledLabel$StyleRangeParser.cl
+ ass
+SHA-256-Digest: U/kUmX8dMZtZAhb7my3qdN6ktadB4KyONEZnu/AhCJE=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/TradesAverageHoldingPeri
+ odWidget$Metric.class
+SHA-256-Digest: tMyNAMi4flHj/wTrg+mhnHYv0wAzW7wHTH11ndaJm/M=
+
+Name: name/abuchen/portfolio/ui/views/AccountListView$14.class
+SHA-256-Digest: C5CodpoKuJJNlE7GzOlQFWq5gty+Cq12L3eDHKDwOmQ=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionD
+ ialog$1.class
+SHA-256-Digest: xpoVqR6kwwAaok27Jp2jfhXg7RTjf7ldJoCVvHCpaoQ=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$7.class
+SHA-256-Digest: /TQqz898hOMfQ6tbtBXljexB3Gp4VD/wRvuZ8YODUic=
+
+Name: name/abuchen/portfolio/ui/views/dataseries/DataSeriesSelectionDial
+ og$1.class
+SHA-256-Digest: x0DX3z7qDu7aWTXYTIks9j0Z51lj+OJYBvv+prkBtdI=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer$TransactionLabe
+ lProvider.class
+SHA-256-Digest: 2rOQo1CiYr2j11wTI760p1ylnIAeTuixOI/hF2VVh/E=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$5.class
+SHA-256-Digest: x00wc4zQLItS5yrGJyhEXCozPfOdduqcUbMBrJHpjjY=
+
+Name: name/abuchen/portfolio/ui/views/SecurityContextMenu$3.class
+SHA-256-Digest: J8RJ2VVRjk6rkLZZcdHPFqhEMKL9r0JWBNqCPnD3rzo=
+
+Name: icons/portfolio.png
+SHA-256-Digest: gt2AtsLA4kkHIoQT9NqkFJ8L6PSy6WkwTuTNKRToO0s=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/ExpectedReturnsAttachedMo
+ del$ExpectedReturnLabelProvider$1.class
+SHA-256-Digest: 118kqzAfbLk175t951kdmdAd9nUOereTFiqGsN9kXgY=
+
+Name: icons/security.png
+SHA-256-Digest: xu9LBajxvSluvJojXGbdnRRYA5AXKrTK4AT2QK0A4gQ=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$5.clas
+ s
+SHA-256-Digest: jnvCjMQV0JYy/UC9x+U2GfQz7C1kySZ0hi68GlA7VAA=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesPerformanceView$32.class
+SHA-256-Digest: kaWa7lS+m6GAwmAxs8PecEJslHItMM9C0Pq3iX/SSzQ=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$5.class
+SHA-256-Digest: Xkisy8M9pfb2YHEdwmVVHecW748qGLAUjtd15d/U4iU=
+
+Name: icons/remove.png
+SHA-256-Digest: 63fFox9aLG746g37bwv7gJ0xVN0bQ+qegjKgTht5v1Q=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$FormattedLabelProvider$1.class
+SHA-256-Digest: K3tIAxg0rOIeD2qZIXtllmlNt9fLjL6O0jzOOjMqXPs=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$4.class
+SHA-256-Digest: UnscA474fjdG+ZCdkCRrxGlPIpGrsCkoSlMDs8koRzA=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/MultiDataSeriesConfig.cl
+ ass
+SHA-256-Digest: d3ehV13Lf/j/Ho2BTQb1HgKDaQQOTPQIOlUCo/twN5w=
+
+Name: name/abuchen/portfolio/ui/views/columns/TaxonomyColumn$TaxonomyCom
+ parator.class
+SHA-256-Digest: 1CFh4y1X3WRfmQuXTsivW/DJj8m8/3DEhaAV7WizoHg=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/EarningsHeatmapW
+ idget$EarningsConfig.class
+SHA-256-Digest: m75rNPA1nihXr/ZuRO/wkSzhbqTpscveAyBrn9+80EI=
+
+Name: name/abuchen/portfolio/ui/wizards/security/AttributesPage$ToAttrib
+ uteObjectConverter.class
+SHA-256-Digest: ErbZlfHmOOFRKF7vWcqCF9HxfnlioDQ9s9ON6WBICBg=
+
+Name: icons/bookmark@2x.png
+SHA-256-Digest: XQ+3GhfcekfgpmqyqwDh/RBxRBqxxotD2kxw5k6fabM=
+
+Name: name/abuchen/portfolio/ui/views/PortfolioListView$2.class
+SHA-256-Digest: uSb+Cu6ZfMXfoVOYIU5GWnq/yCwShWKsxjKXtTIZeOk=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$7.
+ class
+SHA-256-Digest: qs7kNmcynFfS9VPVeeLz9vc8ygl3qxZzD2I0X7vgJ/w=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage$We
+ ightsAreGreaterThan100Validator.class
+SHA-256-Digest: kk9noRxgM7SKPkwQgLrkSYdo3lRN504xPlOnGobTrUo=
+
+Name: name/abuchen/portfolio/ui/util/BindingHelper$CalendarToStringConve
+ rter.class
+SHA-256-Digest: R5lYbQTKK32aWYmpg8OUkD8EqMpZlhKVbDWCNxpNiUc=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionD
+ ialog$2.class
+SHA-256-Digest: FCig/WeJLfDpn/aDBxVe7mATbgjiBeNQ37nLaNaxp4U=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$5.class
+SHA-256-Digest: ZGVm3zp/EcBFCh247mnz3pVCChvVy9j2cxiucwP6LoU=
+
+Name: name/abuchen/portfolio/ui/update/NewVersion.class
+SHA-256-Digest: YwfsxaN+Z3YuUuvjZYWEeEIGpLmaRS/Rkk+mBYCVUwA=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$2.class
+SHA-256-Digest: I0H50hznkEYOQyqs17yByFkurZ+Iq/loQM52/S/IhdI=
+
+Name: icons/text.png
+SHA-256-Digest: RUmdADUY1vR0cxSZHRaQHmT/dKNu2CFC5QlqtDikZLQ=
+
+Name: name/abuchen/portfolio/ui/util/swt/SashLayoutData.class
+SHA-256-Digest: 1XFRwHebaji9kmzdxQpF8iEtJz1ytUW2sB5IujbTrVM=
+
+Name: name/abuchen/portfolio/ui/wizards/client/ImportIndizesPage.class
+SHA-256-Digest: uyq5CS/HS++kRdsdqq9CgYomZx09NwlVdm2DHjuO3Jc=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel$Taxon
+ omyDesignation$2.class
+SHA-256-Digest: FmZ8t0lax/NqoHrrVTFQIiFfeo+5QjrY4zBu2pG9A+w=
+
+Name: name/abuchen/portfolio/ui/log/ErrorLogPart$1.class
+SHA-256-Digest: y0FuRMlXH5CylWZ7xnzLUMx0wnYaLUk2pYBMGmX0cW4=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/SecurityTransferMod
+ el.class
+SHA-256-Digest: zIkb8fZtzcLGPDi5GPlWh1GoPZgHHMh5Q5PYzmpulmA=
+
+Name: name/abuchen/portfolio/ui/dialogs/EditClientFilterDialog.class
+SHA-256-Digest: GB2L6d/m47xCsbHdNc3yWOyNJyllJZxP+AgWh1BmtsE=
+
+Name: name/abuchen/portfolio/ui/wizards/splits/PreviewQuotesPage$1.class
+SHA-256-Digest: bl8NMCBDEfwigf+eQHVvICHERtn/ehbghrZpTIlLkY8=
+
+Name: name/abuchen/portfolio/ui/views/ReturnsVolatilityChartView$ExportD
+ ropDown$1.class
+SHA-256-Digest: LsE1o31L67u9ncQMiSiIGbJfZ0xN3vZtnp8e60WWWjQ=
+
+Name: name/abuchen/portfolio/ui/util/ClientFilterMenu$Item.class
+SHA-256-Digest: ObvpcHSx8TkTcJAcNlkviKWaaTlrDTse0SnxZbftFdo=
+
+Name: icons/quickfix@2x.png
+SHA-256-Digest: nJqstz8P3IMf4H19cBXnhUR84FcEtOjjidN8e5EDG+M=
+
+Name: name/abuchen/portfolio/ui/views/PortfolioListView$4.class
+SHA-256-Digest: Ii3uV1/Wk7u4/0XEU5cXpW8lI/Kxkdqsk7btZxj826o=
+
+Name: name/abuchen/portfolio/ui/util/viewers/BooleanAttributeEditingSupp
+ ort.class
+SHA-256-Digest: PXrgqGqsddYezt4rR7UI7aOO8rTONehXb2hLpF7nb/k=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$20.class
+SHA-256-Digest: GSQjS2FI0IXtxNflalFO5npKnrei5KKwpO1JUY+T6BA=
+
+Name: name/abuchen/portfolio/ui/handlers/OpenPartHandler.class
+SHA-256-Digest: uswoBrgbmIPqu703jYEHlUlWhTd0psHlWoPjL4QV5z8=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$2.class
+SHA-256-Digest: gR9yNqu51Sv6GgNl2+bXDZ78C5/fVJNcC2NinRqCBuk=
+
+Name: name/abuchen/portfolio/ui/views/StatementOfAssetsViewer$StatementO
+ fAssetsContentProvider.class
+SHA-256-Digest: QAKjPhGpKQW9PoIW/IheK5dVB11QoEiUUkAq0yW3svc=
+
+Name: name/abuchen/portfolio/ui/views/TransactionsViewer$4.class
+SHA-256-Digest: aI1Q+NbI8hJ+eS9t8a1TPRzWNo4e7YYPLwoPefRqQDI=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$2.clas
+ s
+SHA-256-Digest: R8lEF1dNdSAu3tnhf3c8Rg5UI1k5ZyYmVPEr3aFSUjc=
+
+Name: icons/calendar_off@2x.png
+SHA-256-Digest: ch94lrUCD2yezANleO0NoztVBcfKKFNmiNOe3pLAN3I=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$3.class
+SHA-256-Digest: n8pLKf40A9elD3rfVf1nLbvWf7PbP63sRYsB/fH9Xvk=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$3.clas
+ s
+SHA-256-Digest: 7Ldsjeu8D6k2HoAqRXOddo6xzKs1sZka11x41i6+5tk=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$4.class
+SHA-256-Digest: fVfNjM+KgluI7uDTXlGcVGHUAFh6ENpnGdcHqP3D7GM=
+
+Name: icons/filter_off@2x.png
+SHA-256-Digest: 1DWnIvBJdLLMkTE7CYE4ZrjsWyCNSfuy+4+V5WpU6kY=
+
+Name: name/abuchen/portfolio/ui/wizards/security/SecurityTaxonomyPage.cl
+ ass
+SHA-256-Digest: 1BblhLExlGRMWvJQfX3Ra/8I8J4NVMmGNdXtdsQq49U=
+
+Name: name/abuchen/portfolio/ui/wizards/security/EditSecurityModel$Taxon
+ omyDesignation$1.class
+SHA-256-Digest: OSayhmLGcSXkW0V/0W/9yDkF6DR/PHDOtqT4C2DX7J8=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransactionD
+ ialog$3.class
+SHA-256-Digest: +5mDLhYXcpvxRaSmFVjOtnoVhsx8xsU927vsecDZNO4=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$2.class
+SHA-256-Digest: UTTkBB7YfIFD+/X/TNdhdUqNfKWuSTug2pcmioGXHoQ=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/AbstractHeatmapW
+ idget.class
+SHA-256-Digest: 4TZl6E3mwEAX7s9SKZjFvCrR6197AXcOpdZaTOWFMYk=
+
+Name: name/abuchen/portfolio/ui/dialogs/transactions/AccountTransferMode
+ l.class
+SHA-256-Digest: j9Sz/0P2gevMWkneNjW05C/EZKNBQ1f7dMAp9drjuPk=
+
+Name: name/abuchen/portfolio/ui/update/UpdateHelper$Task.class
+SHA-256-Digest: nqLMbIBBCABDW9F+2TeBqwIXIm57fJUHpVGgMOzmgHg=
+
+Name: name/abuchen/portfolio/ui/handlers/UpdateQuotesHandler.class
+SHA-256-Digest: +O06jP6GElHOg0wEm25K+wm1HLxfk+O0qon7GINxU10=
+
+Name: name/abuchen/portfolio/ui/handlers/RunConsistencyChecksHandler.cla
+ ss
+SHA-256-Digest: RF6a8xuRjFXYj7Ydxc/Azt9JqqXDZPnj1OZoL8qORvc=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/Delimiter.class
+SHA-256-Digest: bIxIH2WqA1ibhrM9qJNvVz0Z8BmY+R7t/bTG8kyZZJM=
+
+Name: css/light_win.css
+SHA-256-Digest: o8LslLtWAjeKJX62eTI+dxiob3oAXKnoyBOqMSq9eXs=
+
+Name: name/abuchen/portfolio/ui/views/SecuritiesTable$21.class
+SHA-256-Digest: j5+LMhE3N/DU/7T/0XrTuV4kA9d/hO+SQjERDHkrpTQ=
+
+Name: name/abuchen/portfolio/ui/views/SecurityDetailsViewer$LatestQuoteF
+ acet.class
+SHA-256-Digest: MkRVCxSTDDYhGFm57SHQXcB1KCUWygBAmTmeKZnDSM8=
+
+Name: name/abuchen/portfolio/ui/views/dashboard/heatmap/EarningsHeatmapW
+ idget$EarningType.class
+SHA-256-Digest: QhQP2lGcycBhIj3veyoFG0FJlsiYK71M1wBMcVHvJp0=
+
+Name: name/abuchen/portfolio/ui/views/TradesTableViewer$1.class
+SHA-256-Digest: OMzR8BlkWta4Wb/taumwG523PKPfGdtEH/e64lX/EQE=
+
+Name: about.html
+SHA-256-Digest: PfiThIo7vd27JRThYBMZRdUhFRtxXRcHXtBu60eoEhQ=
+
+Name: name/abuchen/portfolio/ui/util/viewers/ShowHideColumnHelper$4.clas
+ s
+SHA-256-Digest: 4KiGmXVQWJkfsBRVPXC9ChwpQ6V4dqUm6DOytih6GDQ=
+
+Name: name/abuchen/portfolio/ui/editor/ToolBarPlusChevronLayout$1.class
+SHA-256-Digest: XeCmlotF/dqcvxiu2jxIQWsry3dh6PkBFTBBrn0us+Y=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/DefinitionViewer.class
+SHA-256-Digest: FPzyL3z5YgvKTxZOfN2uwZmWsyrNlJIyf2V/1LbApvs=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ReviewExtractedItem
+ sPage$4.class
+SHA-256-Digest: aJsEnQjEgzOBJF1QXGG3heoMI8uipls40P4lDZKM6U4=
+
+Name: name/abuchen/portfolio/ui/views/trades/TradeDetailsView.class
+SHA-256-Digest: 461ir7pmdbwA4nUTfBsbdoSdrDJ/Arqeq/IWhDwUnjY=
+
+Name: name/abuchen/portfolio/ui/views/earnings/StartYearSelectionDropDow
+ n.class
+SHA-256-Digest: xbmAkh1qA4MyYaidjg49TxJZZk3zFdrpXyjEmIWG6y4=
+
+Name: icons/handle_ns.png
+SHA-256-Digest: NugYiVXINzr1BbehlIOx7YXVajWUWb8sehPMXYsl/mo=
+
+Name: icons/pp_32@2x.png
+SHA-256-Digest: tglx6O2sjbzLjMCtlx9poL7Krpr9fpqYI4VSOYFIbw8=
+
+Name: name/abuchen/portfolio/ui/views/earnings/AbstractChartTab.class
+SHA-256-Digest: mQC11fonVK3v3WAbudjT3MXITQKD0+LCXJoUvuIJ37k=
+
+Name: name/abuchen/portfolio/ui/views/QuotesContextMenu$3.class
+SHA-256-Digest: wrYxjfaacZeGDOhmwV99P2F6r7o6DTiPxHNmDp1mifc=
+
+Name: name/abuchen/portfolio/ui/wizards/datatransfer/ExportSelectionPage
+ $ExportItemsLabelProvider.class
+SHA-256-Digest: vGoYt13v3nPLeih5xaMavtbmDaOCZNxYB9f+h5/snbw=
+
+Name: name/abuchen/portfolio/ui/views/taxonomy/AbstractNodeTreeViewer$8.
+ class
+SHA-256-Digest: dFgMh7mRh7QHP73QnqNZpzvEbfO6k8zXQfYvm4zjHcE=
+
+Name: name/abuchen/portfolio/ui/jobs/ConsistencyChecksJob$SelectQuickFix
+ Dialog$7.class
+SHA-256-Digest: a0v8B2IMUDSb3a0yV3GaQBdRv+GBrxR/3EIqOllKGqY=
+
+Name: name/abuchen/portfolio/ui/preferences/FinnhubPreferencePage$1.clas
+ s
+SHA-256-Digest: 9SuL1lVXo0gSfvsDN5ZAWe++TgPjEiJBD//eGc9P3Ms=
+
+Name: name/abuchen/portfolio/ui/UIConstants$Event.class
+SHA-256-Digest: sNoXb4flIMueDTkZHXYaLDugaAHz7gvDRVDXiGoD5oM=
+

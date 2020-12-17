@@ -175,7 +175,11 @@ public enum WidgetFactory
 
     TRADES_BASIC_STATISTICS(Messages.LabelTradesBasicStatistics, Messages.LabelTrades, TradesWidget::new),
 
+    TRADES_AVERAGE_RETURN_RATIO(Messages.LabelTradesAverageReturnRatio, Messages.LabelTrades, TradesAverageReturnRatioWidget::new),
+
     TRADES_PROFIT_LOSS(Messages.LabelTradesProfitLoss, Messages.LabelTrades, TradesProfitLossWidget::new),
+
+    TRADES_AVERAGE_PROFIT_LOSS(Messages.LabelTradesAverageProfitLoss, Messages.LabelTrades, TradesAverageProfitLossWidget::new),
 
     TRADES_AVERAGE_HOLDING_PERIOD(Messages.LabelAverageHoldingPeriod, Messages.LabelTrades, TradesAverageHoldingPeriodWidget::new),
 
