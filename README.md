@@ -73,6 +73,10 @@ Run Maven 3.x.x in the 'portfolio-app' directory:
 mvn clean verify -Dtycho.disableP2Mirrors
 ```
 
+```
+mvn -DskipTests -Djava.net.useSystemProxies=true -Dtycho.disableP2Mirrors clean verify --batch-mode --file portfolio-app/pom.xml
+```
+
 ## License
 
 Eclipse Public License

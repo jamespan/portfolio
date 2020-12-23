@@ -13,6 +13,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import name.abuchen.portfolio.ui.util.SWTHelper;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -72,7 +73,6 @@ public class InvestmentPlanDialog extends AbstractTransactionDialog
         //
 
         // name
-
         Label lblName = new Label(editArea, SWT.RIGHT);
         lblName.setText(Messages.ColumnName);
         Text valueName = new Text(editArea, SWT.BORDER);
@@ -138,6 +138,7 @@ public class InvestmentPlanDialog extends AbstractTransactionDialog
         // interval
 
         List<Integer> available = new ArrayList<>();
+        available.add(-1);
         for (int ii = 1; ii <= 12; ii++)
             available.add(ii);
 
@@ -171,6 +172,21 @@ public class InvestmentPlanDialog extends AbstractTransactionDialog
             fees.bindCurrency(Properties.transactionCurrencyCode.name());
         }
 
+        // note
+
+        Label lblNote = null;
+        Text valueNote = null;
+        if (planType == PortfolioTransaction.class)
+        {
+            lblNote = new Label(editArea, SWT.LEFT);
+            lblNote.setText(Messages.ColumnNote);
+            valueNote = new Text(editArea, SWT.BORDER | SWT.MULTI | SWT.V_SCROLL | SWT.H_SCROLL);
+            IObservableValue<?> targetNote = WidgetProperties.text(SWT.Modify).observe(valueNote);
+            @SuppressWarnings("unchecked")
+            IObservableValue<?> noteObservable = BeanProperties.value(Properties.note.name()).observe(model);
+            context.bindValue(targetNote, noteObservable, new UpdateValueStrategy<>(), null);
+        }
+
         //
         // form layout
         //
@@ -196,7 +212,13 @@ public class InvestmentPlanDialog extends AbstractTransactionDialog
 
         if (fees != null)
         {
-            factory.thenBelow(fees.value).width(amountWidth).label(fees.label).suffix(fees.currency, currencyWidth); //
+            factory = factory.thenBelow(fees.value).width(amountWidth).label(fees.label).suffix(fees.currency, currencyWidth); //
+        }
+
+        if (lblNote != null)
+        {
+            factory.thenBelow(valueNote).height(SWTHelper.lineHeight(valueNote) * 8).right(securities.value.getControl())
+                    .label(lblNote);
         }
 
         startingWith(labelAutoGenerate).thenLeft(buttonAutoGenerate);
@@ -205,7 +227,7 @@ public class InvestmentPlanDialog extends AbstractTransactionDialog
 
         int widest = widest(lblName, securities != null ? securities.label : null,
                         portfolio != null ? portfolio.label : null, account.label, lblDate, interval.label,
-                        amount.label, fees != null ? fees.label : null);
+                        amount.label, fees != null ? fees.label : null, lblNote);
         startingWith(lblName).width(widest);
 
         WarningMessages warnings = new WarningMessages(this);

@@ -20,7 +20,7 @@ public class InvestmentPlanModel extends AbstractModel
 {
     public enum Properties
     {
-        calculationStatus, name, security, securityCurrencyCode, portfolio, account, accountCurrencyCode, start, interval, amount, fees, transactionCurrencyCode, autoGenerate; // NOSONAR
+        calculationStatus, name, security, securityCurrencyCode, portfolio, account, accountCurrencyCode, start, interval, amount, fees, transactionCurrencyCode, autoGenerate, note; // NOSONAR
     }
 
     public static final Account DELIVERY = new Account(Messages.InvestmentPlanOptionDelivery);
@@ -42,6 +42,7 @@ public class InvestmentPlanModel extends AbstractModel
     private int interval = 1;
     private long amount;
     private long fees;
+    private String note;
 
     private IStatus calculationStatus = ValidationStatus.ok();
 
@@ -86,6 +87,7 @@ public class InvestmentPlanModel extends AbstractModel
         plan.setInterval(interval);
         plan.setAmount(amount);
         plan.setFees(fees);
+        plan.setNote(note);
     }
 
     @Override
@@ -97,6 +99,7 @@ public class InvestmentPlanModel extends AbstractModel
         setAutoGenerate(false);
         setAmount(0);
         setFees(0);
+        setNote(null);
     }
 
     public void setSource(InvestmentPlan plan)
@@ -112,6 +115,7 @@ public class InvestmentPlanModel extends AbstractModel
         this.interval = plan.getInterval();
         this.amount = plan.getAmount();
         this.fees = plan.getFees();
+        this.note = plan.getNote();
     }
 
     @Override
@@ -251,6 +255,16 @@ public class InvestmentPlanModel extends AbstractModel
     public void setFees(long fees)
     {
         firePropertyChange(Properties.fees.name(), this.fees, this.fees = fees); // NOSONAR
+    }
+
+    public String getNote()
+    {
+        return note;
+    }
+
+    public void setNote(String note)
+    {
+        firePropertyChange(Properties.note.name(), this.note, this.note = note); // NOSONAR
     }
 
     public String getSecurityCurrencyCode()
