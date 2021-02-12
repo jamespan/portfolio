@@ -12,6 +12,7 @@ import name.abuchen.portfolio.model.Named;
 import name.abuchen.portfolio.model.Portfolio;
 import name.abuchen.portfolio.model.PortfolioTransaction;
 import name.abuchen.portfolio.model.Security;
+import name.abuchen.portfolio.model.Transaction;
 import name.abuchen.portfolio.model.TransactionPair;
 import name.abuchen.portfolio.money.CurrencyConverter;
 import name.abuchen.portfolio.money.Money;
@@ -51,6 +52,9 @@ public class Trade implements Adaptable
                                         .with(converter.at(t.getTransaction().getDateTime())))
                         .collect(MoneyCollectors.sum(converter.getTermCurrency()));
 
+        long totalPurchased = transactions.stream()
+                .filter(t -> t.getTransaction().getType().isPurchase())
+                .map(TransactionPair::getTransaction).mapToLong(Transaction::getShares).sum();
         if (end != null)
         {
             this.exitValue = transactions.stream() //
@@ -60,24 +64,30 @@ public class Trade implements Adaptable
                             .collect(MoneyCollectors.sum(converter.getTermCurrency()));
 
             this.holdingPeriod = Math.round(transactions.stream() //
-                            .filter(t -> t.getTransaction().getType().isPurchase())
-                            .mapToLong(t -> t.getTransaction().getShares() * Dates.daysBetween(
-                                            t.getTransaction().getDateTime().toLocalDate(), end.toLocalDate()))
-                            .sum() / (double) shares);
+                            .map(TransactionPair::getTransaction)
+                            .mapToLong(t -> t.getShares() * (t.getType().isPurchase() ? 1: -1) * Dates.daysBetween(
+                                            t.getDateTime().toLocalDate(), end.toLocalDate()))
+                            .sum() / (double) totalPurchased);
         }
         else
         {
             LocalDate now = LocalDate.now();
             double marketValue = shares / Values.Share.divider() * security.getSecurityPrice(now).getValue()
                             / Values.Quote.dividerToMoney();
-            this.exitValue = converter.at(now).apply(Money.of(security.getCurrencyCode(), Math.round(marketValue)));
-
+            this.exitValue = converter.at(now).apply(Money.of(security.getCurrencyCode(), Math.round(marketValue))).add(
+                    transactions.stream()
+                            .filter(t -> t.getTransaction().getType().isLiquidation())
+                            .map(t -> t.getTransaction().getMonetaryAmount()
+                                    .with(converter.at(t.getTransaction().getDateTime())))
+                            .collect(MoneyCollectors.sum(converter.getTermCurrency()))
+            );
             this.holdingPeriod = Math.round(transactions.stream() //
-                            .filter(t -> t.getTransaction().getType().isPurchase())
-                            .mapToLong(t -> t.getTransaction().getShares()
-                                            * Dates.daysBetween(t.getTransaction().getDateTime().toLocalDate(), now))
-                            .sum() / (double) shares);
+                    .map(TransactionPair::getTransaction)
+                    .mapToLong(t -> t.getShares() * (t.getType().isPurchase() ? 1: -1)
+                            * Dates.daysBetween(t.getDateTime().toLocalDate(), now))
+                    .sum() / (double) totalPurchased);
         }
+
 
         if (PortfolioTransaction.Type.SHORT == this.type)
         {
@@ -93,6 +103,9 @@ public class Trade implements Adaptable
         List<LocalDate> dates = new ArrayList<>();
         List<Double> values = new ArrayList<>();
 
+        boolean pyramid = transactions.stream().map(TransactionPair::getTransaction)
+                .map(PortfolioTransaction::getType).filter(PortfolioTransaction.Type::isLiquidation).count() > 1;
+
         transactions.stream().forEach(t -> {
             dates.add(t.getTransaction().getDateTime().toLocalDate());
 
@@ -107,8 +120,19 @@ public class Trade implements Adaptable
 
         if (end == null)
         {
-            dates.add(LocalDate.now());
-            values.add(exitValue.getAmount() / Values.Amount.divider());
+            LocalDate now = LocalDate.now();
+            dates.add(now);
+            if (pyramid)
+            {
+                double marketValue = shares / Values.Share.divider() * security.getSecurityPrice(now).getValue()
+                        / Values.Quote.dividerToMoney();
+                Money lastValue = converter.at(now).apply(Money.of(security.getCurrencyCode(), Math.round(marketValue)));
+                values.add(lastValue.getAmount() / Values.Amount.divider());
+            }
+            else
+            {
+                values.add(exitValue.getAmount() / Values.Amount.divider());
+            }
         }
 
         this.irr = IRR.calculate(dates, values);

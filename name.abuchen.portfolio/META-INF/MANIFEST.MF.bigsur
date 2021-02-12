@@ -1,0 +1,1892 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.3
+Built-By: asbn
+Build-Jdk: 11.0.9
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: name.abuchen.portfolio
+Bundle-Version: 0.49.3.bigsur
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: name.abuchen.portfolio.checks,name.abuchen.portfolio.dat
+ atransfer,name.abuchen.portfolio.datatransfer.actions,name.abuchen.port
+ folio.datatransfer.csv,name.abuchen.portfolio.datatransfer.pdf,name.abu
+ chen.portfolio.events,name.abuchen.portfolio.json,name.abuchen.portfoli
+ o.math,name.abuchen.portfolio.model,name.abuchen.portfolio.money,name.a
+ buchen.portfolio.online,name.abuchen.portfolio.online.impl,name.abuchen
+ .portfolio.snapshot,name.abuchen.portfolio.snapshot.filter,name.abuchen
+ .portfolio.snapshot.security,name.abuchen.portfolio.snapshot.trades,nam
+ e.abuchen.portfolio.snapshot.trail,name.abuchen.portfolio.util
+Import-Package: com.google.common.base,com.google.common.io,com.google.c
+ ommon.util.concurrent,com.google.gson,com.google.gson.reflect,com.thoug
+ htworks.xstream,com.thoughtworks.xstream.annotations,com.thoughtworks.x
+ stream.converters,com.thoughtworks.xstream.converters.basic,com.thought
+ works.xstream.converters.extended,com.thoughtworks.xstream.converters.r
+ eflection,com.thoughtworks.xstream.io,com.thoughtworks.xstream.mapper,j
+ avax.annotation,javax.inject,org.apache.commons.csv,org.apache.pdfbox.p
+ dmodel,org.apache.pdfbox.util,org.bouncycastle,org.eclipse.e4.core.di.a
+ nnotations,org.eclipse.e4.core.di.extensions,org.eclipse.osgi.util,org.
+ eclipse.swt,org.eclipse.swt.graphics,org.eclipse.swt.widgets,org.json.s
+ imple,org.json.simple.parser,org.jsoup,org.jsoup.nodes,org.jsoup.safety
+ ,org.jsoup.select
+Bundle-ClassPath: .
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.core.runtime,org.apache.httpcomponents.httpc
+ lient,org.apache.httpcomponents.httpcore,org.apache.pdfbox,com.jayway.j
+ sonpath.json-path
+Automatic-Module-Name: name.abuchen.portfolio
+Eclipse-ExtensibleAPI: true
+
+Name: META-INF/taxonomy/industry-simple_de.properties
+SHA-256-Digest: VIMiQYEJfykiuYkwU+9gjM7sGChykfyOdH+BmuXXaK8=
+
+Name: name/abuchen/portfolio/snapshot/security/DeltaCalculation.class
+SHA-256-Digest: WveRQOcfc5U6u0VHxprgagNEjaAxU5eR78a4FeZlMLA=
+
+Name: name/abuchen/portfolio/checks/impl/SharesHeldConsistencyCheck$Shar
+ esIssue.class
+SHA-256-Digest: 4somH+JIw+hKX0Y4vikq54mexGxDUvugxUhM6SjgebA=
+
+Name: name/abuchen/portfolio/math/PseudoDerivativeFunction.class
+SHA-256-Digest: N85qiLybYf+hlAotP7hiqXUhaFihfe045YTGuEHPNFQ=
+
+Name: name/abuchen/portfolio/checks/impl/DividendsAndInterestCheck.class
+SHA-256-Digest: ZpVWXIsmLJNswiq64CEJG0Trfa6vF0A1Ll8j2mRlgBQ=
+
+Name: name/abuchen/portfolio/snapshot/labels_nl.properties
+SHA-256-Digest: aQt7LGWhE2QMgkB2c8vzRnZoHxpVseeFCK+IkN+VCMA=
+
+Name: name/abuchen/portfolio/online/impl/FinnhubQuoteFeed.class
+SHA-256-Digest: ZlIgysoG2GU2nMlF0h8HDClQ79nstUsK/SIygEL4uP4=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$CloseColumn.
+ class
+SHA-256-Digest: b440FazZW/nIoj/MYHFsBhv14/EICCjJZl3SiXosCBA=
+
+Name: name/abuchen/portfolio/money/MonetaryException.class
+SHA-256-Digest: 2PZeZfZuXcsfdsbSn1+I0mF28Pnm3vNgMsKX3BUVDes=
+
+Name: name/abuchen/portfolio/model/LatestSecurityPrice.class
+SHA-256-Digest: OYe+9FQQEbSu1JC0v1OGAwNoT+BiUONaVWLb+sczY24=
+
+Name: name/abuchen/portfolio/model/PortfolioTransferEntry.class
+SHA-256-Digest: Jl0ifA6ETt0S+x6XDXaxIJLlSPq3VE4IzbkDAy3GpiQ=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DeutscheBankPDFExtractor.c
+ lass
+SHA-256-Digest: XUHgkgI1bOphPwRynlYY3PxP6vKY1BzMXZPZ0hV2Dqw=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PostfinancePDFExtractor.cl
+ ass
+SHA-256-Digest: aJ9g4EX3WqdycTpQW508b/t72CNAktZg5G3fnlUERtg=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVExtractor.class
+SHA-256-Digest: bi6Vb1GM12uFZ7A1SeLtJoQ/D+/PtPN+YfxWVPrw9kM=
+
+Name: name/abuchen/portfolio/money/MonetaryOperator.class
+SHA-256-Digest: EIWInrtWXD6crHlE6RxyDSqRVc3NjSgBJVqS+3Fm1Qs=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVSecurityPriceExtractor.
+ class
+SHA-256-Digest: M8oxBM+hE1eJSl4ZWYMezbTDwNXu7eWYQk9/vz4CYqE=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$Column.class
+SHA-256-Digest: v5f07/c6r3fnctoOkjP+G3nhVLBY1u1jLO2K09MQubE=
+
+Name: name/abuchen/portfolio/money/Money.class
+SHA-256-Digest: 1yFwHyNo+i24NeUwZu4A5j0eOyHtxX41GKzI0jC5xaE=
+
+Name: name/abuchen/portfolio/snapshot/trail/ArithmeticTrail.class
+SHA-256-Digest: HJE9sG0p+CgAs7Uj80fpxVJi8Xw39bkvmaR0xSyUXuI=
+
+Name: name/abuchen/portfolio/util/ProgressMonitorInputStream.class
+SHA-256-Digest: 7Dn0650pBytQ69af8ZcfWFZKo/0tte/w6t1k+hfLglQ=
+
+Name: name/abuchen/portfolio/json/JPDFExtractorDefinition$JSectionContex
+ t.class
+SHA-256-Digest: nRU7RKRgne7t1PDLBqf8p57VJkmPhvCZuE2g6+xo6Js=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation$Period.class
+SHA-256-Digest: jRe3bikkdG+Nan+O3rxiGMS13ptMS4CqjXPRiiBuPAc=
+
+Name: name/abuchen/portfolio/money/currencies_de.properties
+SHA-256-Digest: c/TTxIiAdBXkn5WM29zD4/SCHhq8rmlukiMWExmkidY=
+
+Name: name/abuchen/portfolio/model/ClientFactory$XmlSerialization.class
+SHA-256-Digest: R5k2kJsrR2v1fkcDvB1wZFbG4SkDfi0XKJQjz7IeoL4=
+
+Name: name/abuchen/portfolio/online/impl/ManualQuoteFeed.class
+SHA-256-Digest: YUpcESAEGhHKXz/mO5arSBOSpIGcchMI1KBH0yUX0lk=
+
+Name: name/abuchen/portfolio/money/MoneyCollectors.class
+SHA-256-Digest: efTSnLi34X+S3G/9FMw1R0ZQySjZ0kpnw27km+aB4Ow=
+
+Name: name/abuchen/portfolio/money/Values$18.class
+SHA-256-Digest: TTZt27TQf1IS74d5QfD1+jNHCsrE/s9IiRf1r8cmTdY=
+
+Name: name/abuchen/portfolio/util/HolidayType.class
+SHA-256-Digest: 4QeaIKQJrtjtVtAPFo/kaTKIoCMsvZPklLKx2JfWwAA=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$ISINFormat.cla
+ ss
+SHA-256-Digest: QrBI33jH+5qYFJvbN3iUUk4Py/YMhbecqxg3evH0adc=
+
+Name: name/abuchen/portfolio/datatransfer/actions/InsertAction.class
+SHA-256-Digest: nGFAu2CK+csKf3d1q8mbY5yXe9FtdvMC4Gkq9kvqTNI=
+
+Name: name/abuchen/portfolio/money/Values$9.class
+SHA-256-Digest: rlvovToCMNvqcuJ+rf44m3hIUK6TbN9YPAQ1cBcNT6Q=
+
+Name: name/abuchen/portfolio/snapshot/labels_es.properties
+SHA-256-Digest: nm0IEKQwB8mAcE87ElykGCCV5WhIKnDTeXbtUHaLwsk=
+
+Name: name/abuchen/portfolio/snapshot/trades/TradeCollectorException.cla
+ ss
+SHA-256-Digest: XcBQ28OpKa1fAtUMsvcbeIoNsSBvsnQWkOlXECnPFho=
+
+Name: name/abuchen/portfolio/model/LimitPrice$RelationalOperator.class
+SHA-256-Digest: 2BLnXLSbfMQ3k4Y7LWaLWPcDC7IEQdvk7/NXlQaPxjA=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DABPDFExtractor.class
+SHA-256-Digest: 5EeDzNZn0tGqgCcZGeKOf7aHwQVcSUaBUYRwBDiycIU=
+
+Name: name/abuchen/portfolio/model/TransactionPair$ByDate.class
+SHA-256-Digest: ggLd7LVYSHvWjFuDUGH4QN5mvtidLLydBHjoRdaFC8U=
+
+Name: name/abuchen/portfolio/money/Values$4.class
+SHA-256-Digest: hy2VPPzOFNTBnC5mOICTfBhkLgoAA7Ns55K+30QJkqI=
+
+Name: name/abuchen/portfolio/snapshot/labels.properties
+SHA-256-Digest: CAVVHJcubWaLoTyvYdr3Rc7qjROdaMdVN+qHwAzOyy8=
+
+Name: name/abuchen/portfolio/model/SecurityPrice$ByDate.class
+SHA-256-Digest: yxRSq+tcClIJidAYfnGQ2BGgQJkwF2nGnZqE8UTZKfQ=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/TickerSymbol
+ .class
+SHA-256-Digest: +/xicoTl16nkJOwUrcndjdfgR2R+FQ4O5xYgaMrbzME=
+
+Name: build-info.properties
+SHA-256-Digest: qtZOi2JVaZts4IhF+tyDHhSVOl/N5la7S/F/SsPvSjs=
+
+Name: name/abuchen/portfolio/util/OnlineHelper.class
+SHA-256-Digest: TnhMemFHFf4pI/HUFoH9GTr4xKaSosUBjS5zPZeBZ5g=
+
+Name: name/abuchen/portfolio/util/TextUtil.class
+SHA-256-Digest: KPWLq5xiJUIVMu052KXv3ZpZdavyrF29kjUtJOrriCs=
+
+Name: META-INF/taxonomy/industry-gics.properties
+SHA-256-Digest: Yla/etoC77+hQuX+qvvpNwseEO6mC4qjwq0LnEqsMxw=
+
+Name: name/abuchen/portfolio/money/ExchangeRate$ByDate.class
+SHA-256-Digest: iGnQ3J9c5VCTaQWYU2Deu/7qSCD1yoiQ9fdmq/gcHRE=
+
+Name: name/abuchen/portfolio/messages_pt.properties
+SHA-256-Digest: Yo4rXXTBfL4lidlQh4LEaI74iY5KMPOcIZIpVhiW3sQ=
+
+Name: name/abuchen/portfolio/model/Bookmark.class
+SHA-256-Digest: noIx7ZdMGSTUDNwnEtpoKYX+XgWj2PIgs/Y+IDV4E1Q=
+
+Name: name/abuchen/portfolio/checks/impl/CrossEntryCheck.class
+SHA-256-Digest: 5D0Ar8OfW8WEWOxF3xt7Ui2XUkX1EY1VBX83gPoBmOQ=
+
+Name: name/abuchen/portfolio/snapshot/trail/TrailProvider.class
+SHA-256-Digest: fs1c7afZbpCEoxpsnze+qGHM7eTkFjzZtdpql1SkOpM=
+
+Name: name/abuchen/portfolio/money/FixedExchangeRateTimeSeries.class
+SHA-256-Digest: ztkNhlZn9pE+2at0CF/wGr3zsdALg51pv96uW6GK9PU=
+
+Name: name/abuchen/portfolio/model/Taxonomy$Visitor.class
+SHA-256-Digest: JqQ7bcoy2FuWZbsiU3FqfP6AyIyv0Nn/bj12FiELd5s=
+
+Name: name/abuchen/portfolio/online/DividendFeed.class
+SHA-256-Digest: nhWHuG8BVaYC99wZOby3bSXoja47pBkVKwcYwCtEpuA=
+
+Name: name/abuchen/portfolio/model/Category.class
+SHA-256-Digest: PUIuNYJj/aWOL7eCT8FYp0s3xqwD8NEtjD1xhrtW6nI=
+
+Name: name/abuchen/portfolio/checks/impl/MissingCurrencyCheck$CurrencyQu
+ ickFix.class
+SHA-256-Digest: WsbXUCB2EtBiUn0SniUn0X/PrMDPj3WlElzHJWr0dS8=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser$DocumentType.cla
+ ss
+SHA-256-Digest: 0t1Gq5NSfGOivRRx3IpsUZFXR6EgtY3vGedqQR+IDz0=
+
+Name: name/abuchen/portfolio/model/labels_nl.properties
+SHA-256-Digest: fso2sTjIcJzHXRxL+qA5cA27oZcuNpQxcjJNLhozVpo=
+
+Name: name/abuchen/portfolio/util/ImageUtil$ZoomingImageDataProvider.cla
+ ss
+SHA-256-Digest: xiK7jNt1uNE6dxF06yHX8AQ4kz1VxOtK9lOg4RzVgzM=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$InputFile.class
+SHA-256-Digest: B5BuC4kKJuMn3U/SzX30FQcwdgilomEsZTNQ9xXF0l8=
+
+Name: META-INF/taxonomy/security-type_de.properties
+SHA-256-Digest: Qow7vw7n/fpf8+NSG2hc/2+FaTK+UFCA+3f3AyIgVBs=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/SwissBasedPDFExtractor.cla
+ ss
+SHA-256-Digest: 9CmRsJRsFChfVKHZpe1BDqYTjxdIjQsn2KM+KuFZ/uw=
+
+Name: META-INF/taxonomy/industry-gics_de.properties
+SHA-256-Digest: EhQTb5aMR6ewNQRuae+kDsSrW4Ka9HQAq4fEte27iUM=
+
+Name: name/abuchen/portfolio/datatransfer/csv/BaseCSVExtractor.class
+SHA-256-Digest: WEap8O7VVjZKAJ3l7bB2wQpafJV/s5LcgUDooVA6HlY=
+
+Name: name/abuchen/portfolio/snapshot/trail/Trail.class
+SHA-256-Digest: dMA2GDAixv5d0pwDfcLrG5gv+L3/687CWowi+9PfrZ8=
+
+Name: META-INF/taxonomy/regions-msci_de.properties
+SHA-256-Digest: GThxVmqSKBojyTD6yj+OMVlmRL43rApsJHqOl2yEmB0=
+
+Name: name/abuchen/portfolio/checks/impl/TransactionCurrencyCheck$Transa
+ ctionCurrencyQuickFix.class
+SHA-256-Digest: gUzzTOx62J7fCnDkMshoVls1ln7UCd7GUJOZztdtTuk=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientFilter.class
+SHA-256-Digest: Jsa3WWNy245tmwZmqCg4Z77L/L2tDBgkKzjYFz9jBEc=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$LowColumn.cl
+ ass
+SHA-256-Digest: 3jpicLQe7LvqhlvrUiAfRGk3LfzFFtUkU+ZkMQU1TNg=
+
+Name: name/abuchen/portfolio/checks/impl/TransactionCurrencyCheck.class
+SHA-256-Digest: cn+V8j7lkbJYo/PoKqH2x8nYPVoTBhHvidsmYecQnG4=
+
+Name: META-INF/services/name.abuchen.portfolio.online.QuoteFeed
+SHA-256-Digest: H+/8ufnLPetq5V6x2FmRBhOZQX1YNnLvDGxeyR+MYhI=
+
+Name: name/abuchen/portfolio/model/AccountTransaction$ByDateAmountTypeAn
+ dHashCode.class
+SHA-256-Digest: 3f4pBJrdGTBRuc/76WOBrDTZGlrS31nXGC1jHWdjOb0=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientFilterHelper.class
+SHA-256-Digest: /Ge2fpWQIKHckiclgrsTKxQ9Ld4naKObEXp7hRA82uw=
+
+Name: name/abuchen/portfolio/math/Risk$Volatility.class
+SHA-256-Digest: cQW8Ah6W2oqT2b436YFy7J73/NOjEjFWDH4X4HnW4g4=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem$Valua
+ tionAtStart.class
+SHA-256-Digest: /QlnX3aK1UDsiZAqCFOYH8TzeaB5HlEdNJI9xNyZMEc=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/trade-republic-dividends.j
+ son
+SHA-256-Digest: X+322wGZlSQzHB/0uBv2kyLof3tT7e31jzM+NzToI/0=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$Field.class
+SHA-256-Digest: t+Aicea0ZVodEtPn8bcFSGX6ijk9pNnwJzo1H9gyVMM=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser$Section.class
+SHA-256-Digest: xqzMgYJQjxMKfx6UtbOZhSRH2daWacGQMKP60/Ju2zQ=
+
+Name: META-INF/services/name.abuchen.portfolio.checks.Check
+SHA-256-Digest: 9L0hudx6D8rmXC5gFnrD0zJtmbvrSbldOZ+jmTzqaKo=
+
+Name: name/abuchen/portfolio/model/AttributeType$StringConverter.class
+SHA-256-Digest: cZTPYTl8E/EJydiWIQGw7RolmsLi/ceBWncEUem3Xow=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ConsorsbankPDFExtractor.cl
+ ass
+SHA-256-Digest: z17+aV7VkOPcVniC/Suhmxo3b2/S9fsJxBbJmYr81g8=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientSecurityFilter.class
+SHA-256-Digest: S3Cknc8Fg/p2HxocqqnHa66CuvKIBJQynd1M7RAUBYY=
+
+Name: name/abuchen/portfolio/snapshot/filter/WithoutTaxesFilter.class
+SHA-256-Digest: uX29bUBUWGXYi15OEy0R73WFu3CyEAr3CtgQZ5rlhaI=
+
+Name: name/abuchen/portfolio/model/labels_es.properties
+SHA-256-Digest: qbHurty/xTlaW0g/Ci196TIu9RuPG7L9MUdK3pyal1o=
+
+Name: name/abuchen/portfolio/checks/impl/PortfolioTransactionWithoutSecu
+ rityCheck$MissingSecurityIssue.class
+SHA-256-Digest: v6dOGDtKIN+H7Em/irGYDCXA82DRb7u9MAmhiQLtk/o=
+
+Name: name/abuchen/portfolio/money/ExchangeRateProvider.class
+SHA-256-Digest: UmUHqgG+aT7+dmpxkvNU3W44Jx1tnDDy2qtcQNJEtOk=
+
+Name: name/abuchen/portfolio/util/XStreamLocalDateConverter.class
+SHA-256-Digest: 3WZkFsLbHqfJa39JEcZYeIgyg9YRM9Oml0fbq6vcl0s=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVConfig$CSVColumnConfig.
+ class
+SHA-256-Digest: 9OB6+XO2adSp7MVX7sInvVDbvbbyWGhFCoKvxYF9I/I=
+
+Name: name/abuchen/portfolio/model/Classification.class
+SHA-256-Digest: +qT+2bFuCi33duVkWnWpHPLc5ESjoTJ+WkaZvfYtsGE=
+
+Name: name/abuchen/portfolio/money/MutableMoney.class
+SHA-256-Digest: FVyiXUQ7U/r3Bz+i7xig6ywrBGOvcK+amg33PYGXu3g=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/iterators/DateItera
+ tor.class
+SHA-256-Digest: M0LFeoW3myoKpDZVPQOD3md6D916QEI/85Y1fzUw1g8=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$DateFieldForma
+ t.class
+SHA-256-Digest: 04AlJXcLEot03CrZqOS4Qh9QhD665SVhhbB6ouiWM4c=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/OnvistaPDFExtractor.class
+SHA-256-Digest: Us04f8BXJW8Ik0YI5zWgRVTecEGS1r0s0PUPk1Amt0k=
+
+Name: name/abuchen/portfolio/util/XStreamLocalDateTimeConverter.class
+SHA-256-Digest: bBNP5fw/a7fUpiSRZzWLzo69NJ4/k+A64sfA7kfFyVg=
+
+Name: name/abuchen/portfolio/util/holiday-names_de.properties
+SHA-256-Digest: mF1xwobdremlpLsBEeheAWKxLZx9CpqXYHn2Xo16aDc=
+
+Name: name/abuchen/portfolio/messages.properties
+SHA-256-Digest: 0+P64eij8gccfwCzN6DIeUh7k3vLjrLCzcmOHSid6Fw=
+
+Name: name/abuchen/portfolio/model/AccountTransferEntry.class
+SHA-256-Digest: uropCbURBQcZvXwM6cnZhPMr6zRFpX5uvcpHu+dgfPw=
+
+Name: name/abuchen/portfolio/money/Values$11.class
+SHA-256-Digest: Ok338p4StoMHv9iq74EQLPrfczi4dyVwx7Cz3w2cegU=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVPortfolioTransactionExt
+ ractor.class
+SHA-256-Digest: yIP0WEu+B6iWQ9knskSWXaXNpuOMFjsb5m1/Ens5Qxk=
+
+Name: name/abuchen/portfolio/snapshot/GroupByTaxonomy$1.class
+SHA-256-Digest: VQz8ApIAR/HHmjgGHUyq/xgEypfR5OLoBPI0mSreAtg=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$ISINField.clas
+ s
+SHA-256-Digest: kxFSDJvzfrftZoZSOhN8k9ZQqMIchc8AtvwDexr7AEw=
+
+Name: name/abuchen/portfolio/util/TradeCalendar$1.class
+SHA-256-Digest: gkOLKzPQGmg7ttfDSghhP3prZJgIgmiZkyPwabcR4z4=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/urls/BaseURL.class
+SHA-256-Digest: tRRkNt/gzqLpkKbPoEjEmvCdA8Il7aRQPFhQm4hCQXg=
+
+Name: name/abuchen/portfolio/snapshot/filter/ReadOnlyAccount.class
+SHA-256-Digest: MWtxvCWQMZrcs8Nb79R0tKeWe2/TzWHeTJ19bJDp414=
+
+Name: name/abuchen/portfolio/money/Values$2.class
+SHA-256-Digest: J1kSltLYqKD+C8TTd33FZSjBoK8Xjc022LgKPB0af04=
+
+Name: name/abuchen/portfolio/checks/impl/ReferenceAccountCheck$MissingRe
+ ferenceAccountIssue.class
+SHA-256-Digest: yTjUOlvbLMWpKMhjVpx6pDWNiocRK6ErF1N5id8eSfQ=
+
+Name: name/abuchen/portfolio/math/NewtonGoalSeek.class
+SHA-256-Digest: SVv/bTuOMuHOKjBHc58O4U78QdxhdcmUwNVADAlN18w=
+
+Name: name/abuchen/portfolio/model/AttributeType.class
+SHA-256-Digest: PGdqwmiqs4GvrDa0fb/E7qHnIkUv5yHs99nFeTysSdU=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/urls/VariableURL.cl
+ ass
+SHA-256-Digest: c+5O/0uPrGtStsT+gnXuvxPfbIOWifu+ixZSTGcH4iY=
+
+Name: META-INF/taxonomy/assetclasses.properties
+SHA-256-Digest: XQqTqE6vIHnEhBtm3Vro6Yl25Yp6Js85F95cOW2IkBE=
+
+Name: name/abuchen/portfolio/checks/impl/MissingAccountTransferIssue.cla
+ ss
+SHA-256-Digest: r37dtPBBcoAYoJdOuCwa1pktbqZmviBGJipf/7UDWoU=
+
+Name: name/abuchen/portfolio/model/ClientFactory$PortfolioTransactionCon
+ verter.class
+SHA-256-Digest: z/7IEipNh2NOX6ZJyjceEu5Wdsi0T55rHxbZpsHzkCc=
+
+Name: name/abuchen/portfolio/util/Isin.class
+SHA-256-Digest: kYfQMMKpl3Xu6npzDucXilJ8H/LBH26r0SCyA+qiykk=
+
+Name: name/abuchen/portfolio/model/labels.properties
+SHA-256-Digest: Z7A0kB7Sld49E/9WSZkpJyqewa/BxVIULht45E71xyo=
+
+Name: name/abuchen/portfolio/model/LimitPrice.class
+SHA-256-Digest: 9yGEFcpAlCYM3ikWkC597x/A72jRu6cKJOkI4rnwgcg=
+
+Name: name/abuchen/portfolio/model/AttributeType$AmountPlainConverter.cl
+ ass
+SHA-256-Digest: VuHLH8KXRAIGYuNMsWJd0AUqXwgNNWtNmYHZ1Eqdn1M=
+
+Name: META-INF/taxonomy/regions_de.properties
+SHA-256-Digest: NroRhR0SWkuB+gLfurxyll4j6LtiqeV/gEV9KPVFbM0=
+
+Name: name/abuchen/portfolio/snapshot/QuoteQualityMetrics.class
+SHA-256-Digest: ynJsR8uP1L+NJ8RcL3YV4it3CzAw1SKTQr+yKM0am8g=
+
+Name: META-INF/taxonomy/regions_pt.properties
+SHA-256-Digest: 9Yij4wHMaOUGO8wVBZfKaPMRf/pq5IoNvODTAdMESr4=
+
+Name: name/abuchen/portfolio/datatransfer/csv/AktienfreundeNetExporter.c
+ lass
+SHA-256-Digest: KzTdprQ+JWSugkL+sasISd73hwQdX8kEZYak4KbOhVY=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DegiroPDFExtractor$FxChang
+ e.class
+SHA-256-Digest: njUuma+0ozrGf2pxZnzRYs4TUjOvILP85gJC8SJXtwU=
+
+Name: name/abuchen/portfolio/money/Values$MoneyValues.class
+SHA-256-Digest: tfwSgvF/vzSA0zd88hSncQG6Fvtpr6hiPB52YrMg2vk=
+
+Name: name/abuchen/portfolio/snapshot/AssetPosition$ByDescription.class
+SHA-256-Digest: IKiMbzPBneeiWni27PuDY7fO7Ge1lpYqrOOc9drrsic=
+
+Name: name/abuchen/portfolio/online/impl/eurostathicp-labels_fr.properti
+ es
+SHA-256-Digest: 07x9WRBKOD59meBlO4FO04KQdIoIAR8ZiZzgua0xQaU=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItemCompar
+ ator.class
+SHA-256-Digest: kv8FWx7J/9IkPZkaGlVwkw5W87Kee5KLtP6NiTB9nrU=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportNet$SymbolInfo.c
+ lass
+SHA-256-Digest: 4SeV/WpGAjzX6a+JlugILB4fNQFuTkl3iWR/BhFcr8E=
+
+Name: name/abuchen/portfolio/money/MoneyCollectors$2.class
+SHA-256-Digest: L7CjmEoqHdG9slCNX767PaygTWADn1g/hrltBY3kvAU=
+
+Name: name/abuchen/portfolio/json/impl/LocalDateSerializer.class
+SHA-256-Digest: aQyoFeYQG3lFV540PlbtWG3+zCSHVjgQP2KBEZwim84=
+
+Name: name/abuchen/portfolio/online/impl/YahooHelper.class
+SHA-256-Digest: 0fLIlQgGVs1XXKngqLanV1+6/Oj0+H7HG3iK/nlET30=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportNetSearchProvide
+ r.class
+SHA-256-Digest: T2K3w1wB80ZSyL8+F+/jAkDaUs0YHqrYWvVVCGmi2JQ=
+
+Name: name/abuchen/portfolio/model/ClientFactory.class
+SHA-256-Digest: U+zHnx1qcNkfexOUbR1f3C7Tx2UJ75b8eoK8B0DUfeY=
+
+Name: name/abuchen/portfolio/model/Taxonomy$1.class
+SHA-256-Digest: SmgRZFUIpSys4Wx6nQuPTqksws0Zt75r5XBxvNS3TqU=
+
+Name: name/abuchen/portfolio/online/QuoteFeed.class
+SHA-256-Digest: csfdSkNxychYSSiFCHmlQjMspaoeDb8+1dFiY9IZpfs=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/trade-republic-investmentp
+ lan.json
+SHA-256-Digest: PLilmSi5eQ3GiPVAbZVuvWX+zhqSV0bKWH8o6Afwz8E=
+
+Name: name/abuchen/portfolio/messages_fr.properties
+SHA-256-Digest: XFpH/9gERFisO5N00xgRW5MkcOnFDhjmszmWY2VnDB8=
+
+Name: name/abuchen/portfolio/model/labels_de.properties
+SHA-256-Digest: F0k/L0cnsMhvrwfoahjEFAdT9E6DWYY9GG72XxHkiQQ=
+
+Name: name/abuchen/portfolio/snapshot/security/CostCalculation$LineItem.
+ class
+SHA-256-Digest: Ojgnzhq7ZfUduzcYGmsVZYvYa2TM7Kj2Xc8Axy0fACA=
+
+Name: META-INF/taxonomy/security-type_nl.properties
+SHA-256-Digest: JOn7kd4y80WfDZY7Z/yXcUKidrEtplqBOodtt+VjJ/w=
+
+Name: name/abuchen/portfolio/money/Values$13.class
+SHA-256-Digest: yNssoKFE6Ns35G2p043yly3fjUPmprgRZjiKeaBYZTE=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$PortfolioTransferIte
+ m.class
+SHA-256-Digest: sfJy4cJAoMll+U5TJX9jI+64TWbpaJhwmvQMVnK/gS4=
+
+Name: name/abuchen/portfolio/json/JTransaction.class
+SHA-256-Digest: 8O/slWDRaPJjYki5xAiAE3k2Fl1Cn8aestm65oxCk68=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser.class
+SHA-256-Digest: jv3EcF+iuTWnNUKu9yor6PT7xqtEHtUxjg6TR+Zflok=
+
+Name: name/abuchen/portfolio/snapshot/PortfolioSnapshot.class
+SHA-256-Digest: jdhkDtjFb9SdSjAVL2/uqAk7wwhC+L0aR5eOvYLEAM4=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ComdirectPDFExtractor.clas
+ s
+SHA-256-Digest: rzApBt7djgwPzsdL9AHmv4HbP63aPa7lBc9iCbP9bcg=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/SwissquotePDFExtractor.cla
+ ss
+SHA-256-Digest: q24rjsHdvCQ9qHPXArgfnYUqzln0d/9N9SV7Je3VIH4=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/JustTradePDFExtractor.clas
+ s
+SHA-256-Digest: vV6tqBk4pEEpyJgH/R04C4xj9rjQfxPrHbdANft/rkg=
+
+Name: name/abuchen/portfolio/money/Values$6.class
+SHA-256-Digest: hVzFkU008Tr0pyLqhWce/ttX/nVaTKGXqvUxdpB8qjE=
+
+Name: name/abuchen/portfolio/util/holiday-names.properties
+SHA-256-Digest: Bh/sTKsytZmbCbNIw9mF/9/UxBs37IzJyCTGaP4xeH4=
+
+Name: name/abuchen/portfolio/datatransfer/actions/CheckSecurityRelatedVa
+ luesAction.class
+SHA-256-Digest: dVp1L8DYlAbWvgqArllofQTBqe+HhPp66eYmaFnRwfE=
+
+Name: name/abuchen/portfolio/money/ExchangeRate.class
+SHA-256-Digest: Ow+9PCUPmZCa9+vMFFXMRxvhlivcN1nqWpqPh/sH22M=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$HighColumn.c
+ lass
+SHA-256-Digest: REgemEtVUnDi42zPc/Edo3RbZ5YCzOWfL2KS4y4wHG8=
+
+Name: name/abuchen/portfolio/datatransfer/IBFlexStatementExtractor.class
+SHA-256-Digest: VD20pGTLq1tAtDJI/ZTuOOKHUJHUq0Mq/6m0fFpCRBY=
+
+Name: META-INF/taxonomy/regions_fr.properties
+SHA-256-Digest: xd8u56PNbYTAObY4xAPAz4vZZI+VzZj6ZvqCo7htD8o=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVConfig.class
+SHA-256-Digest: Ah8HkHMm+Rc7MIjQlREXMvVo9uyZopDfBHR5Rp+lD3E=
+
+Name: name/abuchen/portfolio/datatransfer/actions/DetectDuplicatesAction
+ .class
+SHA-256-Digest: HCrGBl/9LHsmJsHyTWy4TSQVGaGq32c3azs///xE9jM=
+
+Name: name/abuchen/portfolio/json/JPDFExtractorDefinition.class
+SHA-256-Digest: VUA5RVBnwx18FkLI+BwZrE9cJkYXXmFt43pj5134KBo=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/HelloBankPDFExtractor.clas
+ s
+SHA-256-Digest: zYgPJzn/5czTHtOxshBq/c4K/cpugnj9+7DQFIgrxlM=
+
+Name: name/abuchen/portfolio/model/SecurityProperty.class
+SHA-256-Digest: YAp2grjzJ3rCkuNbG+dvO0d6PE7uQHBtVLED/RRM9YY=
+
+Name: name/abuchen/portfolio/model/ClientFactory$PlainWriterZIP.class
+SHA-256-Digest: KVXi80LaLFcArTpgveNtb/x1dOn97Vl5WlnrM96ec60=
+
+Name: name/abuchen/portfolio/online/QuoteFeedData.class
+SHA-256-Digest: p4q+UPFFzwDviwAvBziEDuQiL5sXYx8Kk3R3cFnfhiM=
+
+Name: name/abuchen/portfolio/money/MoneyCollectors$1.class
+SHA-256-Digest: uqgEg5njyjgUyPdSdpWtd0cUAwYUNOTV4MzNHBhLgWY=
+
+Name: name/abuchen/portfolio/model/AttributeType$Converter.class
+SHA-256-Digest: RlunPRXVNtctl+1GVtA2nGWhjIhAxTWg+aIjjylHta0=
+
+Name: name/abuchen/portfolio/model/AttributeType$ImageConverter.class
+SHA-256-Digest: sVPeukTqQZZ2vX37U2EDv3Ij2T2gTPHxoLMxp1usnYE=
+
+Name: name/abuchen/portfolio/checks/impl/DividendsAndInterestCheck$Divid
+ endsAndInterestIssue.class
+SHA-256-Digest: zakt8Pzuyk3BhDkfqcbp1fuo2JhZ4POwG2kpDuPzPjA=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser$Transaction$1.cl
+ ass
+SHA-256-Digest: qEYTsJ2QD4obbotEmwRPKlNk9euKu72KtNNPjouC/LE=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio/pom.p
+ roperties
+SHA-256-Digest: 79LJEan9AOx18NO2SMPwCyKL1rxxwq+u38fmxhG2G6c=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/TradeRepublicPDFExtractor.
+ class
+SHA-256-Digest: Wxp0k92ZbSt+6PWPW9+Xjxl/T1ZxIz0RS6K5P6i6foU=
+
+Name: name/abuchen/portfolio/snapshot/security/SecurityPerformanceRecord
+ $Builder.class
+SHA-256-Digest: jIk9rWMzV9pEdZT6DwhO4+u6aWWyYnM0ww1QMFSOOh4=
+
+Name: name/abuchen/portfolio/checks/impl/ReferenceAccountCheck$AssignExi
+ stingAccountFix.class
+SHA-256-Digest: /QEwvX+3yeQXO2xIpeTsBfJsCieJnTkF0ffKBb27OQE=
+
+Name: META-INF/taxonomy/regions.properties
+SHA-256-Digest: hD2KG2yVbmHPYlEHhBKC5Blq8opd2YWTJ65MetzXMQ0=
+
+Name: name/abuchen/portfolio/online/impl/CSQuoteFeed.class
+SHA-256-Digest: SWqWNYQ/mFCpJtOaFlzN+51UZCJoTl5+QCJ0VvH6rJM=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor.class
+SHA-256-Digest: b/Asc46/bWu2OKOPd60aE2F3SUzKHPno3STfHPst8go=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$LastXDays.class
+SHA-256-Digest: 9iHweYkAoA2XPOLezdL+EZU2v68L1KBMpVnnWDXbD6A=
+
+Name: name/abuchen/portfolio/checks/impl/CrossEntryCheck$AccountEntry.cl
+ ass
+SHA-256-Digest: UFeqdR3+tRuJkGScgUzXjmZwey387T04MSK/vRyDiRc=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels_es.properties
+SHA-256-Digest: 5J6dACX5hhg7tPX1YQl4qJ+toT+V7y2NkWv799FBjc8=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DegiroPDFExtractor.class
+SHA-256-Digest: cu143KHIeQ4g6dnz2Zbzqb8uB+eQvm78bToHn4k9q48=
+
+Name: name/abuchen/portfolio/events/ChangeEvent.class
+SHA-256-Digest: mT+Uq9/9mCghW0i5G8b78uV79SEDsTpswMLEWJ3p/4E=
+
+Name: name/abuchen/portfolio/util/holiday-names_fr.properties
+SHA-256-Digest: PldonSyEOiImK56EgcrYq9EXB9Ik2+Cs5T0URipJrgI=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels_fr.properties
+SHA-256-Digest: 7/z1H2XT7g6pygkxA69Py7NHx+69/2vpLu63V82YscA=
+
+Name: name/abuchen/portfolio/checks/impl/TransactionCurrencyCheck$Transa
+ ctionMissingCurrencyIssue.class
+SHA-256-Digest: C6WAUCKeio8anROfijOL4YfRYNaom98hw/HpKmBqTMk=
+
+Name: name/abuchen/portfolio/money/Values$QuoteValues.class
+SHA-256-Digest: k6XmBxwrEz9vTtSMatFA0Js7Eqcr18QW2eQX/gEaE3E=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$EnumField.clas
+ s
+SHA-256-Digest: 8HSBdOnisdfkK1dbHjr8L6o7+PpseCq3gwyvG1uw/+8=
+
+Name: name/abuchen/portfolio/model/Attributable.class
+SHA-256-Digest: GziS0TziV3bCacvWIsfG9JLRcPESomgz/2pSvIXAcck=
+
+Name: name/abuchen/portfolio/snapshot/trail/DefaultTrail.class
+SHA-256-Digest: waBYURd8xu0v3vbnc2mH3KR28cGw76ACz2wZc3r0vGw=
+
+Name: name/abuchen/portfolio/money/Values$10.class
+SHA-256-Digest: ongvhfjPuFAgRFYKtH8SXNX7KUjz7aeCnoEgge2VpUA=
+
+Name: name/abuchen/portfolio/model/InvestmentVehicle.class
+SHA-256-Digest: qknGy6/45J5nB7/Jp7mVPMJNVZSRzX0I09PIx8EZSt4=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVExporter.class
+SHA-256-Digest: LgfGY2p/pkidxezdsRWjlfWezsyAvHnXXd8ovzWxEpE=
+
+Name: name/abuchen/portfolio/model/ClientFactory$Decryptor.class
+SHA-256-Digest: qGaqFP//cwaa3ZU0tagVgvORggnS7fAoIoKHiHeWLpM=
+
+Name: name/abuchen/portfolio/money/impl/ECBExchangeRateProvider.class
+SHA-256-Digest: 17BIA/Kn3n78vpy/SEHMBeU6CRdc0DJMF+uOAQXVOlM=
+
+Name: name/abuchen/portfolio/snapshot/security/SharesHeldCalculation.cla
+ ss
+SHA-256-Digest: lVA4RWVTSF1KcffE63WrBvxV+DmBLqqq9eNZSd6r/X4=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/AbstractPDFExtractor.class
+SHA-256-Digest: 4zWK6j7aVrJRI5inIk6Nb2Zf9GHtoIqMw2JWe3w7dAo=
+
+Name: name/abuchen/portfolio/snapshot/ClientPerformanceSnapshot.class
+SHA-256-Digest: Ge4g0D+WbUOKKsWtv5iNHcxDn9SRo7nflkudK+yH+Wk=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$TransactionItem.clas
+ s
+SHA-256-Digest: xAQWpHWrIw/AoACJlHQFnebNO5qBjnQ32XNjFNBznwM=
+
+Name: name/abuchen/portfolio/util/HolidayType$LastWeekdayHolidayType.cla
+ ss
+SHA-256-Digest: mMfoCXp5PAYN35z4ajeaDSCtIjv18HgRkYg5YySOih4=
+
+Name: META-INF/services/name.abuchen.portfolio.money.ExchangeRateProvide
+ r
+SHA-256-Digest: APJszrmflienFAs44XfK/EMzlNCaKyat53StYoGE3yo=
+
+Name: META-INF/taxonomy/regions-msci_pt.properties
+SHA-256-Digest: O3Wvgtwh2S7QsKlbiwe6R2jchVVg8Mnc7gB+eJreI+k=
+
+Name: name/abuchen/portfolio/model/Annotated.class
+SHA-256-Digest: ckVirA5msn6gy/FErgSn33Sf4moQdmDap6FnqOEfibY=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$SinceX.class
+SHA-256-Digest: PiSq84O6P8KMyZSguzs++oGqwNkFJ3ocVYEoVIWNzL0=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$FieldFormat.cl
+ ass
+SHA-256-Digest: p3XCusbI7bnNroskAkJE+ZZgkgzhtlVTlNx1iiedJZI=
+
+Name: META-INF/taxonomy/security-type_pt.properties
+SHA-256-Digest: +mH8JWpHEP+2kpMLb71QjbSU5Z/sxOOlPYL99Iep0d8=
+
+Name: name/abuchen/portfolio/checks/impl/AbstractAccountIssue.class
+SHA-256-Digest: 4SmoI9UZcFfhkfe/QQQyukyNsZkBIqIbICB+o9vws4I=
+
+Name: name/abuchen/portfolio/money/ExchangeRateProviderFactory$CurrencyP
+ air.class
+SHA-256-Digest: 7FwmvcMGfqrT76kDG2DFjEWLrK+kKiOxrBfiKX4h0W8=
+
+Name: name/abuchen/portfolio/model/AttributeType$QuoteConverter.class
+SHA-256-Digest: 7++WfWTp4tiTVncaZJE0EeN4fDNXVvyhWJH/mxtykok=
+
+Name: name/abuchen/portfolio/snapshot/filter/ReadOnlyPortfolio.class
+SHA-256-Digest: RiUvvlOZZiBxgp4XioHGeJI1ukZfpROExCGM29d9IJM=
+
+Name: name/abuchen/portfolio/json/JTransaction$Type.class
+SHA-256-Digest: grOGkPPIZfgibEvtdG6BsgGEGLfn+MXnzhqFi/AQvN0=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation.class
+SHA-256-Digest: IN2UHqS3Vw5Qhe4UT0Eq6fBMe6RWCtjDmflKjDOEwcI=
+
+Name: name/abuchen/portfolio/model/Watchlist.class
+SHA-256-Digest: Mzc6Xw8CeY5Ckf8LDRDhuucEmmRMq1p3SpczUya0uxA=
+
+Name: name/abuchen/portfolio/checks/impl/MissingCurrencyCheck$MissingCur
+ rencyIssue.class
+SHA-256-Digest: 3Uv0R+iSu5jRJWalcu3Yck7GE3XxJSOhJY2x4j2CwA0=
+
+Name: name/abuchen/portfolio/datatransfer/csv/csv-config.json
+SHA-256-Digest: w3BCptxnL6cZ54MxaTzmn/Wserk+nNx+7K1LM9HxWrQ=
+
+Name: name/abuchen/portfolio/online/impl/EurostatHICPQuoteFeed.class
+SHA-256-Digest: xFFgEE1hrV4Pv8EjW729ptmU/yVSyU9oq+8sLE4RYIM=
+
+Name: name/abuchen/portfolio/checks/impl/FixDepositsWithSecurityCheck.cl
+ ass
+SHA-256-Digest: afzllrbYcEtxaSS2GDNdSzKq88IT32eJGu+Kue5jpPU=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser$Block.class
+SHA-256-Digest: mjtaqf21dJI6/+HXBF+p/rQPZhqH1AojjDiEtoEbqr8=
+
+Name: META-INF/taxonomy/regions-msci_es.properties
+SHA-256-Digest: v3olC2nuiDMi/vXZE60OMYp6oOFlCmQCji6EX6580Po=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$YearX.class
+SHA-256-Digest: u+5Zgg0KrLZfwAtI3K+cEqdtSgFY5I/E1g2xE+7v9pc=
+
+Name: name/abuchen/portfolio/model/Adaptable.class
+SHA-256-Digest: dGkUy1LTLO+G3Mv2Yj9T+oPOC8QPeozU5cQM4Pn+udA=
+
+Name: name/abuchen/portfolio/util/HolidayType$FixedWeekdayHolidayType.cl
+ ass
+SHA-256-Digest: gmB/2KuYmpXqnkxcNH6p2WyJ/uwbq08KAvnuC+x213o=
+
+Name: name/abuchen/portfolio/model/Attributes.class
+SHA-256-Digest: wtCx0irGFgCwbO7MqB+LPgD+bm+taSFFkCyj5NbDgak=
+
+Name: name/abuchen/portfolio/model/PortfolioTransaction$Type.class
+SHA-256-Digest: bBi1KCNR+E3We1XNHk6RTALCH5Zjy31subkSxgFFa3Y=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$SecurityPriceItem.cl
+ ass
+SHA-256-Digest: graaPMDC/5C1phEBgZhMI8/QUo0tx+fig+M91a4pVPg=
+
+Name: META-INF/taxonomy/kommer_nl.properties
+SHA-256-Digest: JLCaPaILnO+9cCQJFSzH/Ivl5dM6Zr8VOw18W4Z1IPc=
+
+Name: name/abuchen/portfolio/model/AttributeType$PercentPlainConverter.c
+ lass
+SHA-256-Digest: srB3NeZb1FbPV3NV3AT2WkR7GNuMTfAA3YQpi2Swflw=
+
+Name: name/abuchen/portfolio/online/impl/PageCache.class
+SHA-256-Digest: EDcxxb0OiNsZzkQaRrxCIO6f4DpAvciaVAC4nNYPUik=
+
+Name: name/abuchen/portfolio/checks/impl/AbstractPortfolioIssue.class
+SHA-256-Digest: FRe4K7Fr0LLIeyFnIFIOLoHthaJ00DC8rkT9u794vK4=
+
+Name: name/abuchen/portfolio/model/CrossEntry.class
+SHA-256-Digest: 3u3Q9nPnqVu1VaYZOgqH+YqQwATiw8156gg4wj0eCoQ=
+
+Name: name/abuchen/portfolio/money/Values$5.class
+SHA-256-Digest: NWAuXlc7vSamvsBeN+rzKxdqSij5qU1uqndxis/J0gU=
+
+Name: name/abuchen/portfolio/util/Holiday.class
+SHA-256-Digest: Kf/z1Gg8jIPuBvOL5Q64/KA5UsBlziIv5KaehEZ6p20=
+
+Name: name/abuchen/portfolio/util/HolidayType$MoveIf.class
+SHA-256-Digest: 1al4C9Nq0hMcxqxel1TwStarzwnBqTuTZNKBJQpEbqs=
+
+Name: META-INF/taxonomy/assetclasses_fr.properties
+SHA-256-Digest: g3LBmBqGD6R4iI6w8eIbOQfDYgEMDMOAPCxfy5rf7Y0=
+
+Name: name/abuchen/portfolio/online/impl/eurostathicp-labels.properties
+SHA-256-Digest: s6qzw3vQxpiD/U7Y/RdrLi/h6N7a1xBNhX/xjKR7CD8=
+
+Name: name/abuchen/portfolio/snapshot/security/CapitalGainsCalculation$L
+ ineItem.class
+SHA-256-Digest: yWfM8hlmiAxD3JkgZhpZeBnGTCg4iaPO4bFscfr/WAk=
+
+Name: name/abuchen/portfolio/money/impl/SecurityBasedExchangeRateProvide
+ r.class
+SHA-256-Digest: yMt+jgz/5/TehpqGsPyuLLpQxSZD/fzgFDj6WDsynhg=
+
+Name: name/abuchen/portfolio/model/TaxonomyTemplate$1.class
+SHA-256-Digest: EpxrEBJlVxkEJmVRnvXPPSId58B4Zn/KH8fZBzLMaqI=
+
+Name: name/abuchen/portfolio/online/impl/YahooSymbolSearch.class
+SHA-256-Digest: JaL+pqE25GEOxQIj0F3c3cvwuP48fv8oMa9pOnYtBlE=
+
+Name: name/abuchen/portfolio/datatransfer/ImportAction$Context.class
+SHA-256-Digest: KWyJ5geHEgIK4f4vT8CaH0IsO4yBdCK5kbh6vcX/DvU=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/ISIN.class
+SHA-256-Digest: WMBgSweZEh/Ph4byc4Lh7jJycLIcf7lAW9q2zDrOQuI=
+
+Name: name/abuchen/portfolio/model/ClientFactory$PlainWriter.class
+SHA-256-Digest: roQNPmCiI0h6FsaqdMAzAtthGRBMNdrg7T0XlfMfZgU=
+
+Name: META-INF/taxonomy/security-type.properties
+SHA-256-Digest: BI0IOwBPWS8PG9tAgCzR3BHh9m8Nx8vbbfig7WoqJHc=
+
+Name: name/abuchen/portfolio/model/AttributeType$BookmarkConverter.class
+SHA-256-Digest: 2c57Vgv6HnQ4SeAF9byOCvUWxzawR7dJ0n1OjDMMeqk=
+
+Name: name/abuchen/portfolio/model/AttributeType$BooleanConverter.class
+SHA-256-Digest: kThMbQRToaZiOYbs5lFYctCQ49t1RNwkdk6anauLXc8=
+
+Name: name/abuchen/portfolio/checks/impl/NullSecurityPricesCheck.class
+SHA-256-Digest: qRx1MuD/n0K2yoLx98FXM/qTDdSO0obteP3m4FqQRzY=
+
+Name: name/abuchen/portfolio/json/JClient.class
+SHA-256-Digest: zObKSzf3TJUphgaVF81jpSlkWNKA/Qax6238B5eu7gM=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$HeaderInfo.c
+ lass
+SHA-256-Digest: s2W1cBIVyqsN/LkMYCgDh/VWxCH+Vh6J/fK6hYgS+zc=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/Macro.class
+SHA-256-Digest: v+xgCvl6401oxWtcppzkE4tHjqTO3KVr8gl6r+iMEnw=
+
+Name: name/abuchen/portfolio/checks/QuickFix.class
+SHA-256-Digest: MPaqX4ULIA3EO/TK+g4Uo3S+3BEm07KFIEKM9QF1nb4=
+
+Name: name/abuchen/portfolio/online/impl/CSQuoteFeed$CSCloseColumn.class
+SHA-256-Digest: bjNDdOJYGt307qp5t/dDhmpnV6oxTVax26RmUdtql00=
+
+Name: name/abuchen/portfolio/checks/impl/FixOrphanedSecurtiesCheck.class
+SHA-256-Digest: AbCcEeD6HDmbXPbyc7D7vaY5iCwjmDEkUbX3b3N/lF0=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFParser$Transaction.clas
+ s
+SHA-256-Digest: brRhtsKxr+wqrXPrI8MQpx+sYp/VqMYKsp+pfCqizuE=
+
+Name: META-INF/taxonomy/assetclasses_es.properties
+SHA-256-Digest: DuwxFjGK+TCE/Sonv1DbeGAN451R9RdL+N9v+wC7vh4=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/FormattedDat
+ e.class
+SHA-256-Digest: Xt9X2pgCSss6BmQ5+POPmDuSVaiw8Qp0XGzXJtWfvbo=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem$Valua
+ tionAtEnd.class
+SHA-256-Digest: kTta66lW4cwFNx7T0nlaJEyJuYmsjSrBCBJr7Onlu1I=
+
+Name: name/abuchen/portfolio/model/AttributeType$ShareConverter.class
+SHA-256-Digest: YVWRkvxLVfWtFL3cZ4GC1AqOHe1X1K1D6nlNF74nx+k=
+
+Name: name/abuchen/portfolio/snapshot/labels_de.properties
+SHA-256-Digest: STcn7QPKhhFHsMrZ/cScSSAcN5pw3ChPo3CCq73wUJw=
+
+Name: META-INF/taxonomy/assetclasses_de.properties
+SHA-256-Digest: FQeCyWAUbYyNT7uGSlYzggxzcCrftc/LA7uVq0HVkpg=
+
+Name: name/abuchen/portfolio/model/InvestmentPlan.class
+SHA-256-Digest: PFYUmy14a80ndzKWqEq4RCinKaoLvJF0ZmTIViEB67s=
+
+Name: name/abuchen/portfolio/model/Client.class
+SHA-256-Digest: nmpazY1lgPE7aqFQurszpomr0fdfKoFMTBPxEQxJqlk=
+
+Name: META-INF/services/name.abuchen.portfolio.online.DividendFeed
+SHA-256-Digest: PO66JW4TGSNmZShKO49NIDz7HBMQlVz/LIYoDNYUvo8=
+
+Name: name/abuchen/portfolio/model/Security.class
+SHA-256-Digest: IHSpEZdkcNHBBtLHSCyHf7nljxQEXB17N0MhWt6Q7Ws=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$CurrentMonth.class
+SHA-256-Digest: Kr2EPy7/q++MzNRpziuP4MsYo5QZkTKyH+Ty9Z9zBeA=
+
+Name: name/abuchen/portfolio/money/Values$8.class
+SHA-256-Digest: mH2nyQI5daTIf+4oWCodqD/JInXeEwYy59xQik748ek=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio/pom.x
+ ml
+SHA-256-Digest: khO26FNytfTD2dX4t/fk4vYL4BdcoLQGUFK0x5qlDf0=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels_de.properties
+SHA-256-Digest: fPw1/sr7WVSQfgTPt54HU/QFr4p45567uO+W9mlXcPs=
+
+Name: name/abuchen/portfolio/snapshot/labels_pt.properties
+SHA-256-Digest: 6iEJl7BX3IUszUfyg7W51GkvN7PG5cYctd7kCZq1o8c=
+
+Name: name/abuchen/portfolio/online/SecuritySearchProvider.class
+SHA-256-Digest: cf3hjdcfO1pON65bSt4uE0IjdbR9lspk6cP8EYCezAg=
+
+Name: name/abuchen/portfolio/checks/impl/ReferenceAccountCheck.class
+SHA-256-Digest: XpClkpjw+W/ClzfRysiVsULXAHfJcqOu2e0ZBNIoUYc=
+
+Name: META-INF/taxonomy/assetclasses_pt.properties
+SHA-256-Digest: aBoaFYudPCiD+LHxkMzVcI07LRXap3G9mcrG9YFXAvk=
+
+Name: name/abuchen/portfolio/datatransfer/ImportAction$Status.class
+SHA-256-Digest: YeGR4k6xvPbmA6B5VX7TRcKNTZAB1d1+6OGKNShSZnM=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/deutsche-bank-sale.json
+SHA-256-Digest: alHvVUYitSPXmudc5TWeFZF4X2lQ8fhbm9ATZMqusnM=
+
+Name: name/abuchen/portfolio/math/Risk$Drawdown.class
+SHA-256-Digest: VXuUZ5qYqvbAlHB1Ox2UXQWP86eez6TV2kGzek46nUw=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels_pt.properties
+SHA-256-Digest: ug/C0xL2WvSNVXDNW2R8D+6+zIgxb6C89D8D5Lbl2Pk=
+
+Name: name/abuchen/portfolio/snapshot/security/CostCalculation.class
+SHA-256-Digest: QgtRWJ63a5rF79MzoH/1YQjSO2n9V5WSULI9qHqfEII=
+
+Name: name/abuchen/portfolio/money/Values$7.class
+SHA-256-Digest: TZ0b9Q6vEYfZYD/oJCTLkayqufeDqiqqavxM7wakDLA=
+
+Name: name/abuchen/portfolio/snapshot/security/SecurityPerformanceRecord
+ .class
+SHA-256-Digest: ddbBjRgR8Unyh8xSKKoXxgjBJEmBABBXds5bQBruodM=
+
+Name: name/abuchen/portfolio/snapshot/GroupEarningsByAccount.class
+SHA-256-Digest: pXB0FFaCYIKRBGVEpDe0EVU0zt8HZnmxd2TQTg17H5Y=
+
+Name: name/abuchen/portfolio/snapshot/security/SecurityPerformanceRecord
+ $Periodicity.class
+SHA-256-Digest: y90IlYXbMFduuAsk8T7cnlPdZd8U+oQBv7GMcRruqWM=
+
+Name: name/abuchen/portfolio/online/impl/AlphavantageQuoteFeed.class
+SHA-256-Digest: IxCj//V0flmxurfvKDYUlNRHQfanE6gc/y/WhxXt1LI=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod.class
+SHA-256-Digest: ZH8XyJD8pefXZcOBRIKPHNBr6Fo0KXyXUnwFeNFSCEM=
+
+Name: name/abuchen/portfolio/model/Named.class
+SHA-256-Digest: WtsGVgfrUxMBbPCOonqasR1u/xp5N+6VTsuLGE3zSP0=
+
+Name: name/abuchen/portfolio/money/ExchangeRateTimeSeries.class
+SHA-256-Digest: +3D72H+2w6BGOUmXYI6WAoeIC5pfHGAI/HdvrvYScKA=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$AmountField.cl
+ ass
+SHA-256-Digest: /JevT5NQuGFXhoQ35naYwq12p/AE7w1L7YsXJK5xKBA=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed.class
+SHA-256-Digest: tFmdPCS0QDo126kBCm0En1xp1h4m+clm5L7DRLrQPQU=
+
+Name: name/abuchen/portfolio/online/impl/PageCache$1.class
+SHA-256-Digest: 4J9JTbPcd3bMLPfAUVag07cZaibiHr6YXfLZdJNGv2A=
+
+Name: name/abuchen/portfolio/online/SecuritySearchProvider$Type.class
+SHA-256-Digest: vISM3gaaNCLNJvYts2A7bOgaa4D1oaQAQQE0IAJrhc4=
+
+Name: META-INF/taxonomy/kommer.properties
+SHA-256-Digest: +0u3XuIICQwhL3xoxS1OrHb8VS2sz+lpYeIp32tuH/c=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientClassificationFilter$
+ CalculationState.class
+SHA-256-Digest: fXsYuZRckJsOIdP7sjuyW82MfB/qOhvEVH1Ttl4HaR8=
+
+Name: name/abuchen/portfolio/model/Named$ByName.class
+SHA-256-Digest: V4aJxRBTPB6+/dJ/dKpnpF8XWdx1yV5kkjq9e8ls9hc=
+
+Name: name/abuchen/portfolio/money/Values$12.class
+SHA-256-Digest: a48fozr1w3M6c0QING8GFZ+kKQgGgViRYkVXQEUsf8Q=
+
+Name: name/abuchen/portfolio/money/impl/FixedExchangeRateProvider.class
+SHA-256-Digest: vJTimXvKBkfnfMC/j/ac8ir5i1w2uJhMMWm3jGTeCFM=
+
+Name: name/abuchen/portfolio/money/Values$3.class
+SHA-256-Digest: VOgagu4XVgYVe36CC2cN4c2tPL2gb/yxvc+5xyWW1O8=
+
+Name: name/abuchen/portfolio/model/Taxonomy$2.class
+SHA-256-Digest: tyaElLNHrQ4zDew8oJB/3soAoKIlXEb3hVZfBdP2sDQ=
+
+Name: name/abuchen/portfolio/model/TransactionOwner.class
+SHA-256-Digest: JGx4j81ScxZAr3c3iCiESyS9vU5HTyqkeOnTJfjhBUY=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFImportAssistant.class
+SHA-256-Digest: yv+bmHoYl/EAcOxLcktPuyGKTRdOl5D1iWEmKODNkRU=
+
+Name: name/abuchen/portfolio/snapshot/security/IRRCalculation.class
+SHA-256-Digest: pyW8KKRrAAzBfLEl64BJvZ35tKCppNIaDmRDi5/faIA=
+
+Name: name/abuchen/portfolio/model/AttributeType$LongConverter.class
+SHA-256-Digest: a1asc2aM0BElQ7MUNBfLusMgFSjkqhG02tlgLNrjUv8=
+
+Name: name/abuchen/portfolio/util/ImageUtil.class
+SHA-256-Digest: LR87Zjfo2y45rjzE/cBG2qRA/vtNS7apSg/4gF195/E=
+
+Name: name/abuchen/portfolio/snapshot/AccountSnapshot.class
+SHA-256-Digest: N5uxixMEs8L7Og/Bv1k+leUMegCtJdW2ZWipX6ZFvV0=
+
+Name: name/abuchen/portfolio/snapshot/labels_fr.properties
+SHA-256-Digest: AfN9v+2pNj60kgXK4KsPWS20kSnChW3pXQKp9MvCfXc=
+
+Name: name/abuchen/portfolio/money/currencies_fr.properties
+SHA-256-Digest: HqMVwtNKFFqH//sX577mrr/H8A2xjtchDcUv/QR6KcE=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DkbPDFExtractor.class
+SHA-256-Digest: O0fyupFlYxePnZ2CtxrGNK6CEM9krLSxbvYVAtj9RQs=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/Today.class
+SHA-256-Digest: gbqi0R/v3u+2aZQJ1BcyEg2dySDt4g5HVULidBo/ryA=
+
+Name: name/abuchen/portfolio/money/currencies.properties
+SHA-256-Digest: C6ShENSkQf7GcYLMqmyhNnNX0Mc2V0/UUaSZWeeloZQ=
+
+Name: META-INF/taxonomy/regions-msci_fr.properties
+SHA-256-Digest: DzUsJKxlfjnoqLZSi0ToMAmEi7hwW2XEg0e7RUCepks=
+
+Name: name/abuchen/portfolio/online/QuoteFeedData$RawResponse.class
+SHA-256-Digest: fm7vFZ2eqvNyZmHXzKkYgPyL+Dz/+p8K/uAYZ+63f0I=
+
+Name: name/abuchen/portfolio/money/impl/EmptyExchangeRateTimeSeries.clas
+ s
+SHA-256-Digest: jDjJb6EWPhdHgYXzYgs7FWH1qGW4ak4wf3+Jli4s6VY=
+
+Name: name/abuchen/portfolio/datatransfer/actions/CheckCurrenciesAction.
+ class
+SHA-256-Digest: kS4+6T+24SYM8m1YZgwx3k20vIR9C1NnGPcyAqI39xM=
+
+Name: name/abuchen/portfolio/online/impl/YahooFinanceAdjustedCloseQuoteF
+ eed.class
+SHA-256-Digest: tTSHDUZAQqgR+lc54knuayzxgi7RxaCj1NKxq24yV0E=
+
+Name: name/abuchen/portfolio/checks/impl/MissingPortfolioTransferIssue.c
+ lass
+SHA-256-Digest: Ch8dvxhhLgQVAol1NHePVcI3QWZ55NmlfcUGZeWAF9M=
+
+Name: META-INF/taxonomy/kommer_de.properties
+SHA-256-Digest: 2Ta2PGCcLCCMpXXjiI2XQIXMMooOrBtd1/HzzdTuDxw=
+
+Name: name/abuchen/portfolio/model/Client$1.class
+SHA-256-Digest: 7A5NgaiH905GApX7fT+20PKc2PFzD2LGAZS9a7UWW9A=
+
+Name: name/abuchen/portfolio/model/ConfigurationSet.class
+SHA-256-Digest: P+nZH7JMCHso+JX7k3ESaY84N5KOG9/5oqtSfZX6Obk=
+
+Name: name/abuchen/portfolio/online/impl/KrakenQuoteFeed.class
+SHA-256-Digest: 0rhCQzwAT+HgFeQbHXSDRLKabCIZ7lCNYVb6vC/BDcE=
+
+Name: META-INF/taxonomy/security-type_fr.properties
+SHA-256-Digest: sTNAt/RYsPI07/U7NPgm2bo/1wAe2V0jCUpPi1b+EK4=
+
+Name: name/abuchen/portfolio/snapshot/ClientPerformanceSnapshot$Category
+ Type.class
+SHA-256-Digest: IGEw7W2OeDktkaXOVLsicU7bdLHt0CroWC2fTwNKSHM=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/FinTechGroupBankPDFExtract
+ or.class
+SHA-256-Digest: 5DeeVYU//VoCvi5gy7PE8BA9ZS35DKWIS3VsTojJ3ds=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportNet$MarketInfo.c
+ lass
+SHA-256-Digest: 7JvDkC7yJbLATeZJPc5VhUqxvghm4hYOvWZHW8ROh8k=
+
+Name: name/abuchen/portfolio/model/TaxonomyTemplate.class
+SHA-256-Digest: g4xHvL8vov5yQZfaBItK/JAXkgcaFP4bBG9BniplvPQ=
+
+Name: name/abuchen/portfolio/math/NPVFunction.class
+SHA-256-Digest: aqqjJ+yuItBMlPYEe3BmmCq6TaspvQVfXhDNW0f/mk8=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$AccountTransferItem.
+ class
+SHA-256-Digest: vGHBgnsPS7fIlmlVzskVNWXTrWastKYPtKbBs/B1Gbc=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/CommerzbankPDFExtractor.cl
+ ass
+SHA-256-Digest: 7YoJBl7wd6pVcvjtDMo0Sr6cnQ1+RJdelNXvjm4EN/c=
+
+Name: name/abuchen/portfolio/checks/impl/MissingBuySellAccountIssue$Crea
+ teBuySellEntryFix.class
+SHA-256-Digest: dlrXr7wJDnwaZeoPgvl8ac2HKIhSh9ptWqNBMWUy7G0=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/iterators/PageItera
+ tor.class
+SHA-256-Digest: PagtlZVUF2KKj6xzSOxO1d8xTaiwiIQS7iejGPeBTGo=
+
+Name: name/abuchen/portfolio/snapshot/trail/TrailRecord.class
+SHA-256-Digest: PzXAaQB3yB1L8bUFOC1l4IBDBq4zz2xdSMocsgZakPU=
+
+Name: name/abuchen/portfolio/model/Security$ByName.class
+SHA-256-Digest: jICUuwkLp0xye9Ij8o0hlKVTrOnEcBtblgn1tt1yURI=
+
+Name: name/abuchen/portfolio/model/Transaction$Unit$Type.class
+SHA-256-Digest: ajrg4l0WXKpjhAXi5lz3pCpoDi8q5xWukocSl3wQSgE=
+
+Name: name/abuchen/portfolio/json/impl/LocalTimeSerializer.class
+SHA-256-Digest: SLdO2r9MjDX55Zj4GFBDtNyvrSTYMeSZrAPdlIC3WK4=
+
+Name: name/abuchen/portfolio/money/Values$17.class
+SHA-256-Digest: v9uI2PzTAeAzvroIpxS0cem2rWwLYcZ/z740RvqtzMI=
+
+Name: name/abuchen/portfolio/checks/impl/ReferenceAccountCheck$CreateRef
+ erenceAccountFix.class
+SHA-256-Digest: RgqH1q1KmfTs3HCx7C8fTC2nQSb5krNHR9Ij+sKcmYQ=
+
+Name: META-INF/services/name.abuchen.portfolio.online.SecuritySearchProv
+ ider
+SHA-256-Digest: 4M+9DoyA6xrpHmVgIQujTkGnnbspnsDcriXhzYWysIs=
+
+Name: name/abuchen/portfolio/snapshot/security/SecurityPerformanceSnapsh
+ ot.class
+SHA-256-Digest: d3QIRmC8JiI9u4wxyao37j0kH+sBTVIOs7ZalojysqM=
+
+Name: name/abuchen/portfolio/snapshot/security/DividendCalculation$Payme
+ nt.class
+SHA-256-Digest: mHmHSMDZoaeu8HgT+8DskoTbPfSKA6CJf3q+n56+h50=
+
+Name: name/abuchen/portfolio/model/AccountTransaction$Type.class
+SHA-256-Digest: KaqOuoFx9kZHFtptADiIxoQgF/NZbDXMCeecC8Z+53c=
+
+Name: META-INF/taxonomy/industry-gics_fr.properties
+SHA-256-Digest: 8kaTFe1ZXZya02Jk0NuWQQYu1zG5ayt27RGnqNrc/JI=
+
+Name: name/abuchen/portfolio/datatransfer/actions/CheckValidTypesAction.
+ class
+SHA-256-Digest: JUHIJXdjdAUmb9QboJBlD1q5GBQ4OEm9r53qLy/Dv48=
+
+Name: name/abuchen/portfolio/money/impl/ECBData.class
+SHA-256-Digest: t17Mck445EzfO/5TuXS+X2NO9L9xuVrFs4oxcRNbXKQ=
+
+Name: name/abuchen/portfolio/model/ClientSettings.class
+SHA-256-Digest: VoRgjtNKYWNx6Y5FIXHVp7Fj5d0Qk+cTvNT0JgHzU4Q=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportQuoteFeed$1.clas
+ s
+SHA-256-Digest: JNMAuDb95AgT76S5kNQiFpV46qu6hA472iWK3UxQHvs=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$SecurityItem.class
+SHA-256-Digest: m/scLjU/3i5/GQKm3IUMUZlKN3L3lSBuRghog6grlXc=
+
+Name: META-INF/taxonomy/industry-simple.properties
+SHA-256-Digest: nJUFRAv7nWMwPFkvUc9sGxdR9oHdecgGvcI50L0jbB4=
+
+Name: name/abuchen/portfolio/checks/impl/CrossEntryCheck$PortfolioEntry.
+ class
+SHA-256-Digest: F5bdXsRVV3fEmZkywFhSVJ9Dzp+wjXFUikp6zBf8pO0=
+
+Name: name/abuchen/portfolio/snapshot/SecurityPosition.class
+SHA-256-Digest: moYRaXW9yOiPLrxrYBujAQ27vNQotA/oRnnf6mUnGY4=
+
+Name: name/abuchen/portfolio/model/AttributeType$DoubleConverter.class
+SHA-256-Digest: gdwMZWQ2IK1/BeQAAvYSJoxDz7qNRdVAZE7uTOuGotw=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$Item.class
+SHA-256-Digest: SrIqdSW2RYHCnXDeLDMOAnWo9pHUPMWM7j5J88xHpwE=
+
+Name: name/abuchen/portfolio/util/Interval.class
+SHA-256-Digest: buf5rKHghaL+UBJvJ1/C3Lx7Os1k4IhGR/njc4NPEGg=
+
+Name: name/abuchen/portfolio/online/impl/eurostathicp-labels_pt.properti
+ es
+SHA-256-Digest: rY1zcEJ+N/sKRLtnzvBABio86tDA5fsqmrClA6J4YEU=
+
+Name: name/abuchen/portfolio/online/impl/BitfinexQuoteFeed.class
+SHA-256-Digest: UuFE8B/232Ypi7yVsPeYR4dT8nnVUYwurSAPSp2UXJU=
+
+Name: name/abuchen/portfolio/online/impl/YahooFinanceQuoteFeed.class
+SHA-256-Digest: RrSCBKZZPz2bYvn4bdiFlASBpU/vTS4FFtunpK8ftrs=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/BondoraGoAndGrowPDFExtract
+ or.class
+SHA-256-Digest: 5llRwTUPB/Em+++VhMFzYtQpjChc/Olqxv36jJ7dBAk=
+
+Name: name/abuchen/portfolio/datatransfer/ImportAction.class
+SHA-256-Digest: S//5tFCwBU2unyzNxc6GKqz7+gqwf8HVmVxFj3u7jC8=
+
+Name: name/abuchen/portfolio/snapshot/trades/Trade.class
+SHA-256-Digest: +TGpiGDCLdnmQL1EaXa9Jm5wOiSNjdxwGjoi6rDBTp4=
+
+Name: name/abuchen/portfolio/checks/impl/PortfolioTransactionWithoutSecu
+ rityCheck.class
+SHA-256-Digest: BXaWBGSZC8BTfmkJJHqFwfDVWLDL0VYhRzNMrQwx9Qw=
+
+Name: name/abuchen/portfolio/online/impl/AlphavantageQuoteFeed$OutputSiz
+ e.class
+SHA-256-Digest: WyUNDlq2GdrXPtSx4YMs5ylKHxL54sdNJ9h0sm8WfV8=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/urls/DateURL.class
+SHA-256-Digest: XMc4E2p9SoXlYgH4rOWUuo+qQqL0LbNNc9+vppNtKAI=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$YearToDate.class
+SHA-256-Digest: Eq2P4JWfndREz3iy+1KsfeOh+sxeLHfFpr4rxylgit0=
+
+Name: name/abuchen/portfolio/snapshot/GroupByTaxonomy$Item.class
+SHA-256-Digest: wInDRHN+IMCwzq+brcWqNzB0U5r8WFxeay2ZT8KFNTI=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$EnumMapFormat.
+ class
+SHA-256-Digest: 8LWUgWROyKehLzk1Lh6d0Ek7GqcwzZNsyuZEjVs/jDc=
+
+Name: name/abuchen/portfolio/datatransfer/SecurityCache.class
+SHA-256-Digest: ZQQ6GlnDrMGoiIpRlGX/H+M7fO2GqaXLlEoCnuPXThA=
+
+Name: name/abuchen/portfolio/snapshot/security/Calculation.class
+SHA-256-Digest: +V9xwR80wVfg+4u6MbKxE+6l+Vu/UffuGpqW+6EpGP0=
+
+Name: name/abuchen/portfolio/model/Dashboard$Column.class
+SHA-256-Digest: NGanEuSOXuEGaMER4pBQbvfvm5nPGblt/l4cr7z2afA=
+
+Name: name/abuchen/portfolio/json/JTransactionUnit.class
+SHA-256-Digest: S7tWCrSY5VoI01LYvHqoDHaL2AUKC8ug3Qw4aosJTgQ=
+
+Name: name/abuchen/portfolio/snapshot/PortfolioSnapshot$1.class
+SHA-256-Digest: 79iymrDJFjzVPD+ZVqPWkj38yD4wcVJApqJcUxmvLvA=
+
+Name: name/abuchen/portfolio/math/IRR.class
+SHA-256-Digest: v7KjhC8FkhlklyHdzo+OdurRdcJDWtZXoZ9FX9CJ3rE=
+
+Name: name/abuchen/portfolio/model/BuySellEntry.class
+SHA-256-Digest: PEzwa/FOcHRmLiM1Jf6jbCXx1AS2J4CI/45d+8Jf57E=
+
+Name: name/abuchen/portfolio/util/HolidayType$FixedHolidayType.class
+SHA-256-Digest: urMgG06/iaubfwUefVOFUrPQFJnXtPdlxDLVO03yDMo=
+
+Name: name/abuchen/portfolio/messages_de.properties
+SHA-256-Digest: IlbhrI93dsFXo6wapS6KbDy7mxy2af+cBfu+4LqFJ+Q=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVConfigManager.class
+SHA-256-Digest: BZ7yxJatjfxXhBEEgi1zwmgJ2rtp7ipvcBAQ0rOOJf8=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/ConstString.
+ class
+SHA-256-Digest: 3xrD2cmP24aaWxTcxSxAHFwUDK4hphYTh0MJhtna/ug=
+
+Name: name/abuchen/portfolio/model/AttributeType$LimitPriceConverter.cla
+ ss
+SHA-256-Digest: BwzPrEccdyEMn9DpKcOhK2K3Y2HuJhuHYPK7dq6EPSA=
+
+Name: name/abuchen/portfolio/datatransfer/IBFlexStatementExtractor$IBFle
+ xStatementExtractorResult.class
+SHA-256-Digest: 1uR228isjsWy8Xcgq8DhpOgUmOM99ORW9IZGjxQ3Ohs=
+
+Name: name/abuchen/portfolio/model/Taxonomy.class
+SHA-256-Digest: LN1eopZVmq7LnqWDTn8BQF6Xhhg7V1Q/gjsocHHk8Ic=
+
+Name: name/abuchen/portfolio/online/impl/YahooSearchProvider.class
+SHA-256-Digest: V/kf45Vi//EfB94mAcq2J/4wSov4bDB/OvHK8IVIv/4=
+
+Name: name/abuchen/portfolio/messages_nl.properties
+SHA-256-Digest: USlHCOBTCN/klj0FSdrJ393GqxrUrEmcnTIqvj4qAHg=
+
+Name: name/abuchen/portfolio/model/Exchange.class
+SHA-256-Digest: dFFy20+47xKjoUjrRqQ9D13++hAMWypWl721ejPOzNA=
+
+Name: name/abuchen/portfolio/snapshot/filter/ReadOnlyClient.class
+SHA-256-Digest: YanNc8jEX8KvhdV9rZtdbiv9pa4nEsVgHAnsu1CjY4U=
+
+Name: name/abuchen/portfolio/model/Transaction$Unit.class
+SHA-256-Digest: enWvSUZ8CVZ82xCotwdyrCbkuwQWB04xZ7OdFyBiYCs=
+
+Name: name/abuchen/portfolio/online/impl/eurostathicp-labels_de.properti
+ es
+SHA-256-Digest: zaNV6Vt1UOgABGv2N6NbcmYc9Bz76KEiiHLKNtp41cw=
+
+Name: name/abuchen/portfolio/util/Dates.class
+SHA-256-Digest: pq/AKRN/RfSTiHCBhGp75a/USEbK19UAXBzebYA49fA=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/UnicreditPDFExtractor.clas
+ s
+SHA-256-Digest: wMQWtfWu7T5YHVWXLNkovF4ZwU+/00U0K1PwcfdkQSY=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$LastX.class
+SHA-256-Digest: tcihtOFGdPWhE7KZoSW49VsyjM4l5vxWn3/Pg9+6Lhw=
+
+Name: name/abuchen/portfolio/checks/impl/DanglingAccountsCheck.class
+SHA-256-Digest: 01AXbG3NvDTMQwFIUafg5+yr0puzzhrsn7U0+xCiZ0s=
+
+Name: name/abuchen/portfolio/model/Account.class
+SHA-256-Digest: 0Yg0XwPpUGvWpizWscCXtHvLE0T5AKcd5oH9M/I6tW8=
+
+Name: name/abuchen/portfolio/datatransfer/actions/MarkNonImportableActio
+ n.class
+SHA-256-Digest: Dzs3JcJS7v5ilnORgGJ2MQaypTG5HTfpFeRElBnHKBk=
+
+Name: name/abuchen/portfolio/json/JPDFExtractorDefinition$JTransactionMa
+ tcher.class
+SHA-256-Digest: 4BNDY+w8dAG6lKy6cXXCrNPJWQx7M3sKZE5LfUnKXb8=
+
+Name: name/abuchen/portfolio/json/JPDFExtractorDefinition$JSection.class
+SHA-256-Digest: To1UGN+eVijrOTo7y4+hMXAFl8qbR3/7XxsZFRDuF9o=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVPortfolioExtractor.clas
+ s
+SHA-256-Digest: HYUsEDVUg5PpOtuMsgkqDz1j/p6yf/dJccZCillnvDM=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$NonImportableItem.cl
+ ass
+SHA-256-Digest: uAKeSFxs3CJg8Zkw+ACKXsOAW7cRyQLtowEdTOI9XC4=
+
+Name: name/abuchen/portfolio/model/Classification$Assignment.class
+SHA-256-Digest: /g1b/dN9qRhHQtpGUE+GXUl8pwUOALHb5mragkBxJ4c=
+
+Name: name/abuchen/portfolio/model/labels_fr.properties
+SHA-256-Digest: UoElhOZ5efku7QFNKSiI6m1qObhsC9q/hAt8xh4mtlo=
+
+Name: name/abuchen/portfolio/snapshot/security/CapitalGainsCalculation.c
+ lass
+SHA-256-Digest: bxWqxjIR1Y2nzYGDlL+Q1XnMGHIaLcc+hifm6pMKefQ=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem$Valua
+ tion.class
+SHA-256-Digest: iNWa9LYIxIYvq/clz0kjCqR7oIz7i1US8IZd7apTfT8=
+
+Name: name/abuchen/portfolio/snapshot/trail/TransactionTrail.class
+SHA-256-Digest: ldJ2gKV24n5ksPdFXK4CntiWYFAklRRngOekf/oiHn4=
+
+Name: name/abuchen/portfolio/checks/Issue.class
+SHA-256-Digest: JE4sfQ1peROP8GzKB+mWXel9eDhuGQAEdhVWPvKs8c0=
+
+Name: name/abuchen/portfolio/online/impl/EurostatHICPLabels.class
+SHA-256-Digest: 3BeGrujgDhBjyyuE4BSYOgaS6SL6yZNx/snduIHG9hw=
+
+Name: name/abuchen/portfolio/events/ChangeEventConstants.class
+SHA-256-Digest: Tqz1Nr9suoEQJoROB5MY1Sm9oVdtYlZi9am6g5UcZFE=
+
+Name: name/abuchen/portfolio/money/Values$1.class
+SHA-256-Digest: u2/xRVlg9nCjyZOyxAQvl2ZCcmVG25wtZYUHfZC+kEg=
+
+Name: name/abuchen/portfolio/checks/impl/DeleteTransactionFix.class
+SHA-256-Digest: 0GPYffHKz371077nAq0WE9qkL9YTn2qFz/9LZE14+aY=
+
+Name: name/abuchen/portfolio/money/CurrencyConverter.class
+SHA-256-Digest: +bh4irT/Qm8ZA4+70PUU5OZl+J463CrAPoS3Tqct+bI=
+
+Name: name/abuchen/portfolio/checks/impl/BuySellMissingSecurityIssue.cla
+ ss
+SHA-256-Digest: XLscf3wrD4vkubRHEfZhig0q1eWduvIfkBVExT9Rsa0=
+
+Name: name/abuchen/portfolio/snapshot/trades/TradeCollector.class
+SHA-256-Digest: g7ai/GzGDv7A6HMbFbaK66+GrT8iy2u5zJvo8hNNb7Y=
+
+Name: name/abuchen/portfolio/model/Adaptor.class
+SHA-256-Digest: Ptlv9EeigJsQIbiZfyxb8MIonBfGAsCHrtsoXWTiAgA=
+
+Name: name/abuchen/portfolio/money/Values$14.class
+SHA-256-Digest: Xa0FYLcwQYgNE/R42SFzCpBnPsS6K4sDRIEs6zLFUVE=
+
+Name: name/abuchen/portfolio/online/impl/ExchangeLabels.class
+SHA-256-Digest: 9ab4IZB0PmHY3bXe3xVly/pZzYkmvRM5CXSMeltRBPM=
+
+Name: name/abuchen/portfolio/model/SecurityEvent.class
+SHA-256-Digest: NFvroX4DP+ZK3q/Ut8QtuRs1sOIPGpuX6PTFhI/8hqk=
+
+Name: META-INF/taxonomy/regions_es.properties
+SHA-256-Digest: S3afsZWMB1gRO0Y1iyrAdyiZ2mZaEo3v3yZuxR7vDD4=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/weberbank-dividends.json
+SHA-256-Digest: uj/+7NAlOGSimEGIT0uB3YMAvp6t/qc8aNrhZMmHiX0=
+
+Name: name/abuchen/portfolio/snapshot/trail/ArithmeticTrail$Operation.cl
+ ass
+SHA-256-Digest: yFameD6vlBQDqbGT6pD4+9HBp6A9WolvSCNyoWVehxI=
+
+Name: name/abuchen/portfolio/online/impl/CSQuoteFeed$CSDateColumn.class
+SHA-256-Digest: gsgPRpTZTEHCd5Eha2JCSuKG/1o/VfM5bTc92HAh/YA=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/deutsche-bank-purchase.jso
+ n
+SHA-256-Digest: DVJNFEJx6LVu2RqocZnvwu4crE5HM4cuImWG1b4/IbI=
+
+Name: name/abuchen/portfolio/messages_es.properties
+SHA-256-Digest: br48XxpNz5a0718xfYBBRqCGs8rLWcLcp4rRQQcg0JQ=
+
+Name: name/abuchen/portfolio/snapshot/SecurityIndex.class
+SHA-256-Digest: Z3hvtlVnoR2YbaW8bGQ8CT9Jm7nWQ9aQagajgQQwZkQ=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels.properties
+SHA-256-Digest: bIbDyPN6ClRaiUpzrXw5sIqZGpBTUxmw4/vslkAbWbw=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVSecurityExtractor.class
+SHA-256-Digest: U2vEFpwc9j1P90LDsodLIWS4GVS43M4JQ1QZXYyGueg=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/PageNumber.c
+ lass
+SHA-256-Digest: TAJs6ivaVBQjEtY1z5POWZnvYd6T+ioymt/74iUCeDo=
+
+Name: name/abuchen/portfolio/checks/impl/MissingBuySellAccountIssue.clas
+ s
+SHA-256-Digest: KAWsREbbPxwdwjJMwSZcsAP0wCHwl0cTykejsblcbX8=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVConfig$Key.class
+SHA-256-Digest: LSbiLczNhm2Go3m7mjbWbU4/kNvXxkLl/7xrT6ROcPU=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$DateColumn.c
+ lass
+SHA-256-Digest: 8r/PZyJ1i+GMwlRq4M5y3fhpT1CZ6oGtXTFD4XB32tU=
+
+Name: META-INF/taxonomy/regions-msci.properties
+SHA-256-Digest: OaDexfAPoIsf4QX49rVqY6LpecRrzCmlftOaBkpJX64=
+
+Name: name/abuchen/portfolio/util/HolidayName.class
+SHA-256-Digest: NecpRvqqrksNPHjLkjPzb8PFKZD/ot6rQi2NJB2CKzI=
+
+Name: name/abuchen/portfolio/model/ConsumerPriceIndex.class
+SHA-256-Digest: OApyFoIYAiuY0MhxIJmUfcPg1wDxOer4h6K2nCSFy0Q=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/INGDiBaExtractor.class
+SHA-256-Digest: H+LS6J9Rpdhik2k9vXA7awba4LOBpirjQXNNlKjIJTE=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientClassificationFilter$
+ CalculationState$1.class
+SHA-256-Digest: /VHFIVmXwHFJxzn1kuAd70rY8+jQRLGMWALEFYC3T/A=
+
+Name: name/abuchen/portfolio/model/AttributeType$DateConverter.class
+SHA-256-Digest: B8qv/AzLGZsMJRwebZuetH27+wQv4lyHTU18qXfegSY=
+
+Name: name/abuchen/portfolio/online/impl/DivvyDiaryUploader.class
+SHA-256-Digest: p8XudGHH35CmluBDY6KCjLn62BCnjHg6yGaXHTAffNs=
+
+Name: name/abuchen/portfolio/money/ExchangeRateProviderFactory$Dijkstra.
+ class
+SHA-256-Digest: 5VLQQkhihjRm3p9EiOD8U5eTYFqvmL+frNxDAvg2Ug0=
+
+Name: name/abuchen/portfolio/money/MoneyCollectors$AbstractMoneyAdder.cl
+ ass
+SHA-256-Digest: tE8zajO8nojWm1iSUC3C5xibv4EZzmieC7UxSN8IwiY=
+
+Name: name/abuchen/portfolio/model/labels_pt.properties
+SHA-256-Digest: pmCfccorzjtiE2uTJDbbhXIZKaoYC0BK17HpRBSHnGE=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/urls/ConstURL.class
+SHA-256-Digest: Z32v0OqxrntBb46FwObTJfNCSiHaGbxGnpkdxcFBCG8=
+
+Name: name/abuchen/portfolio/snapshot/ClientSnapshot.class
+SHA-256-Digest: o/YwEDbRZ28Ww1snxvpjd9JgJs0E92oyC+mvcqadwjk=
+
+Name: name/abuchen/portfolio/money/Values$15.class
+SHA-256-Digest: afd9oTkh0Sx3p2UkyJjp5k4fnyl+SJeE31PL+NnzyyY=
+
+Name: META-INF/taxonomy/kommer_pt.properties
+SHA-256-Digest: ZKEMi7gzOA5fJLbAdpL186NaJsDRJ8R1pkrZg8jKYtk=
+
+Name: name/abuchen/portfolio/util/HolidayType$RelativeToEasterHolidayTyp
+ e.class
+SHA-256-Digest: lC2O6bY68/XG4ovUOAzzAxM469db+GHdFjnxEIOjUcg=
+
+Name: name/abuchen/portfolio/snapshot/ClientPerformanceSnapshot$Category
+ .class
+SHA-256-Digest: n6MnHOxGwqNzdJNF5fnkMsZAFIjPc9+j4iVyMWckv1A=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/Factory.class
+SHA-256-Digest: 07quw+P7kStIaDelcy9L9FQ4bR10snx4pRs7rAT0fhw=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem$Trans
+ actionItem.class
+SHA-256-Digest: 6BpeygKQ1lBcnS4KnR/TxL7Cufnk/WJeGskfSz9ueA0=
+
+Name: name/abuchen/portfolio/model/SecurityProperty$Type.class
+SHA-256-Digest: zvQQe38O/buRinQJxihVuI5d4rOijsH9uBIZIyNpj64=
+
+Name: name/abuchen/portfolio/model/PortfolioTransaction.class
+SHA-256-Digest: aLj03oE3NiU6qjbznAPrCsWU04cYIYnwGGcG8svVeYw=
+
+Name: name/abuchen/portfolio/money/CurrencyConverterImpl.class
+SHA-256-Digest: pxyckCh1MU09jEyIbkz6pRZlshPhuDWHZejO/b2q+ug=
+
+Name: name/abuchen/portfolio/snapshot/AssetPosition.class
+SHA-256-Digest: jLywnJw6veMfMF8yCmvOmI7h8uwOBQ0XJj+SxBaKxpQ=
+
+Name: OSGI-INF/l10n/bundle_de.properties
+SHA-256-Digest: EWg2yxU4ZoTgdCqxTXcvEF/aNGXTe9BoTZmSOBgJg/k=
+
+Name: name/abuchen/portfolio/util/TokenReplacingReader.class
+SHA-256-Digest: kVp5QggNozkjDwVLSuE4XVs98w1pOoX8liMwDwpu0/w=
+
+Name: name/abuchen/portfolio/snapshot/SecurityPosition$Record.class
+SHA-256-Digest: 33rLRtbPc56s1E8YanSUWle5pNZAFEIZTdQEATQDpco=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem$Divid
+ endPayment.class
+SHA-256-Digest: 3cQfD2dQV+aqpwbM6WrB9ZAxxz4uB1JO+57MZcgYo/M=
+
+Name: name/abuchen/portfolio/online/impl/eurostathicp-labels_nl.properti
+ es
+SHA-256-Digest: wqKB2OqYrHtwckBjPtVvpWIUa/tZW979IhJxy1WqFMY=
+
+Name: name/abuchen/portfolio/model/Dashboard.class
+SHA-256-Digest: 6w3mywnP0jcFkWLK3w3945rLhG2+EBUBf0setSVDAuQ=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation$Period$3.class
+SHA-256-Digest: +MdzbRYKM9UcNpu3mHjACO5irztsYBfEwOlELEAy4pc=
+
+Name: name/abuchen/portfolio/model/ConfigurationSet$Configuration.class
+SHA-256-Digest: cmZ76dtYR7hXD+gX1KQtmw4/rbDH9kvbYkd262CEslo=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/BankSLMPDFExtractor.class
+SHA-256-Digest: 6qI4zhyfiJ4cYAULwHZC9f1KxZZLZR28h7ekqkhTne8=
+
+Name: name/abuchen/portfolio/model/AccountTransaction.class
+SHA-256-Digest: 68Uy+PyxpeEnqNaup4TisceXVrog3kdfKAvda13etc4=
+
+Name: name/abuchen/portfolio/util/TradeCalendarManager.class
+SHA-256-Digest: fkeq/mTOIes65zD3x88UQ5862OaPVipdKCzWm/qVyAk=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: EWg2yxU4ZoTgdCqxTXcvEF/aNGXTe9BoTZmSOBgJg/k=
+
+Name: name/abuchen/portfolio/checks/impl/PortfolioTransactionWithoutSecu
+ rityCheck$SetSecurityFix.class
+SHA-256-Digest: ZIKdk2gVEJCpbxctHiU8ILDXaCxBT+aNXDK6aBkSObo=
+
+Name: name/abuchen/portfolio/snapshot/security/DividendCalculation.class
+SHA-256-Digest: 9nJaA9KEQoe/LJAjgv9WXxnwR3FsWbZy+22rDcfia9M=
+
+Name: name/abuchen/portfolio/online/impl/DivvyDiaryDividendFeed.class
+SHA-256-Digest: Hleqdnq5StFLC2Ke1ZSgia9wtzE9Cg9n/HwYXlR8FfM=
+
+Name: name/abuchen/portfolio/online/impl/YahooSymbolSearch$Result.class
+SHA-256-Digest: L8oRMkN0P9N/yvcDStRRYa7mlRUhIjGjAf6kIr/7HMk=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$Spec.class
+SHA-256-Digest: KVyV5ChYAhGAb11BIA0ObRRSByeDLdQifo9LDqnkCMo=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportNet$OnlineItem.c
+ lass
+SHA-256-Digest: UmjXr0NoTdIFc29iJw5Y9J1PnhDmrnT/DNX8VUVXZ8E=
+
+Name: name/abuchen/portfolio/model/AttributeType$PercentConverter.class
+SHA-256-Digest: 0MkVspQkVo5QI4JAivSUIUgI48AwQPfAhGoOvBNiQXw=
+
+Name: name/abuchen/portfolio/snapshot/security/SecurityPerformanceRecord
+ $Trails.class
+SHA-256-Digest: UB8VMt80UT+AHjiOvtMWzFse9EwWt7VlLokHhQjwiPg=
+
+Name: name/abuchen/portfolio/checks/impl/CrossEntryCheck$CheckImpl.class
+SHA-256-Digest: GVMEZL+z52rrPSfvP7w9bewmSiyXfyhr6Uv/2zavHyQ=
+
+Name: name/abuchen/portfolio/model/Dashboard$Config.class
+SHA-256-Digest: IvkeQ120pHZqll4sSPGkFaPFP9tkzUzRmF37jQ8jG/Q=
+
+Name: name/abuchen/portfolio/model/Transaction.class
+SHA-256-Digest: ciXh9a3Kn/Ev0GKaBb4YqxbwBELvgjCon/P+vD9AowQ=
+
+Name: name/abuchen/portfolio/checks/impl/MissingAccountTransferIssue$Cre
+ ateTransferFix.class
+SHA-256-Digest: ZDDugsQu3weoTsWwnJIMKMU1jdvpl2MaJSZw/jzM9Ck=
+
+Name: name/abuchen/portfolio/money/Quote.class
+SHA-256-Digest: k/usmFYRt+a6GD3j5IzogXENRE4NIfp2Mzv3CcVfYRs=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/Factory$MacroParser
+ .class
+SHA-256-Digest: FZ4zOqhQWUPsS13rbn7s8kALv0LlUytnpmvgKDmT6XM=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/urls/PageURL.class
+SHA-256-Digest: SE8GsbWBVbZ8njLbwhPe7UU9l5Oh9X/J8BfeeA9cP+s=
+
+Name: name/abuchen/portfolio/money/Values$16.class
+SHA-256-Digest: wB4eY7EiZG9vCD2qggImowqGVEkpoftIBFRK1VqYf9U=
+
+Name: name/abuchen/portfolio/snapshot/filter/ClientClassificationFilter.
+ class
+SHA-256-Digest: fYpUIV/XHvF8x6XtescUdmODwEpDsCwpJDbN802Ko+0=
+
+Name: name/abuchen/portfolio/online/impl/QuandlQuoteFeed.class
+SHA-256-Digest: ode6bewJ1PHihFs1Xp0PzYGB7XdykDzWenUZWuD85eg=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVAccountTransactionExtra
+ ctor.class
+SHA-256-Digest: bmrtraTjLtPM86Yl3FsRlTKQF/S4Y2uW7yBZyJr+SZY=
+
+Name: META-INF/taxonomy/regions_nl.properties
+SHA-256-Digest: SoyfFle6yAH7ZyXRPyevK0HaRvbUFcf3lig/ur4CWQg=
+
+Name: name/abuchen/portfolio/checks/Check.class
+SHA-256-Digest: atUpwZSPEGh9A2eGHo+ZN8qGFicIOQICeSRUKhux5Sg=
+
+Name: name/abuchen/portfolio/snapshot/ClientIndex.class
+SHA-256-Digest: 2w1G46xFSJ40XV9c91XtPEiWpeLF3mXa6Psd3siihYU=
+
+Name: name/abuchen/portfolio/snapshot/GroupEarningsByAccount$Item.class
+SHA-256-Digest: zj7myAaNO1w2xiEIKD/PFIq29SilU+iBIGwqDMAtlw8=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/DZBankPDFExtractor.class
+SHA-256-Digest: yHFOPwZ66fbycA41idED611tXPf34XM9OHFXO0JpBuc=
+
+Name: name/abuchen/portfolio/json/JSecurity.class
+SHA-256-Digest: R+ex7QKqn1Xx3xDY8qYIMdVEsvqX4BEHjH/H6OCUtXU=
+
+Name: name/abuchen/portfolio/math/Risk.class
+SHA-256-Digest: 3ZWOl9eiAFJs6Lb5Bjr6/VpXwxHohzj5hJtLKmf2Bg0=
+
+Name: name/abuchen/portfolio/online/impl/GenericJSONQuoteFeed.class
+SHA-256-Digest: DSL79C7ypd9/WdqahKWORpzc09JR75LPVnZDfk/JwIk=
+
+Name: name/abuchen/portfolio/online/impl/exchange-labels_nl.properties
+SHA-256-Digest: kf2gm1TaYrW3+uczZE1/zwOFkkoCYnEsn07nn365k1w=
+
+Name: name/abuchen/portfolio/money/impl/SecurityBasedExchangeRateProvide
+ r$SecurityBasedExchangeRate.class
+SHA-256-Digest: DP+FAG/zWYUBPLBlVkYcnNMsWQJ5uvpfia2obJFKHLs=
+
+Name: name/abuchen/portfolio/money/ExchangeRateProviderFactory.class
+SHA-256-Digest: lla2i5CGS3zJNFD8Y+fVV8YJeb8mJV1BONmDtt4E4Js=
+
+Name: META-INF/taxonomy/assetclasses_nl.properties
+SHA-256-Digest: lIYE1xtYJIXyFFwhe0VgBp/st9sfe/xIhetuQQG9YmU=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ffb.json
+SHA-256-Digest: 4ZAbB3F6Seg7HRRmlXMkak80xRtFd+ZqwRokOM9sVJo=
+
+Name: name/abuchen/portfolio/model/ImageManager.class
+SHA-256-Digest: jb5wXO2MoIKkQv+lpi3qLN9vwh3ehVJHIfj1H6ZMB/8=
+
+Name: name/abuchen/portfolio/events/ChangeEventConstants$Security.class
+SHA-256-Digest: QvlFBadf2FTbBgP0IoYiRFG/yFvg4BqQqt7rdQAmSI0=
+
+Name: name/abuchen/portfolio/model/SecurityPrice.class
+SHA-256-Digest: ao13i1yVB+2TIVVWqOqgYIxcpUZQeE4G/6DWsFHBgNI=
+
+Name: name/abuchen/portfolio/online/impl/YahooHelper$1.class
+SHA-256-Digest: PU56PgRJccPx1OmsxiqEEVMcUmgXew4f7G4TdGrnkDQ=
+
+Name: name/abuchen/portfolio/snapshot/security/CalculationLineItem.class
+SHA-256-Digest: iMA19lw3Hvo6WmxhFV/HmfDTBn7ENY9VjQzpeU2WTew=
+
+Name: name/abuchen/portfolio/math/NewtonGoalSeek$Function.class
+SHA-256-Digest: I+iEZ690OTqEswi76awqcDlcYdeOvRX7/DRDnB73mrw=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportQuoteFeed.class
+SHA-256-Digest: eqvrxhKV6E8B1Hvb+/RPzQawkEwr/IBJNM7RGlDQ3ww=
+
+Name: name/abuchen/portfolio/snapshot/ClientIRRYield.class
+SHA-256-Digest: DP7AY2AyvwiCz9+9Uee9Acqgf7rLvzNYxBA1L8zmfI8=
+
+Name: name/abuchen/portfolio/checks/impl/MissingBuySellPortfolioIssue$Cr
+ eateBuySellEntryFix.class
+SHA-256-Digest: 1PPbJgS39D0se15XbE5HC4tRaPl0kVDj5vvXOlPcEZs=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$LastXTradingDays.c
+ lass
+SHA-256-Digest: c0+9znUWY81b28PxwHEIBQ1v9faGi9veH8l8oqxAzHU=
+
+Name: name/abuchen/portfolio/checks/impl/SharesHeldConsistencyCheck.clas
+ s
+SHA-256-Digest: Ye/I2L7LakPWmlE5YYhVRIvT4AjPRkqOR6NiTJ9/c+4=
+
+Name: name/abuchen/portfolio/money/impl/ECBUpdater$Feeds.class
+SHA-256-Digest: FfYYW2y1v9oH6RHmcgOej2rIrqZHrPg4eeklhoB4Txw=
+
+Name: name/abuchen/portfolio/checks/Checker.class
+SHA-256-Digest: vMeu7yKbowgHC2I5H3BsUNgZ5X7JLbNwVMhAU8Aebk0=
+
+Name: name/abuchen/portfolio/money/Values$19.class
+SHA-256-Digest: SxbiNsvStJ6dHH5uuX9YrSxzlY8SD96jBIGlK01Kg/Q=
+
+Name: name/abuchen/portfolio/util/RateLimitExceededException.class
+SHA-256-Digest: EHJplvD9i2eOencihFEMMi6/Ky08z5Ib6xjQZbdtvgY=
+
+Name: name/abuchen/portfolio/util/ColorConversion.class
+SHA-256-Digest: ixHdnp+mJwQbgIThqYJY1YuH2mmictUQOMuHt9OwYNM=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation$Period$4.class
+SHA-256-Digest: jx0mLBbm3jtd3EZ5rF2H5fxGT0xF1669OMy+SiBKHok=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation$Period$1.class
+SHA-256-Digest: Rj84BVuycnIx0b3/m2iHcncRVFJnXa7P621hSKaeIto=
+
+Name: name/abuchen/portfolio/PortfolioLog.class
+SHA-256-Digest: 7ET0z7370GoHiz/olYYyPdwRHuGcuODOzUNCZDVRE4Q=
+
+Name: name/abuchen/portfolio/money/impl/InverseExchangeRateTimeSeries.cl
+ ass
+SHA-256-Digest: TdnngTGIJDJcqR2E7Bsp0c5gF6nfoXhETbmL7WpdIoU=
+
+Name: name/abuchen/portfolio/model/TransactionPair.class
+SHA-256-Digest: RDWJNSIzoY4/hjXMvqje20LuTOTDw11YuRPqkIkPoiw=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ConsorsbankPre2009PDFExtra
+ ctor.class
+SHA-256-Digest: bHndYsThvSqPRxqCAWpQf/64GXnKJwveo/1mBuND634=
+
+Name: name/abuchen/portfolio/util/WebAccess$Request.class
+SHA-256-Digest: +AW5C4TC3DaBRJp6kGT9lCOFt4mxRfNk7LIYnRvh1Ys=
+
+Name: name/abuchen/portfolio/money/Values.class
+SHA-256-Digest: RE/VpuyrD93nkIPCEyhmBQaGb5d9WJKxLv+bq+yCkmI=
+
+Name: name/abuchen/portfolio/util/BuildInfo.class
+SHA-256-Digest: cobZ8BK1DJS7inN3Nc7hCBMkxbHmSmn7EsDEAbcW7w4=
+
+Name: name/abuchen/portfolio/snapshot/filter/PortfolioClientFilter.class
+SHA-256-Digest: n/6w78zjX/iZL0KeWnoGNxZrXqma2ftmxiqfSGCF1vk=
+
+Name: name/abuchen/portfolio/online/SecuritySearchProvider$ResultItem.cl
+ ass
+SHA-256-Digest: pSeMQgIauOZiq5w2nCm8L2tohogPf0HyoCuBiOUMzDc=
+
+Name: name/abuchen/portfolio/util/Pair.class
+SHA-256-Digest: tY2VdNPCJMYeOBhzICt2nlfsxmuxWfYaxYtbgDCtPxY=
+
+Name: name/abuchen/portfolio/checks/impl/DividendsAndInterestCheck$Conve
+ rtFix.class
+SHA-256-Digest: /tFQjOzCqi2NDtmfEF9feqpY66IGF8uLaEx0tuvshQU=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/SBrokerPDFExtractor.class
+SHA-256-Digest: COuCPUFxvga0WVZut/9euFqiHjSLj7bYXPxp44M6tn0=
+
+Name: name/abuchen/portfolio/checks/QuickFix$1.class
+SHA-256-Digest: mjarY4CbCMI/kLu4MjqA7eJ/ZpK+obwJk9mPt3kSTbg=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/postbank-purchase.json
+SHA-256-Digest: jOzRzZk7eBA/FqI9SdbYXG5o6hDwnH+CJxvTHc/8vIA=
+
+Name: META-INF/taxonomy/kommer_es.properties
+SHA-256-Digest: b8t/J3bqBH2Dr6qoR3m4+lBIryTveZ7QBb//8qo2T2I=
+
+Name: name/abuchen/portfolio/snapshot/security/CapitalGainsRecord.class
+SHA-256-Digest: W36gYxmqV+zzDCTy3ksb6K7cEyRccYaYmYIjPCXdRTM=
+
+Name: name/abuchen/portfolio/util/TokenReplacingReader$ITokenResolver.cl
+ ass
+SHA-256-Digest: FztoFgAtfHiHzcLew2hNckzY1MARgqq22k0YgefJM3Y=
+
+Name: name/abuchen/portfolio/util/QuoteFromTransactionExtractor.class
+SHA-256-Digest: 9btIdONbwoioVQBtuKLTWyhU8/am3U4XNp34EHm+VDY=
+
+Name: name/abuchen/portfolio/model/SecurityEvent$Type.class
+SHA-256-Digest: KZ6qEb7VlA7DhhHiCO0vEk4XP7CtpGPGbxn/c+/8vt8=
+
+Name: name/abuchen/portfolio/online/impl/HTMLTableQuoteFeed$Column.class
+SHA-256-Digest: 1maFxkJ4i23+9YaNYSJHOv2fZv6Eu4SnLXc0g/Frgo8=
+
+Name: name/abuchen/portfolio/snapshot/trail/EmptyTrail.class
+SHA-256-Digest: mTCqjXt994jZfbD87oLYJFqS0uz+IXc4i0Ltp84SbKE=
+
+Name: name/abuchen/portfolio/checks/impl/MissingUUIDCheck.class
+SHA-256-Digest: JtdwZ2pOYwihV0mVgnQBS7/xNDmYBw/HYoympEROEgQ=
+
+Name: name/abuchen/portfolio/model/AttributeType$AmountConverter.class
+SHA-256-Digest: JyatEhxxn7HY8tIgBrmUrnO6xbhXOFbv2NsNp+Dsvso=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter$DateField.clas
+ s
+SHA-256-Digest: L8QY9ldXQasK8M8kOuLIK0Z6Xwsh4HkK0+YnZlorCQg=
+
+Name: META-INF/taxonomy/regions-msci_nl.properties
+SHA-256-Digest: LWzDS83oe52EHL7C8FAXcFsP7VFJ0ihW+iftym/SHw4=
+
+Name: name/abuchen/portfolio/money/impl/InverseExchangeRateTimeSeries$1.
+ class
+SHA-256-Digest: S0qeBav50+qIlyy1zttl4ffJIKW67keUyAiTo35RwDw=
+
+Name: name/abuchen/portfolio/datatransfer/Extractor$BuySellEntryItem.cla
+ ss
+SHA-256-Digest: dHRXXllo9beRPDGwvC/IWyFn6meGtz/npWsw+sGbVfw=
+
+Name: name/abuchen/portfolio/datatransfer/ImportAction$Status$Code.class
+SHA-256-Digest: mDAqeyu/DtJ893yHpgf+CZhwKB+AaGPos/9xVQpAhRc=
+
+Name: name/abuchen/portfolio/online/Factory.class
+SHA-256-Digest: 0ueJHS01lBTlEbYCnUy0vhJ/vvtwC/LFoKpvqf+LvzA=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFExtractorUtils.class
+SHA-256-Digest: PYayWUowh1xLpaKNRffNdTVJlImTvxr736Jozy5rVLI=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ebase.json
+SHA-256-Digest: 9Z+WIl1s6sGuOItAcX4NJYaTSVaXTa1DBAI1HIJn5yM=
+
+Name: name/abuchen/portfolio/checks/impl/FixTaxRefundsCheck.class
+SHA-256-Digest: 7mAX2zOZKIai/fUwITALbpp93r6uQTfbnoLNrq6EiXg=
+
+Name: name/abuchen/portfolio/checks/impl/MissingPortfolioTransferIssue$C
+ reateTransferFix.class
+SHA-256-Digest: hfRhmSo9Bbu4/8W7ck7SBI9QEDADaICL080GDvFeWxM=
+
+Name: name/abuchen/portfolio/online/impl/PortfolioReportNet.class
+SHA-256-Digest: 9fWvsN2Q2RM0QdCFaJ4Mog2+3LqKpm9OAG7Vf1PXoAg=
+
+Name: name/abuchen/portfolio/model/Portfolio.class
+SHA-256-Digest: sneSVvxg3jNDq6jTdJKq3xIv3tv3T7oZ4hZ6Fo4ytGs=
+
+Name: name/abuchen/portfolio/money/impl/ECBUpdater.class
+SHA-256-Digest: WRgEOvNbZuUbMxJN7FdkPMnPr2WIqKdL3+WEia+KunE=
+
+Name: name/abuchen/portfolio/checks/impl/MissingBuySellPortfolioIssue.cl
+ ass
+SHA-256-Digest: N+IyD7Zff1VtdlLJou/TRR+6xEyh5O08A4+zkLTidPM=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/ViacPDFExtractor.class
+SHA-256-Digest: SgsAyI9IyS/ANqeRGJ+MMcMfeouv+hH2rgG1YxY0ISU=
+
+Name: name/abuchen/portfolio/money/impl/ExchangeRateTimeSeriesImpl.class
+SHA-256-Digest: 0Lld6UpGHVaUz/eljjzxtaoIQ6Z/ZZUc8Qn+INo6V6A=
+
+Name: name/abuchen/portfolio/events/SecurityChangeEvent.class
+SHA-256-Digest: TSq3s22rJ9JUZ69Fkcsw8Airv8g1VJz7rJ6pFylcZC4=
+
+Name: name/abuchen/portfolio/model/Transaction$ByDate.class
+SHA-256-Digest: wNpd3FRE96NZv41oj3945Muvr7YEcRzxQ7BQm39wLxo=
+
+Name: META-INF/taxonomy/kommer_fr.properties
+SHA-256-Digest: 0ewwibuEzarX0jBjVEaS6Y20B6HSTH3AgIOmuc4QwcM=
+
+Name: name/abuchen/portfolio/util/WebAccess.class
+SHA-256-Digest: Z2oLYqHz6QMP+/d43OQkqQ+1z0pKH5jw/1K5uAOtaCw=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/SutorPDFExtractor.class
+SHA-256-Digest: RujLpHfEmjyrwDMWMZVN2a76TcV833VIGbheKb2bLX0=
+
+Name: name/abuchen/portfolio/money/impl/ChainedExchangeRateTimeSeries.cl
+ ass
+SHA-256-Digest: 2x/uHEESCXRagxdbM/+5PndqCH0dpQkxPefQj+KD6Ps=
+
+Name: name/abuchen/portfolio/model/ClientFactory$ClientPersister.class
+SHA-256-Digest: 3onalsYY99fc57HpIZWb04SC01WRa5+PLaxkTyXicF0=
+
+Name: name/abuchen/portfolio/snapshot/GroupByTaxonomy.class
+SHA-256-Digest: w3NDLC4nF7PFC/jOvnKSBtmsHr1AfIsVSUy/cBxygBA=
+
+Name: name/abuchen/portfolio/datatransfer/csv/CSVImporter.class
+SHA-256-Digest: zAgCAkkMaVso1JbsOfYOHkl61pUsQE2OV9JOdRVYIFo=
+
+Name: about.html
+SHA-256-Digest: aMHF/jgd5Rh7dZ1KL4BzSvg5T0QRRcwC89wyK4OmDPI=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/WKN.class
+SHA-256-Digest: C6mc5DpMBEEMFTZuN9YTfLekL1d08RGPX1RaI09lrr4=
+
+Name: name/abuchen/portfolio/model/SecurityEvent$DividendEvent.class
+SHA-256-Digest: iXLBubPgEARYADUY7JG2h/ELGQbykkBzPxX7sVxUlDs=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/BaaderBankPDFExtractor.cla
+ ss
+SHA-256-Digest: uwTX1QrSRHR5lbEYAXTk6D5+Oz7f4y/nsFZYnFL1Rv0=
+
+Name: name/abuchen/portfolio/snapshot/SecurityPosition$1.class
+SHA-256-Digest: z1vHuFu8SdI7QkJ+zRg6OYzpMOz3ROv+KCmebcAQ6Ko=
+
+Name: name/abuchen/portfolio/snapshot/ReportingPeriod$FromXtoY.class
+SHA-256-Digest: Z4+aLYdiQEig8vT8dl6rv3k/gs0m8Z/ckRtJPJiUQ78=
+
+Name: name/abuchen/portfolio/snapshot/ClientPerformanceSnapshot$Position
+ .class
+SHA-256-Digest: 84tZ9DjtqIYrNiyn+H1nfsU/sQU3v5OpsgyJ5CCPCdg=
+
+Name: name/abuchen/portfolio/online/impl/PageCache$PageEntry.class
+SHA-256-Digest: X4PGAseHt6m6WULmXTbJhYjYPcG38GNwQazTT5n0SIY=
+
+Name: name/abuchen/portfolio/snapshot/PerformanceIndex.class
+SHA-256-Digest: PHDw0CO22s4H+A2TTMiPPnGszmM02Go0yzjIyIZeRjY=
+
+Name: name/abuchen/portfolio/snapshot/AssetCategory.class
+SHA-256-Digest: H7PoomeNCGe/nqN/gPu1het6R/DmWbyld/BMpO0klIM=
+
+Name: name/abuchen/portfolio/money/CurrencyUnit.class
+SHA-256-Digest: TqKvF6HXOO8vgA2bcTnhyDQ20iHJjp15RezXl/aSj18=
+
+Name: name/abuchen/portfolio/checks/impl/MissingBuySellAccountIssue$Conv
+ ertToDeliveryFix.class
+SHA-256-Digest: leepcKzNnBqW8xqT176KleEORzGMpGqgW2Aq8IEZ8pM=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/TargobankPDFExtractor.clas
+ s
+SHA-256-Digest: MIEJBTTbCcX5kRVjKQhgq9eQwLNnDG4vJylqAgZ78kY=
+
+Name: name/abuchen/portfolio/snapshot/Aggregation$Period$2.class
+SHA-256-Digest: UAD0oiqhJnfuAM8K19+CdSzlhOO/iQ5claN/6vjz1CI=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/VariableURLConstruc
+ tor.class
+SHA-256-Digest: AAI0ZDRm7G/me3HGJOG7qfj/SboiW7jd7mDCxyKiaFU=
+
+Name: name/abuchen/portfolio/online/impl/variableurl/macros/Currency.cla
+ ss
+SHA-256-Digest: x4LmIjvgr4PhMB0GLvF7p5fYqYJ6vIYvcG/GYqwoT/Y=
+
+Name: name/abuchen/portfolio/Messages.class
+SHA-256-Digest: xey0RDh/T0NXhLwkRYzNnfOxFMJf3itOeMb5LQPl5Cw=
+
+Name: name/abuchen/portfolio/checks/impl/MissingCurrencyCheck.class
+SHA-256-Digest: HTUBn4t9lzKJbclIIZBPZd5G4tdWRK9+CO1amscccl8=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/PDFInputFile.class
+SHA-256-Digest: EpwFvNBfDz/jUftXoBJN7kEylqsW4d9cTI2j/mRH4p8=
+
+Name: name/abuchen/portfolio/model/Dashboard$Widget.class
+SHA-256-Digest: lDVi+Itij0Nk+vUEwEpPClL148hMAPZbtkm439Xq114=
+
+Name: name/abuchen/portfolio/util/TradeCalendar.class
+SHA-256-Digest: e1CsKQz0JvXeGvnjm0MVbMR3dfSXCLjlP/af6c2CKk8=
+
+Name: name/abuchen/portfolio/datatransfer/pdf/JSONPDFExtractor.class
+SHA-256-Digest: 2beq9y8qo67qoX4HozWTFoeLzpUpcHMcCdCaNxHibI0=
+
+Name: name/abuchen/portfolio/datatransfer/csv/VINISExporter.class
+SHA-256-Digest: pZFC8+BPHuqcSzQzGlpghbH490U9LrlwGNvEzRkV3dY=
+

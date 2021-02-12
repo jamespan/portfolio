@@ -1,0 +1,117 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.3
+Built-By: asbn
+Build-Jdk: 11.0.9
+Bundle-ManifestVersion: 2
+Bundle-Name: Portfolio Performance Bootstrap
+Bundle-SymbolicName: name.abuchen.portfolio.bootstrap;singleton:=true
+Bundle-Version: 0.49.3.bigsur
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: javax.inject;bundle-version="1.0.0",org.eclipse.emf.comm
+ on,org.eclipse.e4.ui.workbench.addons.swt,org.eclipse.e4.ui.workbench.s
+ wt,org.eclipse.e4.core.commands,org.eclipse.e4.ui.css.swt,org.eclipse.e
+ 4.ui.css.swt.theme,org.eclipse.e4.ui.workbench.renderers.swt,org.eclips
+ e.e4.ui.model.workbench,org.eclipse.emf.ecore,org.eclipse.core.commands
+ ,org.eclipse.jface,org.eclipse.equinox.preferences,org.eclipse.e4.core.
+ services,org.eclipse.e4.core.di.extensions,org.eclipse.e4.core.contexts
+ ,org.eclipse.e4.ui.workbench,org.eclipse.core.runtime,org.eclipse.osgi.
+ services,org.eclipse.e4.core.di.annotations
+Automatic-Module-Name: name.abuchen.portfolio.bootstrap
+
+Name: name/abuchen/portfolio/bootstrap/messages_es.properties
+SHA-256-Digest: uX101Wrlsom0XtdRDpcw+wOyaJR4vc+DoDmYfUDRXMo=
+
+Name: plugin.xml
+SHA-256-Digest: +zjB7ZgQJrBB5RUFEaoyb5bYSSDumuPS3gzg8sjB1TY=
+
+Name: name/abuchen/portfolio/bootstrap/CustomSaveHandler$PromptForSaveDi
+ alog.class
+SHA-256-Digest: xeUvmRP9e19QYuCOk/CP56CgnVyXi+XR0sqW3NtkqHg=
+
+Name: name/abuchen/portfolio/bootstrap/Messages.class
+SHA-256-Digest: tgw3NP5FRJPaiFq1AjTeZ9+o2B2FnSDPh9yXFCBnVuQ=
+
+Name: name/abuchen/portfolio/bootstrap/swt/CustomStackRenderer.class
+SHA-256-Digest: Wr3Ndq8fmM9HUOK3a8u3x0lDN7SSWhqECGu3iU+Ar5c=
+
+Name: name/abuchen/portfolio/bootstrap/CustomSaveHandler.class
+SHA-256-Digest: XiKmkqjMjO9xh497okwxpMackWSDKQNNaZXt90G57aY=
+
+Name: name/abuchen/portfolio/bootstrap/messages.properties
+SHA-256-Digest: OOOjgrLcd7K8Z5ak/HBnmYjBKd8WQvnJrOw5oPlfTeY=
+
+Name: OSGI-INF/l10n/bundle_nl.properties
+SHA-256-Digest: WYXrLc4/zpP71L+atoUvxDT/cHx10RdXxgkjw1C8jRo=
+
+Name: name/abuchen/portfolio/bootstrap/messages_nl.properties
+SHA-256-Digest: N/Ple7S+6nXJclSF9mancMVplcIhKNfnPBMXiMkF7Eo=
+
+Name: name/abuchen/portfolio/bootstrap/SaveHandlerProcessor.class
+SHA-256-Digest: lQIq1krViaKm0w6gwoOfEvZsgL7HnDOME6SbmTzHpzs=
+
+Name: name/abuchen/portfolio/bootstrap/LifeCycleManager.class
+SHA-256-Digest: NhBvI649/VtbMIKK7DlEmlUEplnYJqzcdE/Jiou4x6A=
+
+Name: name/abuchen/portfolio/bootstrap/FilePickerDialog.class
+SHA-256-Digest: Q+iVpp53XcefPX/GUajwOrsw6papkKVSDlKbK6Hf9EU=
+
+Name: name/abuchen/portfolio/bootstrap/messages_fr.properties
+SHA-256-Digest: tzxy35Y25yIKR4nRl5B2MuKSzc0Cx+fy/u6YFitJyQs=
+
+Name: name/abuchen/portfolio/bootstrap/SaveHandlerProcessor$1.class
+SHA-256-Digest: L08ybX0a/I2jK35iUXs5tBrvwWF2oNzdfddyViDr1UA=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio.boots
+ trap/pom.properties
+SHA-256-Digest: fVucWnyB7zH4gs7vcoP4mWFlmozhuQQpPb3MXK5tvh8=
+
+Name: name/abuchen/portfolio/bootstrap/swt/CustomRendererFactory.class
+SHA-256-Digest: /krijO3aNHS4oJqKNqj43LtDp2wOvf7rd3+4fhlg+Fc=
+
+Name: OSGI-INF/l10n/bundle_de.properties
+SHA-256-Digest: 403fsAAQ7UYSAob+3gl/dMuxh6/nimpvpaRdlxJiFw8=
+
+Name: META-INF/maven/name.abuchen.portfolio/name.abuchen.portfolio.boots
+ trap/pom.xml
+SHA-256-Digest: OI9rHdnvrXOiBjED2hV8OZTzsVI6dCqgmto/61BIcgs=
+
+Name: name/abuchen/portfolio/bootstrap/MergeOldLayoutIntoCurrentApplicat
+ ionModelProcessor.class
+SHA-256-Digest: MMSnxD6QQyxD8OAuLy/1duOo3qBFyPEwB9hZDzYXf14=
+
+Name: OSGI-INF/l10n/bundle_fr.properties
+SHA-256-Digest: A1tpkhl67CCpr8hO983qT33qRwlpwAlLcYryps4a5to=
+
+Name: Application.e4xmi
+SHA-256-Digest: 5FN1MFD1NGnibZ9DQUBm4xJ8wT9ne7q5XOZcwt/FU4M=
+
+Name: name/abuchen/portfolio/bootstrap/IniFileManipulator.class
+SHA-256-Digest: kMG3eUZwhSEqGnYNpTh5kFq6T5Jrzu0dR2YADCD+jPM=
+
+Name: name/abuchen/portfolio/bootstrap/messages_pt.properties
+SHA-256-Digest: LTapVUk4MUcCrIlTHjsbM8M+SNufHtCjgIETxjPC7XA=
+
+Name: OSGI-INF/l10n/bundle_pt.properties
+SHA-256-Digest: OE5EXvTdpec2ZF7E/L0FYW15wTPB1vEMANPxCurJ2eU=
+
+Name: name/abuchen/portfolio/bootstrap/FilePickerDialog$FileInfo.class
+SHA-256-Digest: tOCQBkdcPr1pPY8MIhbYfEJQmy1M7Bxgwj7u4RvFC2c=
+
+Name: name/abuchen/portfolio/bootstrap/messages_de.properties
+SHA-256-Digest: qwCyGmniv/CdMkm+kYjTSYOAnsDJbTI1lm1WsPWxZio=
+
+Name: OSGI-INF/l10n/bundle_es.properties
+SHA-256-Digest: YSEEbfCAcr4Uz1qbUzLVg2CahQX+lQQuLznA/Ca6S08=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: nqQNB4+TgT9xD9SbBYO+aICdXsIL4eJbX40FqhnIWiQ=
+
+Name: name/abuchen/portfolio/bootstrap/LifeCycleManager$1.class
+SHA-256-Digest: zXlPi0gjT+olHw5gZl1Dy3PU2cg9RXglYpNvHXgi/Bc=
+
+Name: name/abuchen/portfolio/bootstrap/ModelConstants.class
+SHA-256-Digest: LMPYgi8cYJ8VN4rVxFVgiu3HYjzl5/ymqN8wTo04uKg=
+
+Name: name/abuchen/portfolio/bootstrap/FilePickerDialog$1.class
+SHA-256-Digest: LkV5ovb0/RS+BAExkEI2gwK+PEI+oMBUdo79k4hOgto=
+

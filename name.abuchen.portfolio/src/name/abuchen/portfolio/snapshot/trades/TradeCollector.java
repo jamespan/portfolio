@@ -2,7 +2,7 @@ package name.abuchen.portfolio.snapshot.trades;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,8 +34,7 @@ public class TradeCollector
     {
         List<TransactionPair<?>> transactions = security.getTransactions(client);
 
-        Collections.sort(transactions,
-                        (p1, p2) -> p1.getTransaction().getDateTime().compareTo(p2.getTransaction().getDateTime()));
+        transactions.sort(Comparator.comparing(p -> p.getTransaction().getDateTime()));
 
         List<Trade> trades = new ArrayList<>();
         Map<Portfolio, List<TransactionPair<PortfolioTransaction>>> openTransactions = new HashMap<>();
@@ -61,6 +60,15 @@ public class TradeCollector
 
                 case SELL:
                 case COVER:
+                    List<TransactionPair<PortfolioTransaction>> position = openTransactions.get(portfolio);
+                    position.add(pair);
+                    long shares = position.stream().map(TransactionPair::getTransaction)
+                            .mapToLong(tx -> tx.getShares() * (tx.getType().isPurchase() ? 1 : -1)).sum();
+                    if (shares == 0)
+                    {
+                        trades.add(createNewPyramidTrade(openTransactions, pair));
+                    }
+                    break;
                 case DELIVERY_OUTBOUND:
                     trades.add(createNewTradeFromSell(openTransactions, pair));
                     break;
@@ -87,8 +95,8 @@ public class TradeCollector
 
             if (position.isEmpty())
                 continue;
-
-            long shares = position.stream().mapToLong(p -> p.getTransaction().getShares()).sum();
+            long shares = position.stream().map(TransactionPair::getTransaction)
+                    .mapToLong(tx -> tx.getShares() * (tx.getType().isPurchase() ? 1 : -1)).sum();
 
             Trade newTrade = new Trade(security, entry.getKey(), shares, position.get(0).getTransaction().getType());
             newTrade.setStart(position.get(0).getTransaction().getDateTime());
@@ -100,6 +108,37 @@ public class TradeCollector
         trades.forEach(t -> t.calculate(converter));
 
         return trades;
+    }
+
+    private Trade createNewPyramidTrade(Map<Portfolio, List<TransactionPair<PortfolioTransaction>>> openTransactions,
+                                        TransactionPair<PortfolioTransaction> pair) throws TradeCollectorException
+    {
+        Trade newTrade = new Trade(pair.getTransaction().getSecurity(), (Portfolio) pair.getOwner(),
+                pair.getTransaction().getShares(), pair.getTransaction().getType());
+
+        List<TransactionPair<PortfolioTransaction>> open = openTransactions.get(pair.getOwner());
+
+        if (open == null || open.isEmpty())
+            throw new TradeCollectorException(MessageFormat.format(Messages.MsgErrorTradeCollector_NoHoldingsForSell,
+                    pair.getTransaction().getSecurity(), pair.getOwner(), pair));
+
+        for (TransactionPair<PortfolioTransaction> candidate : open)
+        {
+            if (candidate.getTransaction().getType().isPurchase())
+            {
+                newTrade.setType(candidate.getTransaction().getType());
+            }
+
+            if (newTrade.getStart() == null)
+                newTrade.setStart(candidate.getTransaction().getDateTime());
+
+            newTrade.getTransactions().add(candidate);
+        }
+        open.clear();
+
+        newTrade.setEnd(pair.getTransaction().getDateTime());
+
+        return newTrade;
     }
 
     private Trade createNewTradeFromSell(Map<Portfolio, List<TransactionPair<PortfolioTransaction>>> openTransactions,

@@ -1,13 +1,6 @@
 package name.abuchen.portfolio.ui.views.dashboard;
 
-import java.text.MessageFormat;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.OptionalDouble;
-import java.util.function.BiFunction;
-import java.util.stream.LongStream;
-
+import com.google.common.collect.Range;
 import name.abuchen.portfolio.math.Risk.Drawdown;
 import name.abuchen.portfolio.math.Risk.Volatility;
 import name.abuchen.portfolio.model.Dashboard;
@@ -19,6 +12,14 @@ import name.abuchen.portfolio.ui.views.dashboard.heatmap.EarningsHeatmapWidget;
 import name.abuchen.portfolio.ui.views.dashboard.heatmap.PerformanceHeatmapWidget;
 import name.abuchen.portfolio.ui.views.dashboard.heatmap.YearlyPerformanceHeatmapWidget;
 import name.abuchen.portfolio.ui.views.dataseries.DataSeries;
+
+import java.text.MessageFormat;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.OptionalDouble;
+import java.util.function.BiFunction;
+import java.util.stream.LongStream;
 
 public enum WidgetFactory
 {
@@ -174,6 +175,15 @@ public enum WidgetFactory
     HEATMAP_EARNINGS(Messages.LabelHeatmapEarnings, Messages.LabelEarnings, EarningsHeatmapWidget::new),
 
     TRADES_BASIC_STATISTICS(Messages.LabelTradesBasicStatistics, Messages.LabelTrades, TradesWidget::new),
+
+    TRADES_RETURN_STATISTICS_0("Trades with Return -∞%~-8%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.atMost(-8.0/100)))),
+    TRADES_RETURN_STATISTICS_1("Trades with Return -8%~-5%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(-8.0/100, -5.0/100)))),
+    TRADES_RETURN_STATISTICS_2("Trades with Return -5%~-2%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(-5.0/100, -2.0/100)))),
+    TRADES_RETURN_STATISTICS_3("Trades with Return -2%~+2%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(-2.0/100, +2.0/100)))),
+    TRADES_RETURN_STATISTICS_4("Trades with Return +2%~+5%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(+2.0/100, +5.0/100)))),
+    TRADES_RETURN_STATISTICS_5("Trades with Return +5%~+10%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(+5.0/100, +10.0/100)))),
+    TRADES_RETURN_STATISTICS_6("Trades with Return +10%~+20%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.openClosed(+10.0/100, +20.0/100)))),
+    TRADES_RETURN_STATISTICS_7("Trades with Return +20%~+∞%", Messages.LabelTrades, ((widget, data) -> new TradesReturnWidget(widget, data, Range.greaterThan( +20.0/100)))),
 
     TRADES_AVERAGE_RETURN_RATIO(Messages.LabelTradesAverageReturnRatio, Messages.LabelTrades, TradesAverageReturnRatioWidget::new),
 
